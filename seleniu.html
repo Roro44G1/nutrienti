@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleniul și Scutul Interior</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Seleniul și Scutul Interior
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Seleniu - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Seleniul este un oligoelement esențial, renumit pentru proprietățile sale antioxidante și rolul crucial în funcția tiroidiană și imunitate.</p>
+                    <ul>
+                        <li><b>Antioxidant puternic (glutation peroxidază):</b> Este o componentă cheie a glutation peroxidazei, o enzimă antioxidantă majoră care ajută la protejarea celulelor de daunele cauzate de radicalii liberi (stresul oxidativ). Prin acest mecanism, seleniul contribuie la prevenirea bolilor cronice precum cele cardiovasculare, anumite tipuri de cancer și bolile neurodegenerative.</li>
+                        <li><b>Suport pentru funcția glandei tiroide:</b> Tiroida este organul cu cea mai mare concentrație de seleniu din corp. Seleniul este esențial pentru producția și metabolismul hormonilor tiroidieni, care reglează metabolismul, creșterea și dezvoltarea. De asemenea, pentru protejarea tiroidei de stresul oxidativ în timpul sintezei hormonale. Implicațiile sunt că un deficit de seleniu poate fi asociat cu afecțiuni tiroidiene precum tiroidita Hashimoto și hipotiroidismul.</li>
+                        <li><b>Întărirea sistemului imunitar:</b> Seleniul joacă un rol vital în funcționarea normală a sistemului imunitar, ajutând la producția de anticorpi și la răspunsul organismului împotriva infecțiilor virale și bacteriene. Implicațiile sunt că sprijină apărarea organismului împotriva infecțiilor virale și bacteriene.</li>
+                        <li><b>Sănătatea cardiovasculară:</b> Prin acțiunea sa antioxidantă și antiinflamatorie, seleniul poate contribui la menținerea sănătății inimii și a vaselor de sânge, reducând riscul de boli cardiovasculare.</li>
+                        <li><b>Fertilitatea masculină:</b> La bărbați, seleniul este important pentru producția de spermă sănătoasă și pentru motilitatea acesteia.</li>
+                        <li><b>Detoxifiere:</b> Poate contribui la protejarea organismului împotriva toxicității unor metale grele, cum ar fi mercurul și plumbul.</li>
+                        <li><b>Sănătatea părului și a unghiilor:</b> Seleniul contribuie la menținerea normală a structurii și sănătății părului și unghiilor.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Cantitatea de seleniu din alimente poate varia în funcție de conținutul de seleniu din solul în care au fost cultivate plantele sau de unde au fost hrănite animalele.</p>
+                    <ul>
+                        <li><b>Nuci braziliene:</b> Sunt, de departe, cea mai bogată sursă de seleniu. Doar una sau două nuci braziliene pe zi pot asigura necesarul zilnic de seleniu (atenție la exces, pentru că un consum prea mare poate duce la toxicitate).</li>
+                        <li><b>Fructe de mare și pește:</b> Ton (în special tonul galben), sardine, somon, stridii, scoici, creveți, crab.</li>
+                        <li><b>Carne:</b> Vită, pui și curcan, porc, ficatul de vită.</li>
+                        <li><b>Ouă:</b> Un ou mare poate acoperi o parte semnificativă din necesarul zilnic.</li>
+                        <li><b>Cereale integrale:</b> Orez brun, ovăz, quinoa, pâine integrală (dacă grânele au fost cultivate în soluri bogate în seleniu).</li>
+                        <li><b>Leguminoase:</b> Năut, linte, fasole.</li>
+                        <li><b>Semințe:</b> Semințe de floarea-soarelui, semințe de chia.</li>
+                        <li><b>Ciuperci:</b> Ciupercile Shiitake sunt o sursă bună.</li>
+                    </ul>
+                    <p><b>Considerații:</b> Este important să menținem un echilibru în aportul de seleniu, deoarece atât deficiența, cât și excesul (selenoza) pot avea efecte adverse.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Seleniu: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, seleniul este un oligoelement adesea asociat cu <b>protecția, integritatea personală, autoapărarea, reziliența și capacitatea de a face față agresiunilor (fizice, energetice, emoționale)</b>. Prin rolul său puternic antioxidant și de susținere a sistemului imunitar și a glandei tiroide, seleniul rezonează cu "scutul" nostru interior, cu vitalitatea energetică și cu abilitatea de a menține echilibrul în fața provocărilor.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de seleniu poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Vulnerabilitate emoțională și lipsă de autoapărare:</b> Un sentiment profund de a fi expus, fragil, sau lipsit de protecție în fața criticilor, a energiilor negative sau a atacurilor emoționale. Aceasta poate duce la o senzație de a fi ușor "rănit" sau copleșit.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Imunitate slăbită, susceptibilitate la infecții.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dezechilibre energetice și pierderea vitalității:</b> O lipsă de "scânteie" interioară, un sentiment de epuizare energetică care depășește oboseala fizică.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală, disfuncții tiroidiene (hipotiroidism).</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de încredere în propria intuiție sau ghidare interioară:</b> Afectarea funcției tiroidiene (asociată cu chakra gâtului) poate reflecta o lipsă de încredere în propria voce interioară sau o dificultate de a discerne "adevărul" personal.</li>
+                        <li><b>Tristețe profundă, melancolie, sentiment de victimizare:</b> O tendință de a se simți victimă a circumstanțelor sau a altor persoane, lipsa puterii de a se ridica deasupra situațiilor dificile.</li>
+                        <li><b>Perfecționism și auto-critică excesivă:</b> O nevoie de a fi perfect pentru a te simți în siguranță, teama de a face greșeli, ceea ce poate duce la un stres oxidativ intern (atât fizic, cât și emoțional).</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de seleniu (selenoză), deși rar din dietă (mai des din suplimentare excesivă), ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Defensivitate exagerată și rigiditate:</b> O nevoie excesivă de a te proteja, de a construi "ziduri" emoționale prea înalte, care te pot izola de ceilalți.</li>
+                        <li><b>Agresivitate sau tendințe de dominare:</b> O energie internă "fierbinte" care se manifestă prin control, critică excesivă sau o nevoie de a-i domina pe ceilalți pentru a te simți în siguranță.</li>
+                        <li><b>Intoleranță și judecată:</b> Dificultatea de a accepta imperfecțiunea, atât la propria persoană, cât și la ceilalți. O atitudine rigidă față de opinii sau stiluri de viață diferite.</li>
+                        <li><b>Suprasolicitare și energie "arzătoare":</b> O tendință de a "arde" energia prea repede, de a fi mereu în "luptă", chiar și atunci când nu este necesar.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de întărire a granițelor personale</b> și a autoapărării energetice (vizualizări de scuturi de protecție, afirmații).</li>
+                        <li><b>Lucrul cu stima de sine</b> și recunoașterea propriei valori.</li>
+                        <li><b>Terapii</b> pentru eliberarea sentimentelor de victimizare și cultivarea rezilienței.</li>
+                        <li><b>Meditații</b> pentru a reconecta cu vocea interioară și cu intuiția.</li>
+                        <li><b>Conectarea cu natura</b> pentru a absorbi energie vitală și a te simți în siguranță.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și de "răcorire" a energiei</b> (meditație statică, respirație profundă, yoga restaurativă).</li>
+                        <li><b>Terapii</b> pentru gestionarea furiei și a tendințelor de control.</li>
+                        <li><b>Cultivarea acceptării, a iertării</b> și a empatiei.</li>
+                        <li><b>Exerciții de "împământare"</b> pentru a stabiliza energia.</li>
+                        <li><b>Practici de "eliberare"</b> a ceea ce nu mai servește (jurnalism, artă).</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
