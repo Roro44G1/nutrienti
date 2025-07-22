@@ -3,270 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fier - Ghid Minerale</title>
+    <title>Fierul și Forța Interioară</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        h3 {
-            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        ul, ol {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection:hover {
+            transform: translateY(-5px);
         }
-        ol {
-            list-style: decimal;
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
         }
-        b { /* Stil pentru text aldin */
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            width: 100%;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .internal-toc {
-            background-color: #eaf6ff;
-            border: 1px solid #cceeff;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-        .internal-toc h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .internal-toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .internal-toc li {
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-
-        <h1>Fier</h1>
-
-        <div class="internal-toc">
-            <h3>Pe această pagină:</h3>
-            <ul>
-                <li><a href="#rolul-fizic">Rolul fierului în organism (perspectivă fizică)</a></li>
-                <li><a href="#surse-alimentare">Surse alimentare de fier</a></li>
-                <li><a href="#perspectiva-holistica">Fierul: Perspectivă holistică (cauze emoționale)</a></li>
-            </ul>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Fierul și Forța Interioară
         </div>
 
-        <h2 id="rolul-fizic">Rolul fierului în organism (perspectivă fizică)</h2>
-        <p>Fierul este un mineral esențial pentru viață, crucial pentru buna funcționare a organismului. Rolul său cel mai important este legat de transportul oxigenului, dar contribuie și la numeroase alte procese vitale.</p>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>1. Transportul oxigenului (hemoglobină și mioglobină)</h3>
-        <ul>
-            <li><b>Mecanism:</b> Fierul este o componentă cheie a hemoglobinei, proteina din globulele roșii care leagă oxigenul din plămâni și îl transportă către toate celulele și țesuturile din corp. Fără fier suficient, organismul nu poate produce suficientă hemoglobină. De asemenea, fierul este o componentă a mioglobinei, o proteină similară cu hemoglobinei, găsită în mușchi, care stochează și eliberează oxigenul necesar pentru contracția musculară.</li>
-            <li><b>Implicații:</b> Fără fier suficient, organismul nu poate produce suficientă hemoglobină, ceea ce duce la anemie feriprivă, o condiție caracterizată prin oboseală extremă, slăbiciune, paloare, dificultăți de respirație și amețeli.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Fier - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Fierul este un mineral esențial pentru viață, crucial pentru buna funcționare a organismului. Rolul său cel mai important este legat de transportul oxigenului, dar contribuie și la numeroase alte procese vitale.</p>
+                    <ul>
+                        <li><b>Transportul oxigenului (hemoglobină și mioglobină):</b> Fierul este o componentă cheie a hemoglobinei, proteina din globulele roșii care leagă oxigenul din plămâni și îl transportă către toate celulele și țesuturile din corp. Fără fier suficient, organismul nu poate produce suficientă hemoglobină. De asemenea, fierul este o componentă a mioglobinei, o proteină similară cu hemoglobina, găsită în mușchi, care stochează și eliberează oxigenul necesar pentru contracția musculară. Implicațiile sunt că, fără fier suficient, organismul nu poate produce suficientă hemoglobină, ceea ce duce la anemie feriprivă, o condiție caracterizată prin oboseală extremă, slăbiciune, paloare, dificultăți de respirație și amețeli.</li>
+                        <li><b>Producția de energie:</b> Fierul este implicat în enzimele care transformă carbohidrații, grăsimile și proteinele în energie utilizabilă de către celule.</li>
+                        <li><b>Sistemul imunitar:</b> Este esențial pentru dezvoltarea și funcționarea celulelor imunitare, ajutând organismul să lupte împotriva infecțiilor și bolilor. Implicațiile sunt că un deficit de fier poate slăbi răspunsul imun.</li>
+                        <li><b>Funcția cognitivă și dezvoltarea neurologică:</b> Fierul este crucial pentru dezvoltarea normală a creierului și a sistemului nervos, influențând memoria, concentrația și capacitatea de învățare.</li>
+                        <li><b>Sinteza ADN-ului:</b> Joacă un rol în procesul de sinteză a ADN-ului, materialul genetic al celulelor.</li>
+                        <li><b>Sănătatea pielii, părului și unghiilor:</b> Contribuie la oxigenarea și nutriția corespunzătoare a celulelor din piele, păr și unghii. Implicațiile sunt căderea părului, unghiile fragile și pielea palidă pot fi semne ale deficitului de fier.</li>
+                        <li><b>Sinteza hormonală:</b> Fierul este implicat în producția anumitor hormoni, inclusiv cei tiroidieni.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Există două tipuri de fier în alimente:</p>
+                    <p><b>1. Fier hemic (de origine animală):</b> Se găsește în produsele de origine animală și este foarte bine absorbit de organism (aproximativ 15-35%).</p>
+                    <ul>
+                        <li><b>Ficat:</b> Ficatul de vită, porc sau pui este una dintre cele mai concentrate surse de fier.</li>
+                        <li><b>Carne roșie:</b> Vită, miel, porc (în special carnea slabă).</li>
+                        <li><b>Fructe de mare:</b> Stridii (extrem de bogate în fier), midii, scoici, creveți, crab.</li>
+                        <li><b>Pește:</b> Ton, sardine, somon, macrou (în special cele cu oase comestibile, dacă sunt din conservă).</li>
+                        <li><b>Carne de pasăre:</b> Pui, curcan.</li>
+                        <li><b>Gălbenuș de ou</b>.</li>
+                    </ul>
+                    <p><b>2. Fier non-hemic (de origine vegetală):</b> Se găsește în produsele de origine vegetală și este mai puțin absorbit (aproximativ 2-20%). Absorbția fierului non-hemic poate fi însă semnificativ îmbunătățită prin consumul concomitent de vitamina C.</p>
+                    <ul>
+                        <li><b>Leguminoase:</b>
+                            <ul>
+                                <li>Linte: Una dintre cele mai bogate surse vegetale.</li>
+                                <li>Năut.</li>
+                                <li>Fasole (neagră, roșie, albă).</li>
+                            </ul>
+                        </li>
+                        <li><b>Nuci și semințe:</b>
+                            <ul>
+                                <li>Semințe de dovleac: O sursă excelentă.</li>
+                                <li>Semințe de susan (tahini).</li>
+                                <li>Semințe de chia.</li>
+                                <li>Caju.</li>
+                                <li>Migdale.</li>
+                            </ul>
+                        </li>
+                        <li><b>Cereale integrale:</b>
+                            <ul>
+                                <li>Quinoa.</li>
+                                <li>Ovăz.</li>
+                                <li>Orez brun.</li>
+                                <li>Cereale fortificate (verificați etichetele).</li>
+                            </ul>
+                        </li>
+                        <li><b>Legume cu frunze verzi închise:</b>
+                            <ul>
+                                <li>Spanac: Deși conține fier, oxalații din spanac pot inhiba parțial absorbția, dar vitamina C prezentă ajută la contracarare.</li>
+                                <li>Kale (varză creață).</li>
+                                <li>Broccoli.</li>
+                            </ul>
+                        </li>
+                        <li><b>Fructe uscate:</b>
+                            <ul>
+                                <li>Caise uscate.</li>
+                                <li>Smochine uscate.</li>
+                                <li>Prune uscate.</li>
+                                <li>Stafide.</li>
+                            </ul>
+                        </li>
+                        <li><b>Altele:</b>
+                            <ul>
+                                <li>Tofu (mai ales cel preparat cu săruri de calciu).</li>
+                                <li>Cartofi (în special cei copți cu coajă).</li>
+                                <li>Ciocolată neagră (cu un conținut ridicat de cacao).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Factori care influențează absorbția fierului:</h3>
+                    <ul>
+                        <li><b>Vitamina C:</b> Consumul de alimente bogate în vitamina C (citrice, ardei gras, broccoli, roșii) alături de surse de fier non-hemic crește semnificativ absorbția acestuia.</li>
+                        <li><b>Taninuri:</b> Prezente în cafea și ceai, pot inhiba absorbția fierului. Este recomandat să nu consumi aceste băuturi la masă sau imediat după.</li>
+                        <li><b>Fitați:</b> Găsiți în cereale integrale și leguminoase, pot reduce absorbția fierului. Procese precum înmuierea și fierberea pot reduce conținutul de fitați.</li>
+                        <li><b>Calciu:</b> Suplimentele de calciu și alimentele bogate în calciu (lactatele) pot reduce absorbția fierului. Este indicat să le consumi la ore diferite.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <h3>2. Producția de energie</h3>
-        <ul>
-            <li><b>Mecanism:</b> Fierul este implicat în enzimele care transformă carbohidrații, grăsimile și proteinele în energie utilizabilă de către celule.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Fier: Perspectiva emoțională</h2>
+            <p>Din punct de vedere holistic, fierul este adesea asociat cu <b>vitalitatea, forța, puterea personală, voința și capacitatea de a acționa și de a te manifesta în lume.</b> Sângele, prin care fierul transportă oxigenul, este văzut simbolic ca forța vieții și entuziasmul.</p>
 
-        <h3>3. Sistemul imunitar</h3>
-        <ul>
-            <li><b>Mecanism:</b> Este esențial pentru dezvoltarea și funcționarea celulelor imunitare, ajutând organismul să lupte împotriva infecțiilor și bolilor.</li>
-            <li><b>Implicații:</b> Un deficit de fier poate slăbi răspunsul imun.</li>
-        </ul>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de fier poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de entuziasm și de bucurie de viață:</b> Fierul ne dă "scânteia" vitală. O lipsă emoțională de bucurie, o apatie profundă sau un sentiment că "viața este prea grea" pot rezonă cu o lipsă de energie la nivel fizic, reflectată în deficitul de fier.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală cronică, lipsă de vlagă.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultatea de a te "ancora" sau de a te "împământa":</b> Fierul este un mineral al pământului, al structurii. Emoțional, o persoană cu deficit de fier s-ar putea simți "neîmpământată", lipsită de stabilitate, cu dificultăți în a-și asuma responsabilități sau a se angaja pe deplin în viața cotidiană.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Amețeli, senzație de "ceață mentală".</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de voință sau de curaj:</b> Fierul este legat de forța interioară și de capacitatea de a-ți urmări scopurile. O deficiență ar putea indica o lipsă de voință, teamă de confruntare, dificultatea de a-ți stabili limite sau de a-ți afirma propria putere.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Slăbiciune fizică, scăderea performanței sportive și intelectuale.</li>
+                            </ul>
+                        </li>
+                        <li><b>Tristețe profundă, melancolie, pierderea speranței:</b> Emoțiile de tristețe cronică, doliu neprocesat sau un sentiment de resemnare pot "stinge" focul interior, manifestându-se ca o lipsă de fier.</li>
+                        <li><b>Simbolismul sângelui:</b> Sângele este purtătorul vieții, al identității și al legăturilor familiale. Din perspectivă holistică, s-ar putea explora și "pierderi emoționale" sau sentimente de "golire", de "a fi drenat" energetic de situații sau persoane.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de fier este mai rar și adesea legat de condiții genetice (hemocromatoza ereditară) sau de transfuzii repetate. Totuși, din perspectiva holistică, unde fiecare dezechilibru are o semnificație, am putea explora:</p>
+                    <ol>
+                        <li><b>Rigiditate și încăpățânare:</b> Fierul este un metal dur, asociat cu structura. Un exces ar putea simboliza o rigiditate emoțională, o inflexibilitate, o dificultate de a te adapta sau de a lăsa lucrurile să curgă.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Fierul în exces se depozitează în țesuturi, inclusiv în ficat și inimă, ducând la probleme structurale.</li>
+                            </ul>
+                        </li>
+                        <li><b>Furia reprimată sau resentimente acumulate:</b> "Sângele fierbinte" sau "fierberea sângelui" sunt expresii care descriu furia. Un exces de fier ar putea sugera o acumulare de furie, resentimente sau frustrări care nu au fost exprimate sau procesate sănătos, ducând la o "supraîncărcare" interioară.</li>
+                        <li><b>Tendința de a "ține prea mult" sau de a nu "elibera":</b> Organismul reglează absorbția fierului, dar nu are un mecanism eficient de eliminare a excesului. Emoțional, acest lucru s-ar putea traduce printr-o dificultate de a renunța la trecut, la resentimente, la control, sau o tendință de a acumula (nu doar fier, ci și emoții sau posesiuni).</li>
+                        <li><b>Nevoi excesive de control:</b> O nevoie puternică de a controla mediul sau pe ceilalți, reflectând o lipsă de încredere în fluxul vieții.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <h3>4. Funcția cognitivă și dezvoltarea neurologică</h3>
-        <ul>
-            <li><b>Mecanism:</b> Fierul este crucial pentru dezvoltarea normală a creierului și a sistemului nervos, influențând memoria, concentrația și capacitatea de învățare.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici care încurajează bucuria și entuziasmul</b> (hobby-uri, artă, muzică).</li>
+                        <li><b>Exerciții fizice ușoare, mers în natură</b> pentru "împământare".</li>
+                        <li><b>Meditație și vizualizare</b> pentru a reconecta cu sursa de energie interioară.</li>
+                        <li><b>Terapii</b> care ajută la eliberarea tristeții sau a traumelor emoționale.</li>
+                        <li><b>Afirmații pozitive</b> despre forță, energie și curaj.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de eliberare emoțională</b> (jurnal, terapie, exprimare artistică a furiei).</li>
+                        <li><b>Exerciții de flexibilitate</b> (yoga, stretching) care ajută și la nivel mental.</li>
+                        <li><b>Meditație</b> pentru a cultiva acceptarea și a renunța la control.</li>
+                        <li><b>Lucrul cu iertarea</b> și eliberarea resentimentelor.</li>
+                        <li><b>Activități</b> care încurajează "curățarea" și "detoxifierea" pe toate planurile.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
 
-        <h3>5. Sinteza ADN-ului</h3>
-        <ul>
-            <li><b>Mecanism:</b> Joacă un rol în procesul de sinteză a ADN-ului, materialul genetic al celulelor.</li>
-        </ul>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>6. Sănătatea pielii, părului și unghiilor</h3>
-        <ul>
-            <li><b>Mecanism:</b> Contribuie la oxigenarea și nutriția corespunzătoare a celulelor din piele, păr și unghii.</li>
-            <li><b>Implicații:</b> Căderea părului, unghiile fragile și pielea palidă pot fi semne ale deficitului de fier.</li>
-        </ul>
-
-        <h3>7. Sinteza hormonală</h3>
-        <ul>
-            <li><b>Mecanism:</b> Fierul este implicat în producția anumitor hormoni, inclusiv cei tiroidieni.</li>
-        </ul>
-
-        <h2 id="surse-alimentare">Surse alimentare de fier</h2>
-        <p>Există două tipuri de fier în alimente:</p>
-
-        <h3>1. Fier hemic (de origine animală)</h3>
-        <p>Se găsește în produsele de origine animală și este foarte bine absorbit de organism (aproximativ 15-35%).</p>
-        <ul>
-            <li><b>Ficat:</b> Ficatul de vită, porc sau pui este una dintre cele mai concentrate surse de fier.</li>
-            <li><b>Carne roșie:</b> Vită, miel, porc (în special carnea slabă).</li>
-            <li><b>Fructe de mare:</b> Stridii (extrem de bogate în fier), midii, scoici, creveți, crab.</li>
-            <li><b>Pește:</b> Ton, sardine, somon, macrou (în special cele cu oase comestibile, dacă sunt din conservă).</li>
-            <li><b>Carne de pasăre:</b> Pui, curcan.</li>
-            <li><b>Gălbenuș de ou.</b></li>
-        </ul>
-
-        <h3>2. Fier non-hemic (de origine vegetală)</h3>
-        <p>Se găsește în produsele de origine vegetală și este mai puțin absorbit (aproximativ 2-20%). Absorbția fierului non-hemic poate fi însă semnificativ îmbunătățită prin consumul concomitent de vitamina C.</p>
-        <ul>
-            <li><b>Leguminoase:</b>
-                <ul>
-                    <li>Linte: Una dintre cele mai bogate surse vegetale.</li>
-                    <li>Năut.</li>
-                    <li>Fasole (neagră, roșie, albă).</li>
-                </ul>
-            </li>
-            <li><b>Nuci și semințe:</b>
-                <ul>
-                    <li>Semințe de dovleac: O sursă excelentă.</li>
-                    <li>Semințe de susan (tahini).</li>
-                    <li>Semințe de chia.</li>
-                    <li>Caju.</li>
-                    <li>Migdale.</li>
-                </ul>
-            </li>
-            <li><b>Cereale integrale:</b>
-                <ul>
-                    <li>Quinoa.</li>
-                    <li>Ovăz.</li>
-                    <li>Orez brun.</li>
-                    <li>Cereale fortificate (verificați etichetele).</li>
-                </ul>
-            </li>
-            <li><b>Legume cu frunze verzi închise:</b>
-                <ul>
-                    <li>Spanac: Deși conține fier, oxalații din spanac pot inhiba parțial absorbția, dar vitamina C prezentă ajută la contracarare.</li>
-                    <li>Kale (varză creață).</li>
-                    <li>Broccoli.</li>
-                </ul>
-            </li>
-            <li><b>Fructe uscate:</b>
-                <ul>
-                    <li>Caise uscate.</li>
-                    <li>Smochine uscate.</li>
-                    <li>Prune uscate.</li>
-                    <li>Stafide.</li>
-                </ul>
-            </li>
-            <li><b>Altele:</b>
-                <ul>
-                    <li>Tofu (mai ales cel preparat cu săruri de calciu).</li>
-                    <li>Cartofi (în special cei copți cu coajă).</li>
-                    <li>Ciocolată neagră (cu un conținut ridicat de cacao).</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h3>Factori care influențează absorbția fierului:</h3>
-        <ul>
-            <li><b>Vitamina C:</b> Consumul de alimente bogate în vitamina C (citrice, ardei gras, broccoli, roșii) alături de surse de fier non-hemic crește semnificativ absorbția acestuia.</li>
-            <li><b>Taninuri:</b> Prezente în cafea și ceai, pot inhiba absorbția fierului. Este recomandat să nu consumi aceste băuturi la masă sau imediat după.</li>
-            <li><b>Fitați:</b> Găsiți în cereale integrale și leguminoase, pot reduce absorbția fierului. Procese precum înmuierea și fierberea pot reduce conținutul de fitați.</li>
-            <li><b>Calciu:</b> Suplimentele de calciu și alimentele bogate în calciu (lactatele) pot reduce absorbția fierului. Este indicat să le consumi la ore diferite.</li>
-        </ul>
-
-        <h2 id="perspectiva-holistica">Fierul: Perspectivă holistică (cauze emoționale)</h2>
-        <p>Din punct de vedere holistic, fierul este adesea asociat cu <b>vitalitatea, forța, puterea personală, voința și capacitatea de a acționa și de a te manifesta în lume.</b> Sângele, prin care fierul transportă oxigenul, este văzut simbolic ca forța vieții și entuziasmul.</p>
-
-        <h3>Cauze emoționale ale deficitului de fier (anemie):</h3>
-        <p>Când o persoană suferă de deficit de fier și anemie, o perspectivă holistică ar putea explora următoarele aspecte emoționale:</p>
-        <ol>
-            <li><b>Lipsa de entuziasm și de bucurie de viață:</b> Fierul ne dă "scânteia" vitală. O lipsă emoțională de bucurie, o apatie profundă sau un sentiment că "viața este prea grea" pot rezonă cu o lipsă de energie la nivel fizic, reflectată în deficitul de fier.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Oboseală cronică, lipsă de vlagă.</li>
-                </ul>
-            </li>
-            <li><b>Dificultatea de a te "ancora" sau de a te "împământa":</b> Fierul este un mineral al pământului, al structurii. Emoțional, o persoană cu deficit de fier s-ar putea simți "neîmpământată", lipsită de stabilitate, cu dificultăți în a-și asuma responsabilități sau a se angaja pe deplin în viața cotidiană.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Amețeli, senzație de "ceață mentală".</li>
-                </ul>
-            </li>
-            <li><b>Lipsa de voință sau de curaj:</b> Fierul este legat de forța interioară și de capacitatea de a-ți urmări scopurile. O deficiență ar putea indica o lipsă de voință, teamă de confruntare, dificultatea de a-ți stabili limite sau de a-ți afirma propria putere.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Slăbiciune fizică, scăderea performanței sportive și intelectuale.</li>
-                </ul>
-            </li>
-            <li><b>Tristețe profundă, melancolie, pierderea speranței:</b> Emoțiile de tristețe cronică, doliu neprocesat sau un sentiment de resemnare pot "stinge" focul interior, manifestându-se ca o lipsă de fier.</li>
-            <li><b>Simbolismul sângelui:</b> Sângele este purtătorul vieții, al identității și al legăturilor familiale. Din perspectivă holistică, s-ar putea explora și "pierderi emoționale" sau sentimente de "golire", de "a fi drenat" energetic de situații sau persoane.</li>
-        </ol>
-
-        <h3>Cauze emoționale ale excesului de fier (hemocromatoză):</h3>
-        <p>Excesul de fier este mai rar și adesea legat de condiții genetice sau de transfuzii repetate. Totuși, din perspectiva holistică, unde fiecare dezechilibru are o semnificație, am putea explora:</p>
-        <ol>
-            <li><b>Rigiditate și încăpățânare:</b> Fierul este un metal dur, asociat cu structura. Un exces ar putea simboliza o rigiditate emoțională, o inflexibilitate, o dificultate de a te adapta sau de a lăsa lucrurile să curgă.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Fierul în exces se depozitează în țesuturi, inclusiv în ficat și inimă, ducând la probleme structurale.</li>
-                </ul>
-            </li>
-            <li><b>Furia reprimată sau resentimente acumulate:</b> "Sângele fierbinte" sau "fierberea sângelui" sunt expresii care descriu furia. Un exces de fier ar putea sugera o acumulare de furie, resentimente sau frustrări care nu au fost exprimate sau procesate sănătos, ducând la o "supraîncărcare" interioară.</li>
-            <li><b>Tendința de a "ține prea mult" sau de a nu "elibera":</b> Organismul reglează absorbția fierului, dar nu are un mecanism eficient de eliminare a excesului. Emoțional, acest lucru s-ar putea traduce printr-o dificultate de a renunța la trecut, la resentimente, la control, sau o tendință de a acumula (nu doar fier, ci și emoții sau posesiuni).</li>
-            <li><b>Nevoi excesive de control:</b> O nevoie puternică de a controla mediul sau pe ceilalți, reflectând o lipsă de încredere în fluxul vieții.</li>
-        </ol>
-
-        <h3>Recomandări holistice:</h3>
-        <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar, se pot recomanda:</p>
-        <ul>
-            <li><b>Pentru deficit (lipsă de vitalitate):</b>
-                <ul>
-                    <li>Practici care încurajează bucuria și entuziasmul (hobby-uri, artă, muzică).</li>
-                    <li>Exerciții fizice ușoare, mers în natură pentru "împământare".</li>
-                    <li>Meditație și vizualizare pentru a reconecta cu sursa de energie interioară.</li>
-                    <li>Terapii care ajută la eliberarea tristeții sau a traumelor emoționale.</li>
-                    <li>Afirmații pozitive despre forță, energie și curaj.</li>
-                </ul>
-            </li>
-            <li><b>Pentru exces (rigiditate, furie):</b>
-                <ul>
-                    <li>Practici de eliberare emoțională (jurnal, terapie, exprimare artistică a furiei).</li>
-                    <li>Exerciții de flexibilitate (yoga, stretching) care ajută și la nivel mental.</li>
-                    <li>Meditație pentru a cultiva acceptarea și a renunța la control.</li>
-                    <li>Lucrul cu iertarea și eliberarea resentimentelor.</li>
-                    <li>Activități care încurajează "curățarea" și "detoxifierea" pe toate planurile.</li>
-                </ul>
-            </li>
-        </ul>
-        <p>Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
     </div>
 </body>
 </html>
