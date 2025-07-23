@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghid Integrativ Exhaustiv - Vitamine și Minerale</title>
+    <title>Ghid Integrativ - Vitamine și Minerale</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --color-primary: #1abc9c;
+            --color-secondary: #2c3e50;
+            --color-coenzyme: #9b59b6;
+            --color-mineral: #3498db;
+            --color-background: #f4f7f6;
+            --color-text: #333;
+            --color-card-bg: #ffffff;
+        }
 
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.7;
             margin: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: var(--color-background);
+            color: var(--color-text);
         }
         .container {
             max-width: 1200px;
@@ -41,38 +51,39 @@
         }
         .section-title {
             font-size: 2.2em;
-            color: #2c3e50;
+            color: var(--color-secondary);
             margin: 40px 0 20px 0;
             text-align: center;
-            border-bottom: 3px solid #1abc9c;
+            border-bottom: 3px solid var(--color-primary);
             padding-bottom: 10px;
         }
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 25px;
+            gap: 30px; /* Am mărit spațierea pentru claritate */
         }
         .nutrient-card-link {
             text-decoration: none;
             color: inherit;
-            display: flex; /* Ensures the link takes up the full grid space */
+            display: flex; /* Asigură că linkul este un container flex */
         }
         .nutrient-card {
-            background: #ffffff;
+            background: var(--color-card-bg);
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             padding: 25px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 5px solid #1abc9c;
+            border-left: 5px solid var(--color-primary);
             display: flex;
             flex-direction: column;
-            width: 100%; /* Makes the card fill the link area */
+            width: 100%;
+            flex: 1; /* Cheia pentru egalizarea înălțimii: cardul umple linkul */
         }
         .nutrient-card.coenzyme {
-            border-left-color: #9b59b6;
+            border-left-color: var(--color-coenzyme);
         }
         .nutrient-card.mineral {
-            border-left-color: #3498db;
+            border-left-color: var(--color-mineral);
         }
         .nutrient-card-link:hover .nutrient-card {
             transform: translateY(-5px);
@@ -80,7 +91,7 @@
         }
         .nutrient-card h3 {
             font-size: 1.6em;
-            color: #2c3e50;
+            color: var(--color-secondary);
             margin-top: 0;
             margin-bottom: 15px;
             display: flex;
@@ -89,33 +100,28 @@
         .nutrient-card h3 .icon {
             font-size: 1.5em;
             margin-right: 12px;
-            color: #1abc9c;
+            color: var(--color-primary);
         }
         .nutrient-card.coenzyme h3 .icon {
-            color: #9b59b6;
+            color: var(--color-coenzyme);
         }
         .nutrient-card.mineral h3 .icon {
-            color: #3498db;
+            color: var(--color-mineral);
         }
         .nutrient-card p {
             font-size: 0.95em;
             color: #555;
-            flex-grow: 1;
-        }
-        .final-note {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 40px;
-            border-left: 5px solid #e74c3c;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            flex-grow: 1; /* Permite paragrafului să umple spațiul vertical disponibil */
         }
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             margin-top: 40px;
             color: #777;
             font-size: 0.9em;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
     </style>
 </head>
@@ -123,345 +129,267 @@
 
     <div class="container">
         <header class="header">
-            <h1>Ghid Integrativ Exhaustiv</h1>
+            <h1>Ghid integrativ- Micronutrienți </h1>
             <p>O perspectivă completă asupra vitaminelor și mineralelor</p>
         </header>
 
         <main>
             <section id="introducere">
-                <div class="nutrient-card">
-                    <h3><span class="icon">🌿</span>Introducere: Fundamentele vitalității</h3>
-                    <p>Vitaminele și mineralele sunt <b>elemente nutritive esențiale</b> pentru organismul uman. Deși sunt necesare în cantități mici, ele îndeplinesc un rol vital în funcționarea normală a corpului, contribuind la creștere, menținerea vitalității și bunăstarea generală. Acționează ca niște scântei biochimice, fiind componente ale sistemelor enzimatice care <b>stimulează și reglează metabolismul</b>, asigurând funcționarea întregului ansamblu la cei mai înalți parametri. Fără prezența tuturor vitaminelor esențiale, viața nu poate exista.</p>
-                    <p><b>Vitaminele</b>, fiind compuși organici, funcționează adesea ca și coenzime, molecule ajutătoare care permit reacțiilor biochimice să aibă loc eficient. <b>Mineralele</b>, elemente anorganice, servesc ca <b>componente structurale</b> ale corpului (de exemplu, calciu, magneziu, fosfor pentru oase și dinți) și joacă un rol important în diverse sisteme corporale, cum ar fi funcționarea sistemului nervos și producția de energie. Abordarea holistică recunoaște că acești nutrienți nu acționează izolat, ci într-o rețea complexă de <b>sinergii</b> (acțiuni de susținere reciprocă) și <b>antagonisme</b> (competiție). De exemplu, vitamina D necesită magneziu pentru a fi activată, iar zincul și cuprul trebuie să fie într-un echilibru delicat pentru a nu se bloca reciproc. Astfel, sănătatea nu este doar absența bolii de carență, ci o stare de echilibru dinamic, susținută de o nutriție completă, biodisponibilă și conștientă.</p>
+                <div class="nutrient-card" style="border-left-color: #34495e;">
+                    <h3><span class="icon" style="color: #34495e;">🌿</span>Introducere: Fundamentele vitalității</h3>
+                    <p>Vitaminele și mineralele sunt scânteile biochimice esențiale vieții. Deși necesare în cantități mici, ele reglează metabolismul și funcționează ca piese într-o rețea complexă de sinergii și antagonisme. O abordare holistică recunoaște că sănătatea nu este doar absența bolii, ci un echilibru dinamic susținut de o nutriție completă, unde fiecare element își are rolul său precis.</p>
                 </div>
             </section>
 
-            <h2 class="section-title">Ghidul vitaminelor: Liposolubile</h2>
+            <h2 class="section-title">Vitamine Liposolubile</h2>
             <section id="vitamine-liposolubile" class="grid-container">
-                
                 <a href="vitamina_A.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">👁️</span>Vitamina A (retinol, caroten)</h3>
-                        <p><b>Vitamina A</b> <b>mărește acuitatea vizuală pe timp de noapte, îmbunătățește vederea</b> și ajută în tratamentul multor boli de vedere. La nivel biochimic, forma sa activă (retinal) se combină cu proteina opsină pentru a forma rodopsina, pigmentul esențial din retină care permite vederea în lumină slabă. Din perspectiva medicinei tradiționale chineze (MTC), această funcție este direct legată de sănătatea "sângelui ficatului", care "hrănește ochii", iar la nivel holistic, este legată de viziunea interioară și claritatea mentală. Totodată, <b>mărește rezistența la infecțiile respiratorii</b> și ajută la funcționarea normală a sistemului imunitar, menținând integritatea mucoaselor (respiratorie, digestivă), prima barieră de apărare a corpului, corespondentul energetic al <b>Wei Qi</b> (energia defensivă), guvernată de plămâni. <b>Menține sănătatea țesuturilor superficiale</b> și a organelor interne, fiind vitală pentru diferențierea celulară. De asemenea, contribuie la <b>înlăturarea petelor pigmentare determinate de vârstă</b>, menține procesul de creștere și consolidare a oaselor și asigură <b>starea de sănătate a pielii, părului, dinților și gingiilor.</b> Forma sa de beta-caroten are un potențial de toxicitate redus, iar sinergia sa cu <b>zincul</b> este crucială: zincul este necesar pentru a transporta vitamina A din ficat către țesuturi.</p>
+                        <h3><span class="icon">👁️</span>Vitamina A</h3>
+                        <p>Esențială pentru vedere (în special nocturnă), imunitate și sănătatea pielii. Acționează ca antioxidant și este crucială pentru creșterea și diferențierea celulară. Necesită zinc pentru a fi transportată eficient în organism.</p>
                     </div>
                 </a>
-
                 <a href="vitamina_D.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">☀️</span>Vitamina D (calciferol)</h3>
-                        <p><b>Vitamina D</b> <b>contribuie la utilizarea optimă a calciului și fosforului,</b> substanțe necesare pentru oase și dinți sănătoși. <b>Împreună cu vitaminele A și C, acționează preventiv în cazul răcelilor.</b> Ajută la tratarea conjunctivitelor și la buna asimilare a vitaminei A. Acționează ca un pro-hormon, fiind un puternic modulator al sistemului imunitar. Sinergia sa cu magneziul (necesar pentru activare) și vitamina K2 (care direcționează calciul) este fundamentală pentru sănătatea osoasă și cardiovasculară. În MTC, este asociată cu energia <b>Yang a rinichilor</b>, sursa focului vital, iar în Ayurveda cu <b>Agni</b> (focul metabolic).</p>
+                        <h3><span class="icon">☀️</span>Vitamina D</h3>
+                        <p>Un pro-hormon vital pentru absorbția calciului, sănătatea oaselor și modularea sistemului imunitar. Acționează în sinergie perfectă cu vitamina K2 pentru a direcționa calciul corect în organism.</p>
                     </div>
                 </a>
-
                 <a href="vitamina_E.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">🛡️</span>Vitamina E (tocoferol)</h3>
-                        <p><b>Vitamina E</b> <b>conferă un aspect tineresc prin încetinirea procesului de îmbătrânire</b> a celulelor, datorat oxidării. <b>Mărește rezistența organismului</b> furnizând cantități sporite de oxigen. <b>Preîntâmpină formarea cheagurilor de sânge</b> și ajută la dizolvarea lor. <b>Atenuează starea de oboseală.</b> Este principalul antioxidant liposolubil care protejează membranele celulare și este regenerat de vitamina C. Holistic, este considerată un "scut" protector împotriva stresului oxidativ fizic și emoțional, susținând integritatea și granițele personale.</p>
+                        <h3><span class="icon">🛡️</span>Vitamina E</h3>
+                        <p>Principalul antioxidant liposolubil, protejează membranele celulare de stresul oxidativ. Susține sănătatea pielii, a sistemului cardiovascular și este regenerată de vitamina C.</p>
                     </div>
                 </a>
-
                 <a href="vitamina_K.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">🩸</span>Vitamina K (K1, K2)</h3>
-                        <p><b>Vitamina K</b> este esențială pentru <b>coagularea sanguină</b> și sănătatea oaselor. Există o diferență funcțională majoră: <b>vitamina K1</b> (filochinona) din plante este implicată majoritar în coagulare, în timp ce <b>vitamina K2</b> (menachinonele) din surse fermentate/animale este vitală pentru a direcționa calciul în oase și a preveni depunerea lui pe artere, acționând în sinergie cu vitamina D. La nivel holistic, reprezintă coeziunea și capacitatea de a "ține la un loc" aspectele vieții.</p>
+                        <h3><span class="icon">🩸</span>Vitamina K</h3>
+                        <p>Esențială pentru coagularea sângelui (K1) și pentru direcționarea calciului în oase și dinți, prevenind calcificarea arterelor (K2). Sinergia sa cu vitamina D este fundamentală.</p>
                     </div>
                 </a>
             </section>
 
-            <h2 class="section-title">Ghidul vitaminelor: Hidrosolubile</h2>
+            <h2 class="section-title">Vitamine Hidrosolubile</h2>
             <section id="vitamine-hidrosolubile" class="grid-container">
-
                 <a href="vitamina_B1.html" class="nutrient-card-link">
                     <div class="nutrient-card">
                         <h3><span class="icon">⚡</span>Vitamina B1 (Tiamina)</h3>
-                        <p><b>Vitamina B1</b> <b>ajută digestia, în special a carbohidraților,</b> fiind un cofactor esențial (tiamină pirofosfat - TPP) în ciclul Krebs pentru a transforma glucoza în energie (ATP). <b>Asigură funcționarea în limite normale a sistemului nervos, a mușchilor și a inimii,</b> fiind vitală pentru menținerea tecii de mielină care protejează nervii. De asemenea, <b>ajută la prevenirea răului de mare sau de avion.</b> Din perspectiva MTC, susține energia <b>splinei</b>, responsabilă de digestie și transformarea alimentelor în Qi.</p>
+                        <p>"Vitamina energiei", crucială pentru metabolismul carbohidraților în energie (ATP) și pentru funcționarea optimă a sistemului nervos, protejând teaca de mielină.</p>
                     </div>
                 </a>
-
                 <a href="vitamina_B2.html" class="nutrient-card-link">
                     <div class="nutrient-card">
                         <h3><span class="icon">✨</span>Vitamina B2 (Riboflavina)</h3>
-                        <p><b>Vitamina B2</b> <b>îmbunătățește starea de sănătate a pielii, părului și unghiilor.</b> <b>Mărește acuitatea vizuală și înlătură oboseala ochilor,</b> fiind o componentă a enzimei antioxidante glutation reductaza. <b>Contribuie la metabolizarea carbohidraților, a grăsimilor și proteinelor,</b> fiind o componentă cheie a coenzimelor FAD și FMN, esențiale în lanțul de transport al electronilor pentru producerea de energie.</p>
+                        <p>Componentă cheie a coenzimelor FAD și FMN, esențială pentru producerea de energie, metabolismul grăsimilor și activarea altor vitamine B (B6, B9).</p>
                     </div>
                 </a>
-
                 <a href="vitamina_B3.html" class="nutrient-card-link">
                     <div class="nutrient-card">
                         <h3><span class="icon">🔥</span>Vitamina B3 (Niacina)</h3>
-                        <p><b>Niacina</b> <b>scade colesterolul,</b> ajută digestia, menține sănătatea pielii și a circulației. Este crucială pentru producerea de energie (ca parte a coenzimelor NAD și NADP) și repararea ADN-ului.</p>
+                        <p>Vitală pentru producerea de energie (NAD/NADP) și repararea ADN-ului. Forma de acid nicotinic este folosită pentru a regla colesterolul, provocând un efect de "flush".</p>
                     </div>
                 </a>
-
                 <a href="vitamina_B5.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">🛡️</span>Vitamina B5 (Acid pantotenic)</h3>
-                        <p><b>Acidul pantotenic</b> <b>ajută la vindecarea rănilor</b> și <b>previne infecțiile prin mărirea capacității de formare a anticorpilor.</b> Este esențial pentru conversia energetică a lipidelor și glucidelor și este "vitamina anti-stres", fiind indispensabilă pentru funcționarea glandelor suprarenale și producția de cortizol.</p>
+                        <h3><span class="icon">🛡️</span>Vitamina B5 (Acid Pantotenic)</h3>
+                        <p>"Vitamina anti-stres", componentă centrală a Coenzimei A, indispensabilă pentru funcția glandelor suprarenale și producția de energie din grăsimi și carbohidrați.</p>
                     </div>
                 </a>
-
                 <a href="vitamina_B6.html" class="nutrient-card-link">
                     <div class="nutrient-card">
                         <h3><span class="icon">🧘‍♀️</span>Vitamina B6 (Piridoxină)</h3>
-                        <p><b>Vitamina B6</b> <b>contribuie la buna asimilare a proteinelor și grăsimilor</b> și are rol în <b>prevenirea tulburărilor nervoase.</b> Este un cofactor vital în producția de neurotransmițători (serotonină, dopamină, GABA), **atenuează greața** și este crucială pentru echilibrul hormonal, în special în metabolizarea estrogenului. De asemenea, permite sintetizarea acizilor nucleici și funcționează ca un diuretic natural.</p>
+                        <p>Cofactor cheie în crearea neurotransmițătorilor (serotonină, dopamină, GABA), esențială pentru echilibrul emoțional, somn și metabolismul proteinelor.</p>
                     </div>
                 </a>
-
                 <a href="vitamina_B7.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">💅</span>Vitamina H/B7 (Biotina) ()</h3>
-                        <p><b>Biotina</b> <b>încetinește încărunțirea părului</b> și este adjuvant în tratamentul preventiv împotriva cheliei. <b>Atenuează durerile musculare</b> și ajută la vindecarea eczemelor și a dermatitelor. Este esențială pentru metabolismul lipidelor și proteinelor și este produsă parțial de flora intestinală sănătoasă.</p>
+                        <h3><span class="icon">💅</span>Vitamina B7 (Biotina)</h3>
+                        <p>Coenzimă importantă pentru metabolismul macronutrienților. Cunoscută pentru rolul său în menținerea sănătății părului, pielii și unghiilor (producția de keratină).</p>
                     </div>
                 </a>
-
-                <a href="vitamina_B8.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">😌</span>Vitamina B8 (Inozitol)</h3>
-                        <p><b>Inozitolul</b> <b>contribuie la scăderea nivelului de colesterol</b> și ajută la menținerea stării de sănătate a părului. Joacă un rol important în semnalizarea celulară și funcția neurotransmițătorilor, fiind studiat pentru efectele sale calmante în anxietate și SOP.</p>
-                    </div>
-                </a>
-                
                 <a href="vitamina_B9.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">🌱</span>Vitamina B9 (Acid Folic/folat)</h3>
-                        <p><b>Acidul folic</b> este un factor esențial în <strong>formarea globulelor roșii</strong> și în producerea ADN și ARN. <strong>Preîntâmpină deficiențele de naștere</strong> (defecte de tub neural), fiind absolut crucial înainte și în timpul sarcinii. Acționează în sinergie perfectă cu vitamina B12 în procesul de metilare și este crucial pentru sănătatea cardiovasculară.</p>
+                        <h3><span class="icon">🌱</span>Vitamina B9 (Folat)</h3>
+                        <p>Esențială pentru sinteza ADN-ului, diviziunea celulară și formarea sângelui. Crucială în sarcină pentru a preveni defectele de tub neural la făt.</p>
                     </div>
                 </a>
-                
                 <a href="vitamina_B12.html" class="nutrient-card-link">
                     <div class="nutrient-card">
                         <h3><span class="icon">🧠</span>Vitamina B12 (Cobalamina)</h3>
-                        <p><b>Vitamina B12</b> este esențială pentru <b>formarea celulelor roșii</b> (prevenind anemia megaloblastică) și pentru <b>funcția neurologică,</b> menținând teaca de mielină. <b>Contribuie la metabolismul proteinelor, carbohidraților și grăsimilor</b> și este un jucător cheie în ciclul metilării, un proces fundamental pentru detoxifiere, reglarea expresiei genelor (epigenetică) și menținerea unui nivel scăzut de homocisteină.</p>
+                        <p>Indispensabilă pentru sănătatea sistemului nervos (menține teaca de mielină) și pentru formarea globulelor roșii. Vitală în ciclul metilării, alături de B9.</p>
                     </div>
                 </a>
-
-                <a href="vitamina_B15.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">💨</span>Vitamina B15 (Acid pangamic)</h3>
-                        <p><b>Vitamina B15</b> <b>mărește durata de viață a celulelor</b> prin îmbunătățirea oxigenării. <b>Scade nivelul colesterolului din sânge,</b> asigură protecția împotriva agenților poluanți și stimulează răspunsul imunitar.</p>
-                    </div>
-                </a>
-
-                <a href="vitamina_colina.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">💡</span>Colina</h3>
-                        <p><b>Colina</b> <b>ajută la controlul greutății și colesterolului,</b> fiind un precursor al neurotransmițătorului acetilcolină (memorie) și prevenind acumularea de grăsimi în ficat. Este vitală pentru integritatea membranelor celulare.</p>
-                    </div>
-                </a>
-                
                 <a href="vitamina_C.html" class="nutrient-card-link">
                     <div class="nutrient-card">
-                        <h3><span class="icon">🍊</span>Vitamina C (acid ascorbic)</h3>
-                        <p><b>Vitamina C</b> <b>ajută la vindecarea rănilor, a arsurilor și a gingiilor sângerânde</b> prin rolul său esențial în sinteza colagenului. <b>Mărește eficiența medicamentelor folosite în tratamentul infecțiilor urinare</b> și accelerează cicatrizarea post-operatorie. <b>Menține scăzut nivelul colesterolului din sânge,</b> contribuie la <b>prevenirea infecțiilor virale și bacteriene,</b> stimulând sistemul imunitar, și oferă <b>protecție împotriva agenților cancerigeni,</b> împiedicând formarea nitrozaminelor. Este "combustibilul" glandelor suprarenale, fiind consumată masiv în stres, și acționează în sinergie cu bioflavonoidele (vitamina P). La nivel holistic, este considerată un "liant" energetic, susținând integritatea și reziliența în fața "rănilor" emoționale.</p>
+                        <h3><span class="icon">🍊</span>Vitamina C (Acid Ascorbic)</h3>
+                        <p>Antioxidant puternic, esențial pentru sinteza colagenului (piele, oase, vase de sânge), imunitate și absorbția fierului din surse vegetale.</p>
                     </div>
                 </a>
-
-                <a href="vitamina_F.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">🥑</span>Vitamina F (acizi grași nesaturați)</h3>
-                        <p><b>Vitamina F</b> <b>preîntâmpină formarea depunerilor de colesterol în artere.</b> Asigură sănătatea pielii și a părului. Ajută la scăderea greutății corporale prin arderea grăsimilor saturate. Acesta este un termen mai vechi pentru acizii grași esențiali (Omega-3 și Omega-6), al căror echilibru este crucial pentru modularea inflamației în organism și pentru fluiditatea membranelor celulare, esențială pentru comunicarea intercelulară.</p>
-                    </div>
-                </a>
-
-                <a href="vitamina_P.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">🍇</span>Vitamina P (bioflavonoide)</h3>
-                        <p><b>Vitamina P</b> <b>împiedică distrugerea prin oxidare a vitaminei C,</b> îi potențează acțiunea, <b>întărește vasele capilare</b> și mărește rezistența la infecții. Deși nu sunt vitamine propriu-zise, acești compuși din plante sunt esențiali pentru sănătatea vasculară și acționează ca antioxidanți puternici.</p>
-                    </div>
-                </a>
-
             </section>
 
-            <h2 class="section-title">Coenzime și compuși esențiali</h2>
-            <section id="coenzime" class="grid-container">
-                <a href="nicotinamida.html" class="nutrient-card-link">
+            <h2 class="section-title">Compuși Esențiali și Pseudo-Vitamine</h2>
+            <section id="compusi-esentiali" class="grid-container">
+                <a href="colina.html" class="nutrient-card-link">
                     <div class="nutrient-card coenzyme">
-                        <h3><span class="icon">🔥</span>Nicotinamida</h3>
-                        <p><b>Nicotinamida</b> (o formă a vitaminei B3) este o componentă centrală a coenzimelor NAD+ și NADP+, esențiale în sute de reacții redox din metabolismul energetic. Este vitală pentru producerea de energie celulară (ATP), repararea ADN-ului și funcția antioxidantă. Holistic, susține "focul" metabolic și vitalitatea celulară, fiind crucială în procesele de anti-îmbătrânire.</p>
+                        <h3><span class="icon">💡</span>Colina</h3>
+                        <p>Nutrient esențial pentru sănătatea creierului (precursor al acetilcolinei), funcția hepatică (transportul grăsimilor) și integritatea membranelor celulare.</p>
+                    </div>
+                </a>
+                <a href="vitamina_B8.html" class="nutrient-card-link">
+                    <div class="nutrient-card coenzyme">
+                        <h3><span class="icon">😌</span>Inozitol (fost B8)</h3>
+                        <p>"Mesager" celular important pentru sensibilitatea la insulină (SOP) și funcția neurotransmițătorilor, având efecte benefice în anxietate și atacuri de panică.</p>
+                    </div>
+                </a>
+                 <a href="vitamina_F.html" class="nutrient-card-link">
+                    <div class="nutrient-card coenzyme">
+                        <h3><span class="icon">🥑</span>"Vitamina F" (Acizi Grași)</h3>
+                        <p>Termen vechi pentru acizii grași esențiali Omega-3 (anti-inflamator) și Omega-6 (pro-inflamator), al căror echilibru este vital pentru sănătate.</p>
+                    </div>
+                </a>
+                <a href="vitamina_P.html" class="nutrient-card-link">
+                    <div class="nutrient-card coenzyme">
+                        <h3><span class="icon">🍇</span>"Vitamina P" (Bioflavonoide)</h3>
+                        <p>Compuși din plante care acționează în sinergie cu vitamina C, întărind capilarele, reducând vânătaia și având un puternic efect antioxidant.</p>
                     </div>
                 </a>
                 <a href="coq10.html" class="nutrient-card-link">
                     <div class="nutrient-card coenzyme">
-                        <h3><span class="icon">🔋</span>Coenzima Q10 (Ubichinona)</h3>
-                        <p><b>Coenzima Q10</b> este un antioxidant liposolubil produs de corp, esențial pentru funcționarea mitocondriilor, "uzinele energetice" ale celulelor. Este indispensabilă pentru producerea de ATP, în special în organele cu cerere mare de energie, precum inima, ficatul și rinichii. La nivel holistic, reprezintă "scânteia vieții" la nivel celular, susținând energia fizică și reziliența cardiovasculară.</p>
+                        <h3><span class="icon">🔋</span>Coenzima Q10</h3>
+                        <p>"Scânteia" mitocondriilor, esențială pentru producerea de energie (ATP) în organele vitale, în special în inimă, ficat și rinichi.</p>
                     </div>
                 </a>
                 <a href="glutation.html" class="nutrient-card-link">
                     <div class="nutrient-card coenzyme">
-                        <h3><span class="icon"> Detox </span>Glutationul</h3>
-                        <p><b>Glutationul</b> este considerat "maestrul antioxidant" al organismului, fiind produs în fiecare celulă. Este crucial pentru detoxifierea hepatică (faza a II-a), neutralizarea radicalilor liberi, regenerarea vitaminelor C și E și menținerea unui sistem imunitar puternic. Holistic, este esențial pentru purificarea corpului de toxine fizice și energetice, menținând claritatea și integritatea la nivel celular.</p>
+                        <h3><span class="icon"> Detox </span>Glutation</h3>
+                        <p>"Maestrul antioxidant" al organismului, crucial pentru detoxifierea hepatică, protecția celulară, regenerarea vitaminelor C și E și funcția imunitară.</p>
+                    </div>
+                </a>
+                 <a href="vitamina_B15.html" class="nutrient-card-link">
+                    <div class="nutrient-card coenzyme">
+                        <h3><span class="icon">💨</span>"Vitamina B15"</h3>
+                        <p>Compus controversat, nerecunoscut ca vitamină. Promovat în medicina alternativă pentru oxigenare celulară și performanță atletică. A se aborda cu prudență.</p>
                     </div>
                 </a>
             </section>
 
-            <h2 class="section-title">Ghidul mineralelor</h2>
+            <h2 class="section-title">Minerale</h2>
             <section id="minerale" class="grid-container">
-
                 <a href="bor.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🌱</span>Bor</h3>
-                        <p><b>Borul</b> este un oligoelement important pentru metabolismul calciului, magneziului și fosforului, contribuind la sănătatea oaselor și prevenirea osteoporozei. Susține funcția cerebrală, concentrarea și memoria. De asemenea, joacă un rol în modularea răspunsului inflamator și în producția de hormoni steroizi, precum testosteronul și estrogenul.</p>
+                        <p>Oligoelement important pentru metabolismul calciului și magneziului, susținând sănătatea oaselor, funcția cerebrală și producția de hormoni steroizi.</p>
                     </div>
                 </a>
-
                 <a href="calciu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🦴</span>Calciu</h3>
-                        <p>Cel mai abundent mineral în corp, esențial, alături de fosfor, pentru <b>menținerea sănătății oaselor și dinților.</b> Asigură bătăile regulate ale inimii, ajută în tratamentul insomniilor și deține un rol important în transmiterea impulsurilor nervoase. Funcționează într-un echilibru delicat cu <b>magneziul</b> și depinde de <b>vitaminele D și K2</b>. Holistic, reprezintă structura, stabilitatea și sentimentul de siguranță.</p>
+                        <p>Cel mai abundent mineral, esențial pentru structura oaselor și a dinților. Vital pentru contracția musculară, transmiterea nervoasă și coagularea sângelui.</p>
                     </div>
                 </a>
-                
-                <a href="clor.html" class="nutrient-card-link">
-                    <div class="nutrient-card mineral">
-                        <h3><span class="icon">💧</span>Clor</h3>
-                        <p><b>Clorul</b>, împreună cu sodiul și potasiul, este un electrolit major care ajută la menținerea echilibrului fluidelor în organism. Este o componentă esențială a acidului clorhidric din stomac, fiind indispensabil pentru digestia proteinelor și absorbția altor nutrienți. Contribuie la menținerea pH-ului sanguin normal.</p>
-                    </div>
-                </a>
-
                 <a href="cobalt.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🔴</span>Cobalt</h3>
-                        <p><b>Cobaltul</b> este un component central al moleculei de <b>vitamina B12</b> (cobalamină), fiind astfel indispensabil pentru formarea globulelor roșii, funcția neurologică și sinteza ADN-ului. Deși necesar în cantități minuscule, rolul său este vital, fiind obținut prin consumul de vitamina B12.</p>
+                        <p>Component central al moleculei de vitamina B12 (cobalamină), fiind astfel indispensabil pentru formarea globulelor roșii și funcția neurologică.</p>
                     </div>
                 </a>
-
                 <a href="crom.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🍬</span>Crom</h3>
-                        <p><b>Cromul</b> contribuie, alături de insulină, la <b>metabolizarea zaharurilor,</b> îmbunătățind sensibilitatea celulară la insulină prin potențarea acțiunii acesteia. Ajută la reglarea glicemiei, fiind un factor important în prevenirea diabetului și a sindromului metabolic, și poate contribui la scăderea tensiunii arteriale.</p>
+                        <p>Îmbunătățește acțiunea insulinei, ajutând la reglarea glicemiei. Contribuie la metabolismul carbohidraților, grăsimilor și proteinelor.</p>
                     </div>
                 </a>
-
                 <a href="cupru.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🔗</span>Cupru</h3>
-                        <p><b>Cuprul</b> este necesar pentru <b>sintetizarea hemoglobinei din fierul organic.</b> Permite utilizarea eficientă a tirosinei, asigurând pigmenarea părului și pielii, și este important pentru formarea colagenului și a elastinei, menținând sănătatea țesutului conjunctiv. De asemenea, este un cofactor pentru enzima antioxidantă superoxid dismutaza (SOD).</p>
+                        <p>Necesar pentru formarea globulelor roșii, absorbția fierului și menținerea sănătății oaselor, vaselor de sânge și a nervilor. Acționează ca antioxidant.</p>
                     </div>
                 </a>
-
                 <a href="fier.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">❤️</span>Fier</h3>
-                        <p><b>Fierul</b> este un element nutritiv esențial pentru <b>producerea hemoglobinei</b> (care transportă oxigenul) și a mioglobinei (care stochează oxigenul în mușchi). Mărește rezistența la îmbolnăvire și preîntâmpină oboseala. Vindecă și previne anemiile cauzate de carențe. Absorbția sa este dependentă de <b>vitamina C</b>. Holistic, este legat de forța vitală, curaj și capacitatea de a "transporta" bucuria de a trăi.</p>
+                        <p>Esențial pentru producerea hemoglobinei, proteina care transportă oxigenul în sânge. Previne anemia și oboseala. Absorbția sa este sporită de vitamina C.</p>
                     </div>
                 </a>
-
-                <a href="fluor.html" class="nutrient-card-link">
-                    <div class="nutrient-card mineral">
-                        <h3><span class="icon">🦷</span>Fluor</h3>
-                        <p><b>Fluorul</b> contribuie la sănătatea oaselor și a dinților, întărind smalțul dentar și structura osoasă. Rolul său principal este de a <b>preveni cariile</b> prin inhibarea demineralizării și promovarea remineralizării dinților.</p>
-                    </div>
-                </a>
-
                 <a href="fosfor.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">💡</span>Fosfor</h3>
-                        <p><b>Fosforul</b> se regăsește în fiecare celulă, necesar pentru <b>structura normală a oaselor și dinților.</b> Asigură energia și vigoarea organismului, fiind o componentă cheie a moleculei de energie ATP, a membranelor celulare (fosfolipide) și a ADN-ului/ARN-ului.</p>
+                        <p>Prezent în fiecare celulă, esențial pentru oase și dinți. Component cheie al moleculei de energie ATP, al membranelor celulare și al ADN-ului.</p>
                     </div>
                 </a>
-
                 <a href="iod.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🦋</span>Iod</h3>
-                        <p>Două treimi din <b>iodul</b> din organism este concentrat în tiroidă, controlând metabolismul. Ajută la arderea excesului de grăsimi și contribuie la procesul de creștere. Este indispensabil pentru producția hormonilor tiroidieni T3 și T4. La nivel energetic, este legat de exprimare și comunicare (chakra gâtului).</p>
+                        <p>Indispensabil pentru producția hormonilor tiroidieni, care reglează metabolismul, creșterea și dezvoltarea. Esențial pentru funcția cognitivă.</p>
                     </div>
                 </a>
-
                 <a href="magneziu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🧘</span>Magneziu</h3>
-                        <p><b>Magneziul</b> este necesar pentru <b>metabolizarea vitaminelor C, calciu, fosfor, sodiu și potasiu.</b> Esențial pentru buna funcționare a mușchilor și nervilor. Are acțiune antidepresivă și contribuie la menținerea unui sistem cardiovascular sănătos. Este cofactor în peste 300 de reacții enzimatice și este "mineralul relaxării", fiind epuizat de stres.</p>
+                        <p>"Mineralul relaxării". Cofactor în peste 300 de reacții enzimatice, crucial pentru funcția musculară și nervoasă, producția de energie și reglarea glicemiei.</p>
                     </div>
                 </a>
-
                 <a href="mangan.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">💪</span>Mangan</h3>
-                        <p><b>Manganul</b> contribuie la activarea enzimelor necesare pentru utilizarea biotinei și a vitaminelor B1 și C. Ajută la <b>eliminarea oboselii</b> și îmbunătățește reflexele musculare. Este vital pentru sănătatea oaselor și a cartilajelor, formarea țesutului conjunctiv și funcția antioxidantă mitocondrială.</p>
+                        <p>Vital pentru sănătatea oaselor, formarea țesutului conjunctiv și funcția antioxidantă mitocondrială. Ajută la metabolismul macronutrienților.</p>
                     </div>
                 </a>
-                
-                <a href="molibden.html" class="nutrient-card-link">
-                    <div class="nutrient-card mineral">
-                        <h3><span class="icon">⚙️</span>Molibden</h3>
-                        <p><b>Molibdenul</b> contribuie la metabolizarea carbohidraților și a grăsimilor și este esențial în <b>detoxifierea sulfitilor</b> din alimente, acționând ca un cofactor pentru enzima sulfit oxidaza.</p>
-                    </div>
-                </a>
-
                 <a href="nichel.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">💎</span>Nichel</h3>
-                        <p><b>Nichelul</b> este un oligoelement care joacă un rol în funcția anumitor enzime și poate influența metabolismul fierului, calciului și al vitaminei B12. Deși esențialitatea sa la om este încă dezbătută, se consideră că ajută la menținerea sănătății membranelor celulare și la metabolismul hormonal.</p>
+                        <p>Oligoelement care poate influența metabolismul fierului și hormonilor. Rolul său exact la om este încă în studiu, dar este considerat important pentru sănătatea generală.</p>
                     </div>
                 </a>
-
                 <a href="potasiu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🍌</span>Potasiu</h3>
-                        <p><b>Potasiul</b> contribuie la echilibrarea balanței apei în organism și la normalizarea bătăilor inimii. Asigură o <b>gândire clară prin alimentarea creierului cu oxigen.</b> Ajută la eliminarea reziduurilor organice și contrabalansează efectele sodiului asupra tensiunii arteriale.</p>
+                        <p>Un electrolit crucial care reglează echilibrul fluidelor, contracțiile musculare și semnalele nervoase. Ajută la menținerea unei tensiuni arteriale sănătoase.</p>
                     </div>
                 </a>
-
                 <a href="seleniu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">✨</span>Seleniu</h3>
-                        <p><b>Seleniul</b> acționează ca <b>antioxidant</b> (parte a glutation peroxidazei), protejând țesuturile de deteriorarea oxidativă. Contribuie la funcția tiroidiană (conversia T4 în T3) și imunitate, acționând sinergic cu <b>vitamina E</b>.</p>
+                        <p>Un antioxidant puternic (parte a glutation peroxidazei), esențial pentru funcția tiroidiană (activarea hormonilor) și sănătatea sistemului imunitar.</p>
                     </div>
                 </a>
-
                 <a href="siliciu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🌍</span>Siliciu</h3>
-                        <p><b>Siliciul</b> este important pentru formarea și menținerea sănătății țesuturilor conjunctive, inclusiv oase, cartilaje, piele, păr și unghii. Este esențial pentru sinteza colagenului și a elastinei, conferind rezistență și flexibilitate acestor țesuturi. Contribuie la menținerea densității osoase.</p>
+                        <p>Important pentru formarea și menținerea sănătății țesuturilor conjunctive, inclusiv oase, piele, păr și unghii, prin rolul său în sinteza colagenului.</p>
                     </div>
                 </a>
-
                 <a href="staniu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🔩</span>Staniu</h3>
-                        <p><b>Staniul</b> este un oligoelement a cărui funcție în corpul uman nu este pe deplin înțeleasă, dar studiile sugerează că ar putea juca un rol în creșterea normală și în funcția anumitor procese metabolice. Este prezent în cantități foarte mici în organism.</p>
+                        <p>Oligoelement a cărui funcție la om nu este pe deplin înțeleasă, dar se crede că ar putea juca un rol în creșterea normală și procesele metabolice.</p>
                     </div>
                 </a>
-
                 <a href="strontiu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">⚛️</span>Stronțiu</h3>
-                        <p><b>Stronțiul</b> este un mineral similar calciului, care se poate încorpora în matricea osoasă. Anumite forme (ranelatul de stronțiu) sunt folosite terapeutic pentru a crește densitatea osoasă și a reduce riscul de fracturi în osteoporoză, prin stimularea formării osoase și inhibarea resorbției.</p>
+                        <p>Mineral similar calciului, care se poate încorpora în oase. Anumite forme sunt folosite terapeutic pentru a crește densitatea osoasă în osteoporoză.</p>
                     </div>
                 </a>
-
-                <a href="sulf.html" class="nutrient-card-link">
-                    <div class="nutrient-card mineral">
-                        <h3><span class="icon">🌿</span>Sulf</h3>
-                        <p><b>Sulful</b> este esențial pentru <b>sănătatea părului, pielii și unghiilor</b> (componentă a keratinei) și pentru detoxifierea hepatică (parte a glutationului). Este un component important al multor aminoacizi (metionină, cisteină) și este crucial pentru integritatea țesutului conjunctiv.</p>
-                    </div>
-                </a>
-
                 <a href="vanadiu.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">❤️‍🩹</span>Vanadiu</h3>
-                        <p><b>Vanadiul</b> inhibă formarea colesterolului în vasele sanguine și ajută la <b>prevenirea atacurilor cardiace.</b> Este studiat pentru rolul său în mimarea acțiunii insulinei, putând fi de ajutor în reglarea glicemiei.</p>
+                        <p>Oligoelement studiat pentru rolul său în mimarea acțiunii insulinei, putând fi de ajutor în reglarea glicemiei și metabolismul colesterolului.</p>
                     </div>
                 </a>
-
                 <a href="zinc.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🧬</span>Zinc</h3>
-                        <p><b>Zincul</b> îndeplinește rolul unui agent de circulație, dirijând și supraveghind buna desfășurare a proceselor fiziologice și a sistemelor enzimatice și celulare. Accelerează procesul de vindecare a rănilor și este vital pentru imunitate, fertilitate și simțul gustului/mirosului.</p>
+                        <p>Cofactor pentru sute de enzime. Vital pentru imunitate, vindecarea rănilor, sinteza ADN-ului, fertilitate și menținerea simțului gustului și mirosului.</p>
                     </div>
                 </a>
-
-            </section>
-
-            <section id="nota-finala">
-                <div class="final-note">
-                    <h3>Notă finală: Dieta, procesarea și suplimentarea</h3>
-                    <p>Este important de reținut că, deși o dietă echilibrată ar trebui să asigure necesarul de vitamine și minerale, <b>prelucrarea alimentelor, depozitarea și gătirea pot distruge multe dintre ele.</b> De asemenea, agricultura modernă a dus la sărăcirea solurilor în minerale esențiale. De aceea, în societatea modernă, suplimentele pot fi necesare pentru a compensa aceste carențe. Vitaminele nu pot fi asimilate în lipsa alimentelor obișnuite și nu pot înlocui macronutrienții. Mineralele sunt, de asemenea, indispensabile pentru ca vitaminele să-și poată îndeplini rolul. Abordarea ideală este o dietă bazată pe alimente integrale, dense nutritiv, completată inteligent și personalizat, acolo unde este cazul, sub îndrumarea unui specialist.</p>
-                </div>
             </section>
         </main>
 
         <footer class="footer">
-            <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
+            <h3>Notă finală: Dieta, procesarea și suplimentarea</h3>
+            <p>Deși o dietă echilibrată ar trebui să asigure necesarul de nutrienți, prelucrarea alimentelor, depozitarea și gătirea pot distruge multe dintre ele. De asemenea, agricultura modernă a dus la sărăcirea solurilor în minerale. Abordarea ideală este o dietă bazată pe alimente integrale, dense nutritiv, completată inteligent și personalizat, acolo unde este cazul, sub îndrumarea unui specialist.</p>
+            <p style="margin-top: 20px;">Copyright &copy; 2025 dr.ing. Radu Pascu</p>
         </footer>
     </div>
 
