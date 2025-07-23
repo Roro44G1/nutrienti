@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B15 și Respirația Celulară</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #7f8c8d;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #6c7a7b transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #6c7a7b transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 8px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #7f8c8d;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #7f8c8d;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #95a5a6;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            background-color: #f8f9fa;
+        }
+        @media (max-width: 768px) {
+            .section { padding: 20px; }
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B15 și respirația celulară
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">1. Perspectiva fizică și biochimică</h2>
+            <div class="physical-row">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p><b>Vitamina B15</b>, cunoscută și ca <b>acid pangamic</b>, este un compus controversat, nerecunoscut oficial ca vitamină în multe țări. În medicina alternativă, este considerat un nutrient valoros.</p>
+                    <ul>
+                        <li><b>Oxigenarea celulară:</b> cel mai important rol atribuit este capacitatea de a îmbunătăți utilizarea oxigenului la nivel celular și de a reduce acumularea de acid lactic, <b>mărind durata de viață a celulelor</b> și rezistența la efort.</li>
+                        <li><b>Detoxifiere și protecție hepatică:</b> <b>asigură protecția împotriva agenților poluanți</b>, în special monoxidul de carbon, și susține funcția ficatului.</li>
+                        <li><b>Sănătate cardiovasculară:</b> <b>scade nivelul colesterolului din sânge</b> și ajută la îmbunătățirea circulației.</li>
+                        <li><b>Sistemul imunitar:</b> <b>stimulează răspunsul imunitar al organismului</b> prin susținerea funcției glandelor endocrine.</li>
+                        <li><b>Funcția neurologică:</b> poate contribui la calmarea sistemului nervos.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                     <p>Vitamina B15 se găsește în cantități mici în diverse alimente, adesea alături de alte vitamine din complexul B.</p>
+                    <ul>
+                        <li>Drojdie de bere.</li>
+                        <li>Cereale integrale: orez brun, orz.</li>
+                        <li>Semințe: semințe de dovleac, semințe de susan.</li>
+                        <li>Ficat de vită.</li>
+                        <li>Sâmburi de caise.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="physical-row">
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de deficit</h3>
+                    <p>Deoarece nu este recunoscută ca o vitamină esențială, nu există un tablou clinic clar al deficienței. Teoretic, un aport scăzut ar putea contribui la:</p>
+                    <ul>
+                        <li>Oboseală și rezistență scăzută la efort.</li>
+                        <li>Oxigenare celulară deficitară.</li>
+                        <li>Tulburări nervoase și endocrine.</li>
+                        <li>Îmbătrânire celulară accelerată.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de exces</h3>
+                    <p>Vitamina B15 este considerată a avea o toxicitate foarte scăzută. Nu au fost raportate efecte adverse semnificative. În cazuri rare, la începutul suplimentării, unele persoane pot experimenta greață, care de obicei dispare după câteva zile.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Perspectiva holistică și funcțională</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Sinergii și factori care cresc necesarul</h3>
+                    <p><b>Sinergii (lucrează împreună cu):</b></p>
+                    <ul>
+                        <li><b>Vitaminele E și A:</b> acționează sinergic pentru a proteja celulele de oxidare.</li>
+                        <li><b>Vitaminele din complexul B:</b> completează acțiunea acestora în metabolismul energetic.</li>
+                        <li><b>Coenzima Q10:</b> ambele susțin producția de energie la nivel mitocondrial.</li>
+                    </ul>
+                    <p><b>Factori care cresc necesarul:</b></p>
+                    <ul>
+                        <li>Sportivii de performanță, persoanele care trăiesc în medii poluate sau la altitudini mari, persoanele cu afecțiuni cardiovasculare sau hepatice.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Perspective din medicinele tradiționale</h3>
+                    <p><b>Medicina tradițională chineză (MTC):</b> Funcția de a îmbunătăți oxigenarea o leagă direct de <b>Qi-ul Plămânilor</b> (respirația) și de <b>Qi-ul Rinichilor</b> (anduranța). Prin susținerea rezistenței la efort, tonifică <b>Qi-ul Splinei</b> (mușchii). Acțiunea sa de protecție hepatică susține funcția <b>Ficatului</b>.</p>
+                    <p><b>Ayurveda:</b> Poate fi văzută ca un agent <b>Rasayana</b> (rejuvenant), care crește <b>Prana</b> (forța vitală) și <b>Ojas</b> (esența vitalității și imunității). Susține toate cele șapte țesuturi (*dhatus*), în special *Rakta* (sângele) și *Mamsa* (mușchii).</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">3. Perspectiva psiho-somatică și spirituală</h2>
+            <p>Din perspectivă holistică, <b>Vitamina B15</b> este asociată cu <b>respirația vieții, reziliența, anduranța și capacitatea de a prospera în medii dificile</b>. Ea rezonează cu abilitatea noastră de a "respira" adânc în fața provocărilor, de a ne oxigena nu doar corpul, ci și mintea și spiritul, și de a rezista "poluanților" emoționali.</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span>Deficit</h3>
+                    <p>Un deficit teoretic ar putea fi legat de:</p>
+                    <ol>
+                        <li><b>Senzația de a fi "sufocat" de viață:</b> sentimentul de a nu avea suficient "aer" sau spațiu personal, de a fi copleșit.<br><i>Manifestare fizică: oboseală, rezistență scăzută.</i></li>
+                        <li><b>Lipsa de anduranță emoțională:</b> epuizare rapidă în fața conflictelor sau a stresului.</li>
+                        <li><b>Vulnerabilitate la "toxicitatea" emoțională:</b> absorbirea ușoară a negativității din jur.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span>Exces (nevoia de a suplimenta)</h3>
+                    <p>Căutarea acestui nutrient poate indica:</p>
+                    <ol>
+                        <li><b>O dorință de a depăși limitele umane:</b> o tendință spre perfecționism și performanță extremă.</li>
+                        <li><b>O luptă conștientă cu un mediu perceput ca fiind toxic:</b> o nevoie de a construi un "scut" suplimentar.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>Recomandări integrative</h3>
+                    <ul>
+                        <li><b>Practici de respirație conștientă (Pranayama):</b> pentru a crește oxigenarea și a calma sistemul nervos.</li>
+                        <li><b>Exerciții fizice moderate:</b> pentru a îmbunătăți capacitatea cardiovasculară și rezistența.</li>
+                        <li><b>Tehnici de "curățare" energetică:</b> meditații, timp petrecut în natură, departe de mediile poluate.</li>
+                        <li><b>Stabilirea de granițe sănătoase</b> pentru a te proteja de "poluanții" emoționali.</li>
+                        <li><b>Cultivarea rezilienței și a anduranței</b> prin asumarea de provocări graduale și celebrarea progresului.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască. Statutul vitaminei B15 este neclar, iar suplimentarea trebuie făcută cu prudență și, ideal, sub îndrumarea unui specialist.</p>
+        </div>
+        
+        <div class="footer-copyright">
+            <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
+        </div>
+    </div>
+</body>
+</html>
