@@ -3,347 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minerale - DZR</title>
+    <title>Doze Recomandate - Minerale</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --color-header-bg: #2c3e50; /* Gri închis pentru antet */
+            --color-table-header-bg: #6c7a7b; /* Gri mai deschis pentru capul de tabel */
+            --color-secondary: #2c3e50;
+            --color-background: #f4f7f6;
+            --color-text: #333;
+            --color-card-bg: #ffffff;
+            --color-border: #e0e0e0;
+            --color-link: #3498db;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
             margin: 0;
-            background-color: #e9ecef;
-            color: #343a40;
+            background-color: var(--color-background);
+            color: var(--color-text);
             display: flex;
             justify-content: center;
             padding: 40px 20px;
             box-sizing: border-box;
         }
-        .infographic-container {
-            max-width: 900px;
+        .container {
+            max-width: 1200px; /* Am mărit lățimea pentru noua coloană */
             width: 100%;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: var(--color-card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             overflow: hidden;
-            border: 1px solid #e0e0e0;
         }
-        .infographic-header {
-            background-color: #79a3b1;
+        .header {
+            background: var(--color-header-bg);
             color: white;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
-            font-size: 2.2em;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
             font-weight: 700;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-            position: relative;
         }
-        .infographic-header:before, .infographic-header:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
         }
-        .infographic-header:before {
-            border-width: 0 0 20px 20px;
-            border-color: transparent transparent #5f8694 transparent;
-            bottom: 0;
-            left: 0;
-        }
-        .infographic-header:after {
-            border-width: 20px 20px 0 0;
-            border-color: #5f8694 transparent transparent transparent;
-            top: 0;
-            right: 0;
-        }
-
-        .section {
+        .content {
             padding: 30px 40px;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
         }
-        .section:last-child {
-            border-bottom: none;
-        }
-
-        .section-title {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 600;
-            border-bottom: 2px solid #a3d9ff;
-            padding-bottom: 5px;
-            align-self: stretch;
-        }
-        .section-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            width: 100%;
+        .table-container {
+            overflow-x: auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border-radius: 10px;
-            overflow: hidden; /* Ensures rounded corners apply to inner elements */
-        }
-        th, td {
-            border: 1px solid #e0e0e0;
-            padding: 12px 15px;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background-color: #f0f8ff;
-            color: #2c3e50;
-            font-weight: 600;
-            font-size: 1em;
-            text-transform: uppercase;
-        }
-        td {
-            background-color: #ffffff;
             font-size: 0.95em;
         }
-        tr:nth-child(even) td {
+        th, td {
+            border: 1px solid var(--color-border);
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: var(--color-table-header-bg);
+            color: white;
+            font-weight: 700;
+        }
+        tr:nth-child(even) {
             background-color: #f8f9fa;
         }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin: 0;
+        td:first-child a {
+            font-weight: bold;
+            color: var(--color-link);
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
-        li {
-            margin-bottom: 4px;
-        }
-        li:last-child {
-            margin-bottom: 0;
+        td:first-child a:hover {
+            color: #2980b9;
         }
         .note {
             font-size: 0.85em;
             color: #777;
             margin-top: 20px;
-            text-align: center;
-            width: 100%;
         }
-        .footer-copyright {
+        .footer {
             text-align: center;
-            padding: 20px 0;
-            font-size: 0.85em;
-            color: #6c757d;
-            border-top: 1px solid #e0e0e0;
+            padding: 20px;
             margin-top: 20px;
+            color: #777;
+            font-size: 0.9em;
+            background-color: #f8f9fa;
         }
-
+        
         @media (max-width: 768px) {
-            .infographic-header {
-                font-size: 1.8em;
+            .content {
+                padding: 20px 15px;
             }
-            .section-title {
-                font-size: 1.5em;
-            }
-            table, th, td {
-                display: block;
-            }
-            th {
-                text-align: right;
-                padding-right: 20px;
-                position: relative;
-            }
-            td {
-                text-align: left;
-                padding-left: 20px;
-            }
-            tr {
-                margin-bottom: 15px;
-                border: 1px solid #e0e0e0;
-                border-radius: 10px;
-                padding: 10px;
-                background-color: #ffffff;
-            }
-            tr:nth-child(even) {
-                background-color: #f8f9fa;
-            }
-            tr td:before {
-                content: attr(data-label);
-                font-weight: bold;
-                text-transform: uppercase;
-                margin-right: 10px;
-                color: #5f8694;
-                display: inline-block;
-                width: 120px; /* Adjust as needed */
-            }
-            th:before {
-                content: ""; /* Hide content for mobile th */
+            .header h1 {
+                font-size: 2em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="infographic-container">
-        <div class="infographic-header">
-            Minerale - Puterea Pământului în corpul tău
+
+    <div class="container">
+        <header class="header">
+            <h1>Ghid Doze Recomandate - Minerale</h1>
+            <p>Aport Adecvat (AI), Doze Zilnice Recomandate (DZR) și Limite Superioare (UL) pentru adulți.</p>
+        </header>
+
+        <div class="content">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mineral</th>
+                            <th>Surse alimentare principale</th>
+                            <th>Aport Adecvat (AI) / Doză Recomandată (DZR)</th>
+                            <th>Limită Superioară (UL)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="bor.html">Bor</a></td>
+                            <td>Prune, stafide, migdale, avocado</td>
+                            <td>Nu este stabilit</td>
+                            <td>20 mg/zi</td>
+                        </tr>
+                        <tr>
+                            <td><a href="calciu.html">Calciu</a></td>
+                            <td>Lactate, sardine, tofu, legume verzi (kale)</td>
+                            <td>1.000 - 1.200 mg/zi</td>
+                            <td>2.500 mg/zi</td>
+                        </tr>
+                        <tr>
+                            <td><a href="cobalt.html">Cobalt</a></td>
+                            <td>Ficat, carne, pește, lactate (ca parte a B12)</td>
+                            <td>Nu este stabilit</td>
+                            <td>Nu este stabilit</td>
+                        </tr>
+                        <tr>
+                            <td><a href="crom.html">Crom</a></td>
+                            <td>Broccoli, cereale integrale, struguri</td>
+                            <td>AI: 25-35 mcg/zi</td>
+                            <td>Nu este stabilit</td>
+                        </tr>
+                        <tr>
+                            <td><a href="cupru.html">Cupru</a></td>
+                            <td>Ficat, stridii, nuci, semințe, ciocolată neagră</td>
+                            <td>DZR: 900 mcg/zi</td>
+                            <td>10.000 mcg/zi (10 mg)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="fier.html">Fier</a></td>
+                            <td>Carne roșie, ficat, spanac, linte, fasole</td>
+                            <td>DZR: 8 mg (bărbați), 18 mg (femei, 19-50 ani)</td>
+                            <td>45 mg/zi</td>
+                        </tr>
+                        <tr>
+                            <td><a href="fosfor.html">Fosfor</a></td>
+                            <td>Lactate, carne, pește, nuci, leguminoase</td>
+                            <td>DZR: 700 mg/zi</td>
+                            <td>4.000 mg/zi</td>
+                        </tr>
+                        <tr>
+                            <td><a href="iod.html">Iod</a></td>
+                            <td>Pește marin, alge, lactate, sare iodată</td>
+                            <td>DZR: 150 mcg/zi</td>
+                            <td>1.100 mcg/zi</td>
+                        </tr>
+                        <tr>
+                            <td><a href="magneziu.html">Magneziu</a></td>
+                            <td>Legume verzi, nuci, semințe, avocado</td>
+                            <td>DZR: 400-420 mg (bărbați), 310-320 mg (femei)</td>
+                            <td>350 mg/zi (din suplimente)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="mangan.html">Mangan</a></td>
+                            <td>Cereale integrale, nuci, ananas, ceai</td>
+                            <td>AI: 2.3 mg (bărbați), 1.8 mg (femei)</td>
+                            <td>11 mg/zi</td>
+                        </tr>
+                        <tr>
+                            <td><a href="nichel.html">Nichel</a></td>
+                            <td>Nuci, semințe, leguminoase, ciocolată</td>
+                            <td>Nu este stabilit</td>
+                            <td>1.000 mcg/zi (1 mg)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="potasiu.html">Potasiu</a></td>
+                            <td>Banane, cartofi, spanac, avocado, fasole</td>
+                            <td>AI: 3.400 mg (bărbați), 2.600 mg (femei)</td>
+                            <td>Nu este stabilit (din alimente)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="seleniu.html">Seleniu</a></td>
+                            <td>Nuci de Brazilia, fructe de mare, carne, ouă</td>
+                            <td>DZR: 55 mcg/zi</td>
+                            <td>400 mcg/zi</td>
+                        </tr>
+                        <tr>
+                            <td><a href="siliciu.html">Siliciu</a></td>
+                            <td>Banane, fasole verde, orez brun, ovăz</td>
+                            <td>Nu este stabilit</td>
+                            <td>Nu este stabilit</td>
+                        </tr>
+                        <tr>
+                            <td><a href="staniu.html">Staniu</a></td>
+                            <td>Alimente conservate, cereale, legume</td>
+                            <td>Nu este stabilit</td>
+                            <td>Nu este stabilit</td>
+                        </tr>
+                        <tr>
+                            <td><a href="strontiu.html">Stronțiu</a></td>
+                            <td>Fructe de mare, cereale integrale, legume</td>
+                            <td>Nu este stabilit</td>
+                            <td>Nu este stabilit</td>
+                        </tr>
+                        <tr>
+                            <td><a href="vanadiu.html">Vanadiu</a></td>
+                            <td>Ciuperci, crustacee, piper negru</td>
+                            <td>Nu este stabilit</td>
+                            <td>1.800 mcg/zi (1.8 mg)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="zinc.html">Zinc</a></td>
+                            <td>Stridii, carne roșie, semințe de dovleac</td>
+                            <td>DZR: 11 mg (bărbați), 8 mg (femei)</td>
+                            <td>40 mg/zi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">
+                <strong>Notă:</strong> Valorile prezentate sunt pentru adulți și se bazează pe ghidurile dietetice de referință (Dietary Reference Intakes - DRI) emise de Institute of Medicine (IOM), SUA. Acestea pot varia ușor în funcție de alte organizații de sănătate. Consultați întotdeauna un specialist pentru recomandări personalizate.
+            </p>
         </div>
 
-        <div class="section">
-            <h2 class="section-title">Tabel comparativ al mineralelor</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Mineral</th>
-                        <th>Cantitatea în corp (adult)</th>
-                        <th>DZR (adulți)</th>
-                        <th>Surse alimentare</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Mineral">Bor</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">1-13 mg/zi (aport sigur)</td>
-                        <td data-label="Surse alimentare">Fructe, legume cu frunze verzi, nuci, leguminoase, vin, cidru, bere.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Calciu</td>
-                        <td data-label="Cantitatea în corpul uman">1-1.5 kg (aproximativ 1.5-2% din greutatea corporală)</td>
-                        <td data-label="Doza zilnică recomandată">1000-1200 mg/zi</td>
-                        <td data-label="Surse alimentare">Produse lactate (lapte, iaurt, brânzeturi), pește cu oase comestibile (sardine, somon), legume cu frunze verzi (kale, broccoli), leguminoase (năut, linte), nuci și semințe (susan, chia), produse fortificate (lapte vegetal, cereale), tofu, smochine uscate.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Clor</td>
-                        <td data-label="Cantitatea în corpul uman">Aproximativ 70 g (0.1% din greutatea corporală)</td>
-                        <td data-label="Doza zilnică recomandată">2300-2500 mg/zi</td>
-                        <td data-label="Surse alimentare">Sare de masă, alimente procesate (conserve, mezeluri), măsline, alge marine, legume (țelină, salată verde, roșii).</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Cobalt</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică (componentă a Vitaminei B12)</td>
-                        <td data-label="Doza zilnică recomandată">3-5 µg/zi (ca parte a Vitaminei B12)</td>
-                        <td data-label="Surse alimentare">Alimente de origine animală (carne, ficat, pește, ouă, lactate), surse de Vitamina B12.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Crom</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">25-35 µg/zi</td>
-                        <td data-label="Surse alimentare">Broccoli, fructe (mere, banane), suc de struguri, carne, condimente (piper negru, busuioc), drojdie de bere, ciuperci, prune, stafide, nuci, sparanghel, vin, cereale integrale.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Cupru</td>
-                        <td data-label="Cantitatea în corpul uman">80-150 mg</td>
-                        <td data-label="Doza zilnică recomandată">0.9-1.2 mg/zi</td>
-                        <td data-label="Surse alimentare">Fructe de mare (stridii, crab), nuci și semințe, leguminoase, cereale integrale, organe (ficat), ciocolată, cacao, apă potabilă.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Fier</td>
-                        <td data-label="Cantitatea în corpul uman">3-4 g</td>
-                        <td data-label="Doza zilnică recomandată">8 mg/zi (bărbați); 18 mg/zi (femei)</td>
-                        <td data-label="Surse alimentare">Carne roșie, organe (ficat), leguminoase (fasole, linte), legume cu frunze verzi (spanac, sparanghel), fructe uscate (stafide, caise), cereale fortificate, ouă, nuci, semințe, fructe de mare (scoici, stridii).</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Fluor</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică (aproximativ 2-3 g)</td>
-                        <td data-label="Doza zilnică recomandată">3.5 mg/zi</td>
-                        <td data-label="Surse alimentare">Apă potabilă (fluorizată), ceai, pește de mare, alimente fortificate.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Fosfor</td>
-                        <td data-label="Cantitatea în corpul uman">~600 g (0.65-1.1% din greutatea corporală)</td>
-                        <td data-label="Doza zilnică recomandată">700-1250 mg/zi</td>
-                        <td data-label="Surse alimentare">Produse lactate (lapte, brânză), carne, pește, ouă, leguminoase, nuci și semințe, cereale integrale, legume cu frunze verzi.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Iod</td>
-                        <td data-label="Cantitatea în corpul uman">20-50 mg</td>
-                        <td data-label="Doza zilnică recomandată">150 µg/zi</td>
-                        <td data-label="Surse alimentare">Fructe de mare (pește de mare, alge marine, crustacee), sare iodată, produse lactate, ouă, cartofi, curcan.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Magneziu</td>
-                        <td data-label="Cantitatea în corpul uman">~25 g (0.05% din greutatea corporală)</td>
-                        <td data-label="Doza zilnică recomandată">310-420 mg/zi (femei/bărbați)</td>
-                        <td data-label="Surse alimentare">Nuci și semințe (braziliene, floarea-soarelui, dovleac), cereale integrale, leguminoase, legume cu frunze verzi (spanac, chard), avocado, ciocolată neagră, banane, stafide.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Mangan</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">1.8-2.3 mg/zi (femei/bărbați)</td>
-                        <td data-label="Surse alimentare">Cereale integrale, nuci, ghimbir, ceai, fasole, ananas, spanac, cartofi dulci.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Molibden</td>
-                        <td data-label="Cantitatea în corpul uman">Aproximativ 9 mg</td>
-                        <td data-label="Doza zilnică recomandată">45 µg/zi</td>
-                        <td data-label="Surse alimentare">Leguminoase (fasole, linte), nuci, cereale integrale (în special germenii), lapte, pâine, apă.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Nichel</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică (sub 10 mg) / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">Sub 100 µg/zi (aport sigur)</td>
-                        <td data-label="Surse alimentare">Cereale integrale, leguminoase, nuci și semințe, ciocolată, cacao, ceai, legume (spanac, broccoli).</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Potasiu</td>
-                        <td data-label="Cantitatea în corpul uman">~250 g (0.3% din greutatea corporală)</td>
-                        <td data-label="Doza zilnică recomandată">4700 mg/zi</td>
-                        <td data-label="Surse alimentare">Fructe (banane, caise, kiwi), legume (cartofi, spanac, sfeclă), produse lactate, carne, pește, leguminoase, cereale integrale.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Seleniu</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">55-75 µg/zi (femei/bărbați)</td>
-                        <td data-label="Surse alimentare">Nuci braziliene, fructe de mare (pește, crustacee), carne (organe), ouă, cereale integrale.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Siliciu</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">Nu este stabilită</td>
-                        <td data-label="Surse alimentare">Alimente de origine vegetală (cereale integrale, ierburi, legume cu frunze verzi), apă.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Sodiu</td>
-                        <td data-label="Cantitatea în corpul uman">~100 g (0.1% din greutatea corporală)</td>
-                        <td data-label="Doza zilnică recomandată">1000 mg/zi (pentru menținere)</td>
-                        <td data-label="Surse alimentare">Sare de masă, alimente procesate (conserve, mezeluri, snacks-uri), măsline, alge marine, legume (țelină, roșii).</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Staniu</td>
-                        <td data-label="Cantitatea în corpul uman">Aproximativ 17 mg</td>
-                        <td data-label="Doza zilnică recomandată">Aproximativ 8 µg/zi (aport estimat)</td>
-                        <td data-label="Surse alimentare">Alimente conservate în cutii de tablă, cereale integrale, leguminoase, carne, pește, fructe și legume.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Stronțiu</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">Nu este stabilită</td>
-                        <td data-label="Surse alimentare">Cereale integrale, legume cu frunze verzi, rădăcinoase, fructe, fructe de mare, produse lactate, apă potabilă.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Sulf</td>
-                        <td data-label="Cantitatea în corpul uman">~140 g (0.2% din greutatea corporală)</td>
-                        <td data-label="Doza zilnică recomandată">Nu este stabilită (acoperită prin proteine)</td>
-                        <td data-label="Surse alimentare">Proteine de origine animală (carne, pește, ouă, lactate), proteine de origine vegetală (leguminoase, nuci), legume crucifere (broccoli, varză), ceapă, usturoi, drojdie de bere.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Vanadiu</td>
-                        <td data-label="Cantitatea în corpul uman">Cantitate foarte mică / Nu este stabilită</td>
-                        <td data-label="Doza zilnică recomandată">Aproximativ 10 µg/zi (aport estimat)</td>
-                        <td data-label="Surse alimentare">Fructe de mare (stridii, scoici, pește), cereale integrale, leguminoase, legume (spanac, pătrunjel, ciuperci), carne, produse lactate.</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Mineral">Zinc</td>
-                        <td data-label="Cantitatea în corpul uman">1.5-2.5 g</td>
-                        <td data-label="Doza zilnică recomandată">8-15 mg/zi (femei/bărbați)</td>
-                        <td data-label="Surse alimentare">Fructe de mare (stridii, crab), carne (vită, miel, porc), nuci și semințe (dovleac, susan), leguminoase (fasole, linte), cereale integrale, produse lactate, ouă.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="note">Notă: Dozele zilnice recomandate (DZR) și valorile nutriționale de referință (VNR) pot varia ușor în funcție de organizația care le emite (de exemplu: OMS, FDA), vârstă, sex, starea fiziologică (sarcină, alăptare) și condițiile medicale. Aportul de minerale este influențat și de biodisponibilitate (de exemplu: fitați, oxalați, interacțiuni cu alte minerale). Consultați întotdeauna un specialist pentru recomandări personalizate.</p>
-        </div>
-
-        <div class="footer-copyright">
-            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
-        </div>
+        <footer class="footer">
+            <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
+        </footer>
     </div>
+
 </body>
 </html>
