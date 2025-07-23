@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitamina B6 (Piridoxina) și Echilibrul Emoțional</title>
+    <title>Vitamina B6 și Echilibrul Emoțional</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +26,7 @@
             border: 1px solid #e0e0e0;
         }
         .infographic-header {
-            background-color: #79a3b1;
+            background-color: #27ae60;
             color: white;
             padding: 30px 20px;
             text-align: center;
@@ -44,28 +44,23 @@
         }
         .infographic-header:before {
             border-width: 0 0 20px 20px;
-            border-color: transparent transparent #5f8694 transparent;
+            border-color: transparent transparent #229954 transparent;
             bottom: 0;
             left: 0;
         }
         .infographic-header:after {
             border-width: 20px 20px 0 0;
-            border-color: #5f8694 transparent transparent transparent;
+            border-color: #229954 transparent transparent transparent;
             top: 0;
             right: 0;
         }
-
         .section {
             padding: 30px 40px;
             border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
         }
         .section:last-child {
             border-bottom: none;
         }
-
         .section-title {
             font-size: 1.8em;
             color: #2c3e50;
@@ -73,7 +68,6 @@
             font-weight: 600;
             border-bottom: 2px solid #a3d9ff;
             padding-bottom: 5px;
-            align-self: stretch;
         }
         .section-content {
             display: flex;
@@ -81,13 +75,12 @@
             gap: 25px;
             width: 100%;
         }
-        /* New styling for the rows within section-content for physical perspective */
         .physical-row {
             display: flex;
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
-            margin-bottom: 25px; /* Space between rows */
+            margin-bottom: 25px;
         }
         .physical-row:last-child {
             margin-bottom: 0;
@@ -106,7 +99,7 @@
         }
         .subsection-title {
             font-size: 1.3em;
-            color: #5f8694;
+            color: #27ae60;
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
@@ -121,74 +114,44 @@
             padding-left: 20px;
         }
         .subsection li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         .subsection b {
             color: #34495e;
         }
         .note {
-            font-size: 0.85em;
-            color: #777;
+            font-size: 0.9em;
+            color: #6c757d;
             margin-top: 20px;
-            text-align: center;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #27ae60;
             width: 100%;
+            box-sizing: border-box;
         }
-
-        .subsection ol ul {
-            list-style: circle;
-            margin-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
         .icon {
             font-size: 1.8em;
             margin-right: 10px;
-            color: #79a3b1;
+            color: #27ae60;
             display: inline-block;
             vertical-align: middle;
         }
         .icon-small {
             font-size: 1.5em;
             margin-right: 8px;
-            color: #79b18b;
+            color: #2ecc71;
             display: inline-block;
             vertical-align: middle;
         }
-
-        .index-button-container {
-            text-align: center;
-            padding: 20px 40px;
-            background-color: #f0f0f0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .index-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-        }
-        .index-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
         .footer-copyright {
             text-align: center;
             padding: 20px 0;
             font-size: 0.85em;
             color: #6c757d;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 20px;
+            background-color: #f8f9fa;
         }
-
         @media (max-width: 768px) {
+            .section { padding: 20px; }
             .section-content, .physical-row {
                 flex-direction: column;
             }
@@ -207,151 +170,141 @@
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Vitamina B6 (Piridoxina) și Echilibrul Emoțional
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+            Vitamina B6 și echilibrul emoțional
         </div>
 
         <div class="section">
-            <h2 class="section-title">Vitamina B6 (Piridoxina) - Perspectiva fizică</h2>
-            <div class="section-content">
-                <div class="physical-row">
-                    <div class="subsection">
-                        <h3 class="subsection-title">Rolul principal</h3>
-                        <p>Vitamina B6 este o vitamină hidrosolubilă esențială, parte a complexului de vitamine B. Este un termen generic pentru șase compuși (piridoxină, piridoxal, piridoxamină și formele lor fosforilate), dintre care piridoxal 5'-fosfat (PLP) este forma activă principală. Joacă un rol extrem de versatil, fiind implicată în peste 100 de reacții enzimatice.</p>
-                        <ul>
-                            <li><b>Metabolismul proteinelor și aminoacizilor:</b> PLP este o coenzimă esențială pentru majoritatea reacțiilor care implică aminoacizi, inclusiv sinteza și descompunerea proteinelor. Este crucială pentru transformarea triptofanului în niacină și a metioninei în cisteină.</li>
-                            <li><b>Sinteza neurotransmițătorilor:</b> Este vitală pentru producerea mai multor neurotransmițători importanți (mesageri chimici ai creierului), inclusiv serotonina, dopamina, noradrenalina, GABA și histamina. Aceștia sunt esențiali pentru reglarea dispoziției, somnului și funcției cognitive.</li>
-                            <li><b>Formarea globulelor roșii și funcția hemoglobinei:</b> Este necesară pentru sinteza hemului (parte a hemoglobinei) și pentru a permite hemoglobinei să lege oxigenul. O deficiență poate duce la anemie sideroblastică.</li>
-                            <li><b>Sistemul imunitar:</b> Contribuie la dezvoltarea și funcția celulelor imunitare, cum ar fi limfocitele.</li>
-                            <li><b>Metabolismul glucozei:</b> Joacă un rol în reglarea glicemiei prin eliberarea glucozei din glicogenul muscular și hepatic.</li>
-                            <li><b>Sănătatea sistemului nervos:</b> Pe lângă sinteza neurotransmițătorilor, vitamina B6 ajută la menținerea integrității tecii de mielină.</li>
-                        </ul>
-                    </div>
-                    <div class="subsection">
-                        <h3 class="subsection-title">Surse alimentare</h3>
-                        <p>Vitamina B6 se găsește într-o varietate largă de alimente, atât animale, cât și vegetale.</p>
-                        <ul>
-                            <li><b>Carne de pasăre:</b> Pui, curcan.</li>
-                            <li><b>Pește:</b> Somon, ton.</li>
-                            <li><b>Cartofi și cartofi dulci</b>.</li>
-                            <li><b>Banane</b>.</li>
-                            <li><b>Cereale fortificate:</b> Pâine, cereale pentru micul dejun.</li>
-                            <li><b>Leguminoase:</b> Năut (foarte bogat), linte, fasole.</li>
-                            <li><b>Ficat:</b> De vită, pui.</li>
-                            <li><b>Nuci și semințe:</b> Semințe de floarea-soarelui.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="physical-row">
-                    <div class="subsection">
-                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză B6)</h3>
-                        <p>Deficiența de vitamina B6 este relativ rară în țările dezvoltate, dar poate apărea la alcoolici, vârstnici, persoane cu afecțiuni renale sau autoimune, sau la utilizarea unor medicamente (ex: izoniazidă).</p>
-                        <ol>
-                            <li><b>Probleme neurologice și psihiatrice:</b>
-                                <ul>
-                                    <li>Convulsii (în special la sugari cu deficit sever).</li>
-                                    <li>Neuropatie periferică (amorțeală, furnicături la mâini și picioare).</li>
-                                    <li>Encefalopatie.</li>
-                                    <li>Iritabilitate, depresie, anxietate, confuzie, insomnie.</li>
-                                </ul>
-                            </li>
-                            <li><b>Probleme dermatologice:</b> Dermatită seboreică (erupții scuamoase) în jurul ochilor, nasului și gurii.</li>
-                            <li><b>Glosită (inflamația limbii) și cheiloză (crăpături la colțurile gurii)</b>.</li>
-                            <li><b>Anemie sideroblastică:</b> Un tip de anemie în care globulele roșii nu pot încorpora fierul eficient.</li>
-                            <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții.</li>
-                        </ol>
-                    </div>
-                    <div class="subsection">
-                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B6)</h3>
-                        <p>Toxicitatea vitaminei B6 apare aproape exclusiv din suplimentarea excesivă cu doze foarte mari (peste 1-2 grame/zi) pe termen lung, nu din aportul alimentar.</p>
-                        <ol>
-                            <li><b>Neuropatie senzorială severă:</b> Amorțeală severă și progresivă, furnicături și dureri la nivelul extremităților, ataxie (dificultăți de coordonare), afectarea sensului vibrațiilor și al poziției. În cazuri severe, poate duce la dificultăți de mers și la leziuni nervoase permanente.</li>
-                            <li><b>Leziuni ale pielii:</b> Leziuni cutanate, fotosensibilitate (rar).</li>
-                            <li><b>Greață și arsuri la stomac.</b></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Vitamina B6 (Piridoxina): Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, Vitamina B6 (Piridoxina) este adesea asociată cu <b>echilibrul emoțional, gestionarea stresului, fluiditatea gândurilor și a emoțiilor, capacitatea de a procesa și integra experiențele și armonizarea minte-corp</b>. Prin rolul său central în sinteza neurotransmițătorilor și în metabolismul proteinelor, Vitamina B6 rezonează cu "chimia" noastră emoțională, cu abilitatea de a ne simți centrați și de a ne adapta la fluxurile interne și externe.</p>
-
-            <div class="section-content">
+            <h2 class="section-title">1. Perspectiva fizică și biochimică</h2>
+            <div class="physical-row">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de Vitamina B6 poate fi legat de următoarele aspecte emoționale:</p>
-                    <ol>
-                        <li><b>Dezechilibre emoționale și instabilitate:</b> Schimbări bruște de dispoziție, iritabilitate, anxietate sau depresie. O senzație de a fi "pe val" emoțional, fără un control clar.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Iritabilitate, depresie, anxietate, insomnie, convulsii.</li>
-                            </ul>
-                        </li>
-                        <li><b>Dificultăți în a procesa experiențele și emoțiile:</b> Incapacitatea de a "digera" evenimente trecute, resentimente sau frustrări, lăsându-le să se acumuleze și să afecteze echilibrul.</li>
-                        <li><b>Lipsa de fluiditate mentală și "rigiditate":</b> Deși fizic poate afecta nervii (care transmit fluid), emoțional poate indica o lipsă de flexibilitate în gândire, o tendință de a fi "fixat" pe anumite idei sau tipare.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Neuropatie periferică, dificultăți de coordonare.</li>
-                            </ul>
-                        </li>
-                        <li><b>Sentiment de deconectare minte-corp:</b> O lipsă de armonie între ceea ce gândești și ceea ce simți sau faci, ducând la frustrare și la o lipsă de coerență internă.</li>
-                        <li><b>Vulnerabilitate la stres:</b> Capacitatea redusă de a face față presiunilor, ducând la o "supraîncărcare" emoțională rapidă.</li>
-                    </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de Vitamina B6 (aproape exclusiv din suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
-                    <ol>
-                        <li><b>Control excesiv al emoțiilor:</b> O tendință de a suprima sau de a "manipula" emoțiile, de a le ține sub control strict, ceea ce poate duce la o rigiditate sau o lipsă de autenticitate emoțională.</li>
-                        <li><b>Rigiditate în gândire și "analiză excesivă":</b> O nevoie de a analiza și de a înțelege totul la nivel intelectual, fără a permite fluiditatea emoțională sau intuiția.</li>
-                        <li><b>"Supra-stimulare" nervoasă emoțională:</b> O energie mentală și emoțională prea intensă, care duce la agitație, neliniște sau insomnie.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Neuropatie senzorială (amorțeală, furnicături severe).</li>
-                            </ul>
-                        </li>
-                        <li><b>Perfecționism și judecată:</b> O nevoie de a fi "perfect" în procesarea emoțiilor sau în comportament, ducând la auto-critică sau la judecarea celorlalți.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Calea spre echilibru</h2>
-            <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p><b>Vitamina B6</b> (<b>piridoxină</b>) este o vitamină hidrosolubilă esențială cu roluri diverse, în special în metabolismul proteinelor și funcția neurologică. Forma sa activă este coenzima <b>piridoxal 5'-fosfat (PLP)</b>.</p>
                     <ul>
-                        <li><b>Practici de echilibrare emoțională:</b> Meditație, mindfulness, respirație conștientă pentru a armoniza mintea și corpul.</li>
-                        <li><b>Terapii</b> pentru eliberarea emoțiilor reprimate și a traumelor, cultivarea fluidității emoționale.</li>
-                        <li><b>Exerciții de coordonare minte-corp</b> (yoga, dans, tai chi) pentru a îmbunătăți integrarea.</li>
-                        <li><b>Jurnalism terapeutic</b> pentru a procesa experiențele și a clarifica gândurile.</li>
-                        <li><b>Practici de gestionare a stresului</b> și de construire a rezilienței.</li>
+                        <li><b>Metabolismul proteinelor și al aminoacizilor:</b> PLP este un cofactor pentru peste 100 de enzime implicate în metabolismul aminoacizilor.</li>
+                        <li><b>Sinteza neurotransmițătorilor:</b> Este esențială pentru producerea de <b>serotonină</b>, <b>dopamină</b>, <b>epinefrină</b>, <b>norepinefrină</b> și <b>GABA</b>.</li>
+                        <li><b>Sănătatea sistemului nervos:</b> Contribuie la menținerea sănătății neuronilor și la formarea mielinei.</li>
+                        <li><b>Formarea hemoglobinei:</b> PLP este necesară pentru sinteza hemului, o componentă a hemoglobinei.</li>
+                        <li><b>Metabolismul homocisteinei:</b> Împreună cu folatul (B9) și vitamina B12, ajută la transformarea homocisteinei în cisteină.</li>
+                        <li><b>Funcția imunitară:</b> Este importantă pentru menținerea sănătății organelor limfoide și pentru producția de anticorpi.</li>
+                        <li><b>Metabolismul glicogenului:</b> Ajută la eliberarea glucozei stocate în ficat și mușchi.</li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                     <p>Vitamina B6 se găsește într-o gamă largă de alimente, atât de origine animală, cât și vegetală.</p>
                     <ul>
-                        <li><b>Practici de relaxare profundă</b> și de "împământare" pentru a calma sistemul nervos.</li>
-                        <li><b>Terapii</b> care ajută la eliberarea nevoii de control și la cultivarea flexibilității.</li>
-                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> și a incertitudinii.</li>
-                        <li><b>Meditații</b> pentru a cultiva flexibilitatea mentală și a reduce supra-analiza.</li>
-                        <li><b>Exerciții</b> care încurajează renunțarea la rigiditate și permit un flux mai natural al vieții.</li>
+                        <li><b>Carne:</b> Pasăre (pui, curcan), carne de porc, vită (în special ficat).</li>
+                        <li><b>Pește:</b> Somon, ton.</li>
+                        <li><b>Leguminoase:</b> Năut (o sursă vegetală excepțional de bogată), linte, soia.</li>
+                        <li><b>Nuci și semințe:</b> Fistic, semințe de floarea-soarelui.</li>
+                        <li><b>Legume:</b> Cartofi, spanac, morcovi.</li>
+                        <li><b>Fructe:</b> Banane, avocado, pepene roșu.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="physical-row">
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de deficit</h3>
+                    <p>Deficiența severă este rară, dar carențele moderate pot apărea la persoanele cu afecțiuni renale, boli autoimune sau alcoolism.</p>
+                    <ul>
+                        <li><b>Probleme dermatologice:</b> Dermatită seboreică, crăpături la colțurile gurii (cheiloză), limbă umflată (glosită).</li>
+                        <li><b>Probleme neurologice:</b> Confuzie, iritabilitate, depresie, anxietate. La sugari, poate provoca convulsii. Neuropatie periferică (amorțeală și furnicături).</li>
+                        <li><b>Anemie microcitară:</b> Globule roșii mai mici decât normal.</li>
+                        <li><b>Imunitate slăbită.</b></li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome cauzate de exces (toxicitate)</h3>
+                    <p>Dozele foarte mari din suplimente, luate pe termen lung (peste 100-200 mg/zi), pot fi toxice.</p>
+                     <ul>
+                        <li><b>Neuropatie periferică severă:</b> Principalul simptom toxic. Poate include durere, amorțeală și slăbiciune la nivelul membrelor. De obicei, este reversibilă după oprirea suplimentării.</li>
+                        <li><b>Sensibilitate la lumină (fotosensibilitate).</b></li>
+                        <li><b>Greață și arsuri la stomac.</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. Perspectiva holistică și funcțională</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rol în managementul stresului și axa hormonală</h3>
+                    <p>Prin rolul său crucial în sinteza neurotransmițătorilor GABA (calmant) și serotonină (stare de bine), vitamina B6 este fundamentală pentru un răspuns echilibrat la stres. De asemenea, este implicată în metabolizarea hormonilor steroizi, inclusiv a estrogenului, fiind utilă în managementul sindromului premenstrual (SPM).</p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Sinergii și antagonisme</h3>
+                    <p><b>Sinergii (lucrează împreună cu):</b></p>
+                    <ul>
+                        <li><b>Magneziu:</b> Vitamina B6 ajută la transportul magneziului în celule. Acționează sinergic în reducerea simptomelor de anxietate și SPM.</li>
+                        <li><b>Alte vitamine B (B2, B9, B12):</b> Funcționează împreună în căile metabolice.</li>
+                        <li><b>Zincul:</b> Este necesar pentru conversia vitaminei B6 în forma sa activă (PLP).</li>
+                    </ul>
+                    <p><b>Antagonisme (competiție sau blocaj):</b></p>
+                    <ul>
+                        <li><b>Alcoolul:</b> Crește distrugerea și eliminarea vitaminei B6.</li>
+                        <li><b>Anumite medicamente:</b> Contraceptivele orale, unele medicamente pentru tuberculoză și boala Parkinson.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Perspective din medicinele tradiționale</h3>
+                    <p><b>Medicina tradițională chineză (MTC):</b> Vitamina B6 este legată de funcția <b>Ficatului</b>, care asigură fluxul liber al <b>Qi-ului</b> și reglează emoțiile. Ajută la calmarea "Vântului din Ficat" (iritabilitate, spasme) și la susținerea <b>Shen-ului</b> (mintea, spiritul), adăpostit în <b>Inimă</b>.</p>
+                    <p><b>Ayurveda:</b> Este esențială pentru buna funcționare a <b>Majja Dhatu</b> (țesutul nervos). Este deosebit de importantă pentru echilibrarea <b>Vata dosha</b>, care guvernează sistemul nervos, ajutând la reducerea anxietății și agitației.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">3. Perspectiva psiho-somatică și spirituală</h2>
+            <p>Din perspectivă holistică, <b>Vitamina B6</b> este asociată cu <b>echilibrul emoțional, procesarea viselor, transformarea și capacitatea de a integra experiențele</b>. Rezonează cu alchimia interioară, cu abilitatea de a transforma experiențele brute în stări de spirit și înțelegeri subtile.</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span>Deficit</h3>
+                    <p>Un deficit de vitamina B6 poate fi legat de:</p>
+                    <ol>
+                        <li><b>Instabilitate emoțională și iritabilitate:</b> o tendință de a avea stări de spirit fluctuante, de a te simți copleșit emoțional.<br><i>Manifestare fizică: depresie, anxietate.</i></li>
+                        <li><b>Dificultatea de a-ți aminti visele:</b> indică o dificultate în procesul de "digestie" nocturnă a informațiilor.</li>
+                        <li><b>Sentimentul de a fi "blocat" într-o stare:</b> incapacitatea de a transforma o emoție sau o situație.</li>
+                        <li><b>Confuzie și lipsă de claritate mentală.</b></li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span>Exces</h3>
+                    <p>Excesul toxic din suplimente ar putea sugera la nivel simbolic:</p>
+                    <ol>
+                        <li><b>O "scurtcircuitare" a sistemului nervos:</b> o încercare forțată de a schimba starea de spirit, care duce la o amorțire.<br><i>Manifestare fizică: neuropatie periferică.</i></li>
+                        <li><b>O supra-procesare mentală:</b> o tendință de a analiza excesiv, care duce la "paralizie prin analiză".</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>În caz de deficit</h3>
+                    <ul>
+                        <li>Lucrul cu visele: ținerea unui jurnal de vise.</li>
+                        <li>Terapii pentru echilibrare emoțională: meditație, tehnici de respirație.</li>
+                        <li>Practici creative care ajută la transformarea și exprimarea emoțiilor (pictură, scris, dans).</li>
+                        <li>Asigurarea unui aport adecvat de magneziu și zinc, care lucrează în sinergie.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span>În caz de exces</h3>
+                    <ul>
+                        <li>Renunțarea la nevoia de a controla stările interioare prin mijloace externe.</li>
+                        <li>Practici de "împământare" pentru a te reconecta cu corpul și cu simțurile.</li>
+                        <li>Cultivarea încrederii în procesele naturale de transformare, fără a le forța.</li>
                     </ul>
                 </div>
             </div>
             <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
-        </div>
-
+        
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
         </div>
     </div>
 </body>
