@@ -3,301 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitamina B2 și claritatea energetică</title>
+    <title>Vitamina B2 (Riboflavina)</title>
     <style>
+        :root {
+            --primary-color: #f1c40f; /* O nuanță de galben-auriu */
+            --primary-color-dark: #f39c12;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f6f7;
+            --text-color: #34495e;
+            --card-background: #ffffff;
+            --light-gray-background: #f8f9fa;
+            --border-color: #e0e0e0;
+            --accent-blue: #3498db;
+            --accent-green: #27ae60;
+            --base-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --border-radius-large: 15px;
+            --border-radius-small: 10px;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: var(--base-font-family);
+            line-height: 1.7;
             margin: 0;
-            background-color: #e9ecef;
-            color: #343a40;
+            background-color: var(--background-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             padding: 40px 20px;
             box-sizing: border-box;
         }
+
         .infographic-container {
-            max-width: 900px;
+            max-width: 950px;
             width: 100%;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: var(--card-background);
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-medium);
             overflow: hidden;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
         }
+
         .infographic-header {
-            background-color: #f1c40f;
-            color: #2c3e50;
-            padding: 30px 20px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 40px 20px;
             text-align: center;
-            font-size: 2.2em;
+            font-size: 2.4em;
             font-weight: 700;
             text-shadow: 1px 1px 4px rgba(255,255,255,0.4);
             position: relative;
         }
-        .infographic-header:before, .infographic-header:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .infographic-header:before {
-            border-width: 0 0 20px 20px;
-            border-color: transparent transparent #d4ac0d transparent;
-            bottom: 0;
-            left: 0;
-        }
-        .infographic-header:after {
-            border-width: 20px 20px 0 0;
-            border-color: #d4ac0d transparent transparent transparent;
-            top: 0;
-            right: 0;
-        }
+
         .section {
-            padding: 30px 40px;
+            padding: 25px 45px;
             border-bottom: 1px solid #f0f0f0;
         }
+
         .section:last-child {
             border-bottom: none;
         }
+
         .section-title {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 20px;
+            font-size: 1.9em;
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
             font-weight: 600;
-            border-bottom: 2px solid #a3d9ff;
-            padding-bottom: 5px;
+            border-bottom: 3px solid var(--primary-color-dark);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
+
         .section-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
             width: 100%;
         }
-        .physical-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            width: 100%;
-            margin-bottom: 25px;
-        }
-        .physical-row:last-child {
-            margin-bottom: 0;
-        }
+        
         .subsection {
             flex: 1;
-            min-width: 280px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
+            min-width: 300px;
+            background-color: var(--light-gray-background);
+            border-radius: var(--border-radius-small);
+            padding: 25px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid transparent;
         }
+
         .subsection:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left-color: var(--primary-color);
         }
+
         .subsection-title {
-            font-size: 1.3em;
-            color: #f39c12;
+            font-size: 1.4em;
+            color: var(--primary-color-dark);
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
             display: flex;
             align-items: center;
+            border-bottom: none;
+            padding-bottom: 0;
         }
-        .subsection p, .subsection ul, .subsection ol {
-            font-size: 0.95em;
-            margin-bottom: 10px;
+
+        .subsection p,.subsection ul,.subsection ol {
+            font-size: 0.98em;
+            margin-bottom: 12px;
         }
-        .subsection ul, .subsection ol {
+
+        .subsection ul,.subsection ol {
             padding-left: 20px;
         }
+
         .subsection li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
-        .subsection b {
-            color: #34495e;
+
+        .subsection b,.subsection strong {
+            color: var(--secondary-color);
         }
+
         .note {
             font-size: 0.9em;
             color: #6c757d;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #f1c40f;
+            margin-top: 25px;
+            padding: 15px 20px;
+            background-color: #fef9e7;
+            border-left: 4px solid var(--primary-color);
             width: 100%;
             box-sizing: border-box;
+            border-radius: 5px;
         }
+        
+        .holistic-note {
+            background-color: #e8f8f5;
+            border-left-color: var(--accent-green);
+       }
+
         .icon {
-            font-size: 1.8em;
-            margin-right: 10px;
-            color: #f1c40f;
-            display: inline-block;
+            font-size: 1.5em;
+            margin-right: 12px;
+            color: var(--primary-color-dark);
             vertical-align: middle;
         }
+        
+        .subsection-icon {
+             font-size: 1.5em;
+             margin-right: 10px;
+             color: var(--primary-color-dark);
+        }
+        
         .icon-small {
             font-size: 1.5em;
             margin-right: 8px;
-            color: #f39c12;
+            color: var(--primary-color-dark);
             display: inline-block;
             vertical-align: middle;
         }
+
+        .footer-container {
+            padding: 30px 45px;
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+        }
+        
+        .references h4 {
+            color: white;
+            border-bottom: 1px solid #7f8c8d;
+            padding-bottom: 5px;
+        }
+        
+        .references ul {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 0.8em;
+        }
+        
+        .references li {
+            margin-bottom: 5px;
+        }
+
         .footer-copyright {
             text-align: center;
             padding: 20px 0;
-            font-size: 0.85em;
+            font-size: 0.9em;
             color: #6c757d;
-            background-color: #f8f9fa;
+            background-color: var(--light-gray-background);
         }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--light-gray-background);
+        }
+
         @media (max-width: 768px) {
-            .section { padding: 20px; }
-            .section-content, .physical-row {
+            .section { padding: 25px 20px; }
+            .section-content {
                 flex-direction: column;
             }
             .subsection {
                 min-width: unset;
             }
             .infographic-header {
-                font-size: 1.8em;
+                font-size: 2em;
             }
             .section-title {
-                font-size: 1.5em;
+                font-size: 1.6em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="infographic-container">
-        <div class="infographic-header">
-            Vitamina B2 și claritatea energetică
-        </div>
+    <main class="infographic-container">
+        <header class="infographic-header">
+            Vitamina B2 (Riboflavina)
+        </header>
 
-        <div class="section">
-            <h2 class="section-title">1. Perspectiva fizică și biochimică</h2>
-            <div class="physical-row">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p><b>Vitamina B2</b>, cunoscută sub denumirea de <b>riboflavină</b>, este o vitamină hidrosolubilă esențială, crucială pentru metabolismul energetic, sănătatea pielii și a ochilor. Organismul nu o poate stoca în cantități mari, necesitând un aport zilnic constant.</p>
-                    <ul>
-                        <li><b>Metabolismul energetic:</b> Este o componentă cheie a coenzimelor FAD (flavin adenin dinucleotid) și FMN (flavin mononucleotid), care sunt esențiale pentru producerea de energie din carbohidrați, grăsimi și proteine. Aceste coenzime funcționează ca niște "baterii" reîncărcabile în lanțul de transport al electronilor, procesul final prin care celulele generează ATP, "moneda energetică" a corpului.</li>
-                        <li><b>Sănătatea pielii, părului și a unghiilor:</b> Contribuie la menținerea sănătății pielii, a mucoaselor (în special a celor din tractul digestiv), a părului și a unghiilor, fiind implicată în creșterea și repararea celulară.</li>
-                        <li><b>Sănătatea ochilor:</b> Este importantă pentru vederea normală și poate ajuta la prevenirea cataractei. Ajută la protejarea <b>glutationului</b>, un antioxidant major din ochi, prin rolul său în enzima glutation reductaza, care reciclează și reactivează acest antioxidant vital.</li>
-                        <li><b>Metabolismul altor nutrienți:</b> Este necesară pentru activarea altor vitamine din complexul B, în special a vitaminei B6 și a folatului (B9), și ajută la conversia triptofanului în niacină (B3).</li>
-                        <li><b>Producția de globule roșii:</b> Joacă un rol în producerea de globule roșii și în metabolismul fierului.</li>
-                    </ul>
+        <section class="section">
+            <h2 class="section-title"><span class="icon">🔬</span>1. Perspectiva fizică și biochimică</h2>
+            <div class="section-content">
+                <div class="subsection" style="flex: 2;">
+                    <h3 class="subsection-title"><span class="subsection-icon">⚙️</span>Rolul principal în organism</h3>
+                     <p><b>Vitamina B2</b>, cunoscută sub denumirea de <b>riboflavină</b>, este o vitamină hidrosolubilă esențială, crucială pentru metabolismul energetic și sănătatea celulară. Organismul nu o poate stoca în cantități mari, necesitând un aport zilnic constant.</p>
+                     <ul>
+                         <li><b>Metabolismul energetic:</b> Este o componentă cheie a coenzimelor <strong>FAD</strong> (flavin adenin dinucleotid) și <strong>FMN</strong> (flavin mononucleotid), care sunt esențiale pentru producerea de energie (ATP) din carbohidrați, grăsimi și proteine.</li>
+                         <li><b>Sănătatea pielii și a mucoaselor:</b> Contribuie la menținerea sănătății pielii, a mucoaselor (în special a celor din tractul digestiv), a părului și a unghiilor.</li>
+                         <li><b>Sănătatea ochilor:</b> Este importantă pentru vederea normală și ajută la protejarea <strong>glutationului</strong>, un antioxidant major din ochi, fiind vitală pentru prevenirea stresului oxidativ la nivelul cristalinului.</li>
+                         <li><b>Metabolismul altor nutrienți:</b> Este necesară pentru activarea altor vitamine B, în special a <strong>vitaminei B6</strong> și a <strong>folatului (B9)</strong>, și ajută la conversia triptofanului în niacină (B3).</li>
+                         <li><b>Producția de globule roșii:</b> Joacă un rol în producerea de globule roșii și în metabolismul fierului.</li>
+                     </ul>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                     <p>Riboflavina se găsește într-o gamă largă de alimente. Este sensibilă la lumină (de aceea laptele este adesea ambalat în recipiente opace), dar relativ stabilă la căldură.</p>
+                 <div class="subsection" style="flex: 1.5;">
+                    <h3 class="subsection-title"><span class="subsection-icon">🥛</span>Surse alimentare</h3>
+                    <p>Riboflavina se găsește într-o gamă largă de alimente. Este sensibilă la lumină (de aceea laptele este adesea ambalat în recipiente opace), dar relativ stabilă la căldură.</p>
                     <ul>
-                        <li><b>Produse lactate:</b> Lapte, iaurt, brânză (în special brânza de vaci).</li>
+                        <li><b>Produse lactate:</b> Lapte, iaurt, brânză.</li>
                         <li><b>Ouă.</b></li>
                         <li><b>Carne:</b> Ficat, rinichi, carne slabă de vită și de pui.</li>
                         <li><b>Pește:</b> Somon, macrou.</li>
-                        <li><b>Legume cu frunze verzi:</b> Spanac, sparanghel, broccoli.</li>
-                        <li><b>Leguminoase:</b> Mazăre, linte.</li>
+                        <li><b>Legume verzi:</b> Spanac, sparanghel, broccoli.</li>
                         <li><b>Nuci și semințe:</b> Migdale.</li>
-                        <li><b>Cereale integrale și produse fortificate:</b> Pâine integrală, cereale pentru micul dejun.</li>
-                        <li><b>Drojdie de bere.</b></li>
+                        <li><b>Cereale integrale și produse fortificate.</b></li>
                     </ul>
                 </div>
             </div>
-            <div class="physical-row">
+        </section>
+
+        <section class="section">
+             <h2 class="section-title"><span class="icon">⚠️</span>2. Deficit (Ariboflavinoză) și Exces</h2>
+             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (ariboflavinoză)</h3>
-                    <p>Deficiența de riboflavină este rară în țările dezvoltate, dar poate apărea în contextul malnutriției sau al alcoolismului. Simptomele se manifestă adesea la nivelul pielii și mucoaselor.</p>
+                    <h3 class="subsection-title"><span class="subsection-icon">📉</span>Simptome cauzate de deficit</h3>
+                    <p>Deficiența de riboflavină (ariboflavinoza) este rară în țările dezvoltate, dar simptomele se manifestă adesea la nivelul pielii și mucoaselor.</p>
                     <ul>
-                        <li><b>Leziuni la colțurile gurii (cheilită angulară):</b> Crăpături și răni la colțurile buzelor.</li>
+                        <li><b>Leziuni la colțurile gurii (cheilită angulară):</b> Crăpături și răni.</li>
                         <li><b>Buze umflate și crăpate (cheiloză).</b></li>
                         <li><b>Limbă umflată, dureroasă, de culoare roșu-purpuriu (glosită).</b></li>
-                        <li><b>Dermatită seboreică:</b> Erupții cutanate solzoase și grase, în special în jurul nasului, urechilor și pe scalp.</li>
-                        <li><b>Probleme oculare:</b> Ochi roșii, senzație de arsură și mâncărime, sensibilitate la lumină (fotofobie), vascularizare crescută a corneei.</li>
+                        <li><b>Dermatită seboreică:</b> Erupții cutanate solzoase, în special în jurul nasului.</li>
+                        <li><b>Probleme oculare:</b> Ochi roșii, senzație de arsură, sensibilitate la lumină (fotofobie).</li>
                         <li><b>Anemie</b> (din cauza rolului în metabolismul fierului).</li>
                         <li><b>Oboseală și slăbiciune.</b></li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title">Simptome cauzate de exces</h3>
-                    <p>Riboflavina este o vitamină hidrosolubilă cu o toxicitate practic inexistentă. Excesul este rapid eliminat prin urină. Un efect secundar inofensiv al dozelor mari este colorarea urinei într-un galben-portocaliu strălucitor.</p>
+                    <h3 class="subsection-title"><span class="subsection-icon">📈</span>Exces și siguranță</h3>
+                    <p>Riboflavina este o vitamină hidrosolubilă cu o toxicitate practic inexistentă. Organismul absoarbe doar cantitatea de care are nevoie, iar excesul este rapid eliminat prin urină.</p>
+                    <div class="note">
+                        <p>Un efect secundar inofensiv al dozelor mari (din suplimente) este colorarea urinei într-un <strong>galben-portocaliu strălucitor</strong>. Acest lucru este normal și indică faptul că organismul a absorbit suficientă riboflavină și elimină surplusul.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">2. Perspectiva holistică și funcțională</h2>
-            <div class="section-content">
-                 <div class="subsection">
-                    <h3 class="subsection-title">Rol în managementul stresului și axa hormonală</h3>
-                    <p>Prin rolul său central în producerea de energie, un nivel adecvat de B2 asigură "combustibilul" necesar pentru ca glandele suprarenale și sistemul nervos să funcționeze optim în condiții de stres. Deficiența poate duce la o epuizare rapidă a resurselor energetice.</p>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Sinergii și antagonisme</h3>
-                    <p><b>Sinergii (lucrează împreună cu):</b></p>
-                    <ul>
-                        <li><b>Alte vitamine din complexul B (B3, B6, B9):</b> Riboflavina este necesară pentru activarea și conversia acestora în formele lor coenzimatice active.</li>
-                        <li><b>Fierul:</b> Riboflavina este implicată în mobilizarea fierului din depozite.</li>
-                        <li><b>Seleniul:</b> Lucrează împreună în cadrul sistemului antioxidant al glutationului.</li>
-                    </ul>
-                    <p><b>Antagonisme (competiție sau blocaj):</b></p>
-                    <ul>
-                        <li><b>Alcoolul:</b> Asemenea altor vitamine B, alcoolul inhibă absorbția și crește excreția riboflavinei.</li>
-                        <li><b>Lumina (în special UV):</b> Poate distruge riboflavina din alimente.</li>
-                    </ul>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Perspective din medicinele tradiționale</h3>
-                    <p><b>Medicina tradițională chineză (MTC):</b> Riboflavina este strâns legată de funcția <b>Ficatului</b> și a <b>Inimii</b>. Rolul său în sănătatea ochilor și în metabolismul grăsimilor susține funcția ficatului de a "hrăni ochii" și de a asigura fluxul liber al Qi-ului. Prin implicarea în producția de sânge, hrănește <b>Sângele Inimii</b>, care adăpostește <b>Shen-ul</b> (mintea, conștiința).</p>
-                    <p><b>Ayurveda:</b> Riboflavina susține <b>Agni</b> (focul digestiv și metabolic) și este esențială pentru sănătatea <b>Rakta Dhatu</b> (țesutul sanguin) și <b>Mamsa Dhatu</b> (țesutul muscular). Este deosebit de importantă pentru echilibrarea <b>Pitta dosha</b>, care guvernează vederea, digestia și transformările metabolice.</p>
-                </div>
-            </div>
-        </div>
+             </div>
+        </section>
         
-        <div class="section">
-            <h2 class="section-title">3. Perspectiva psiho-somatică și spirituală</h2>
-            <p>Din perspectivă holistică, <b>Vitamina B2</b> este asociată cu <b>lumina interioară, vitalitatea, claritatea percepției și capacitatea de a "metaboliza" experiențele vieții</b>. Culoarea sa galbenă o leagă simbolic de soare și de chakra plexului solar (Manipura), centrul puterii personale și al energiei.</p>
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">🌿</span>3. Perspective holistice și funcționale</h2>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">💔</span>Deficit</h3>
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">🧬</span>Rolul crucial în metabolismul folatului (MTHFR)</h3>
+                    <p>Aceasta este una dintre cele mai importante funcții, dar adesea trecută cu vederea. Enzima <strong>MTHFR</strong>, esențială pentru activarea folatului (vitamina B9), este dependentă de coenzima FAD, care este derivată din riboflavină.</p>
+                    <ul>
+                        <li>Persoanele cu variații genetice comune ale genei MTHFR (ex: C677T) au o enzimă mai puțin eficientă.</li>
+                        <li>O deficiență de riboflavină poate agrava această problemă, ducând la niveluri crescute de homocisteină.</li>
+                        <li>Studiile arată că suplimentarea cu riboflavină poate ajuta la <strong>stabilizarea enzimei MTHFR</strong> și la scăderea homocisteinei la persoanele cu aceste variații genetice.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">🤕</span>Utilizare terapeutică în migrene</h3>
+                    <p>Unul dintre cele mai bine documentate beneficii ale suplimentării cu riboflavină este în <strong>profilaxia (prevenirea) migrenelor</strong>.</p>
+                    <p>Se crede că migrenele sunt parțial cauzate de o disfuncție a metabolismului energetic în creier. Prin rolul său în producția de ATP, riboflavina poate corecta acest deficit. Doze mari (ex: 400 mg/zi), luate constant timp de câteva luni sub supraveghere medicală, s-au dovedit eficiente în reducerea frecvenței și intensității migrenelor.</p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">☯️</span>Perspective tradiționale</h3>
+                    <p><b>În MTC</b>, riboflavina susține funcția <b>Ficatului</b> (prin rolul în sănătatea ochilor) și a <b>Inimii</b> (prin implicarea în producția de sânge, care adăpostește mintea/Shen-ul).</p>
+                    <p><b>În Ayurveda</b>, riboflavina susține <b>Agni</b> (focul metabolic) și este esențială pentru sănătatea <b>Rakta Dhatu</b> (sângele). Este deosebit de importantă pentru echilibrarea <b>Pitta dosha</b>, care guvernează vederea și transformările metabolice.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">❤️‍🩹</span>4. Perspective psiho-somatice și calea spre echilibru</h2>
+            <p>Din perspectivă holistică, Vitamina B2 este asociată cu <b>lumina interioară, vitalitatea, claritatea percepției și capacitatea de a "metaboliza" experiențele vieții</b>. Culoarea sa galbenă o leagă simbolic de soare și de chakra plexului solar (Manipura), centrul puterii personale.</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">💔</span>Deficit</h3>
                     <p>Un deficit de riboflavină poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
                         <li><b>Lipsa de "strălucire" și vitalitate:</b> o senzație de a fi "șters", tern, lipsit de energie și entuziasmasm.<br><i>Manifestare fizică: piele și păr fără vitalitate, oboseală.</i></li>
                         <li><b>Percepție "încețoșată" a realității:</b> dificultatea de a vedea lucrurile clar, atât la propriu, cât și la figurat.<br><i>Manifestare fizică: sensibilitate la lumină, ochi iritați.</i></li>
-                        <li><b>Dificultatea de a "digera" emoțiile:</b> o tendință de a stagna în emoții sau experiențe neplăcute. <br><i>Manifestare fizică: probleme digestive, leziuni la nivelul gurii.</i></li>
-                        <li><b>Stimă de sine scăzută:</b> o senzație de a nu fi "suficient de bun".</li>
+                        <li><b>Dificultatea de a "digera" emoțiile:</b> o tendință de a stagna în experiențe neplăcute.<br><i>Manifestare fizică: probleme digestive, leziuni la nivelul gurii.</i></li>
                     </ol>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">⚡</span>Nevoia de a suplimenta</h3>
-                    <p>Nevoia de a suplimenta poate indica:</p>
-                    <ol>
-                        <li><b>O dorință de a-ți crește "lumina" interioară</b> și de a-ți revendica puterea personală.</li>
-                        <li><b>O perioadă de transformare intensă</b> care necesită un plus de energie metabolică și emoțională.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">4. Calea spre echilibru</h2>
-            <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>Recomandări integrative</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>Calea spre echilibru</h3>
+                    <p>Obiectivele pe care le susține riboflavina pot fi atinse prin:</p>
                     <ul>
-                        <li>Practici pentru creșterea stimei de sine: afirmații pozitive, lucrul cu un terapeut.</li>
+                        <li>Practici pentru creșterea stimei de sine și a puterii personale.</li>
                         <li>Expunerea la lumina soarelui (cu moderație) pentru a stimula energia vitală.</li>
                         <li>Exerciții de vizualizare pentru a aduce claritate asupra obiectivelor.</li>
                         <li>Jurnalism terapeutic pentru a "digera" și procesa experiențele emoționale.</li>
-                        <li>Purtarea culorii galbene sau meditații pe chakra plexului solar.</li>
+                        <li>Meditații pe chakra plexului solar sau purtarea culorii galbene.</li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon">📜</span>5. Recomandări și siguranță</h2>
+            <div class="section-content">
+                <div class="subsection">
+                     <h3 class="subsection-title"><span class="subsection-icon">📋</span>Doze zilnice recomandate</h3>
+                     <p>Cantitatea necesară de riboflavină este relativ mică și, de obicei, este acoperită de o dietă echilibrată.</p>
+                     <table>
+                         <thead>
+                             <tr>
+                                 <th>Grup de populație</th>
+                                 <th>DZR (mg/zi)</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Adulți (19+ ani) - Bărbați</td>
+                                 <td>1.3</td>
+                             </tr>
+                             <tr>
+                                 <td>Adulți (19+ ani) - Femei</td>
+                                 <td>1.1</td>
+                             </tr>
+                             <tr>
+                                 <td>Femei însărcinate</td>
+                                 <td>1.4</td>
+                             </tr>
+                             <tr>
+                                 <td>Femei care alăptează</td>
+                                 <td>1.6</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                     <p style="font-size: 0.8em; margin-top: 15px;"><i>Notă: Dozele terapeutice (ex: pentru migrene) sunt mult mai mari și trebuie luate doar la recomandarea medicului.</i></p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">🚨</span>Siguranță și concluzii</h3>
+                    <p>Riboflavina este una dintre cele mai sigure vitamine, fără o limită superioară tolerabilă (UL) stabilită, deoarece nu s-au raportat efecte toxice din surse alimentare sau suplimente.</p>
+                    <div class="note holistic-note">
+                        <p><b>Concluzie:</b> Vitamina B2 este un "erou necunoscut" al metabolismului. Deși adesea umbrită de alte vitamine B, rolul său este fundamental pentru producerea de energie, activarea altor nutrienți cheie și protecția antioxidantă. Asigurarea unui aport adecvat este esențială pentru vitalitate și sănătate la nivel celular.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <div class="footer-copyright">
             <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
+            <p style="font-size: 0.8em; color: #95a5a6;">Acest conținut este pur informativ și nu înlocuiește sfatul medical profesionist. Consultați întotdeauna medicul pentru probleme de sănătate.</p>
         </div>
-    </div>
+    </main>
 </body>
 </html>
