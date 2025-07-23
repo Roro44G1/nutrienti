@@ -14,8 +14,8 @@
             --card-background: #ffffff;
             --light-gray-background: #f8f9fa;
             --border-color: #e0e0e0;
-            --accent-blue: #3498db;
             --accent-green: #27ae60;
+            --accent-red: #c0392b;
             --base-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             --border-radius-large: 15px;
             --border-radius-small: 10px;
@@ -71,7 +71,7 @@
             margin-top: 0;
             margin-bottom: 25px;
             font-weight: 600;
-            border-bottom: 3px solid var(--accent-blue);
+            border-bottom: 3px solid var(--primary-color-dark);
             padding-bottom: 10px;
             display: flex;
             align-items: center;
@@ -142,16 +142,16 @@
             color: #6c757d;
             margin-top: 25px;
             padding: 15px 20px;
-            background-color: #eaf2f8;
-            border-left: 4px solid var(--accent-blue);
+            background-color: #fef5e7;
+            border-left: 4px solid var(--primary-color);
             width: 100%;
             box-sizing: border-box;
             border-radius: 5px;
         }
         
         .warning-note {
-            background-color: #fef5e7;
-            border-left-color: var(--primary-color);
+            background-color: #f9ebea;
+            border-left-color: var(--accent-red);
         }
         
         .holistic-note {
@@ -162,7 +162,7 @@
         .icon {
             font-size: 1.5em;
             margin-right: 12px;
-            color: var(--accent-blue);
+            color: var(--primary-color-dark);
             vertical-align: middle;
         }
         
@@ -263,12 +263,12 @@
                     <h3 class="subsection-title"><span class="subsection-icon">⚙️</span>Rolul principal în organism</h3>
                     <p>Vitamina A este o vitamină liposolubilă esențială, un termen generic pentru un grup de compuși, incluzând <b>retinoizii</b> (preformați, din surse animale) și <b>carotenoizii</b> (pro-vitamina A, din plante).</p>
                     <ul>
-                        <li><b>Sănătatea vederii:</b> este fundamentală pentru formarea rodopsinei, un pigment vizual din retină, esențial pentru vederea în condiții de lumină slabă și pentru adaptarea la întuneric.</li>
+                        <li><b>Sănătatea vederii:</b> este fundamentală pentru formarea rodopsinei, un pigment vizual din retină, esențial pentru vederea în condiții de lumină slabă.</li>
                         <li><b>Creștere și dezvoltare:</b> este vitală pentru creșterea și diferențierea celulară, dezvoltarea țesuturilor, oaselor și dinților.</li>
                         <li><b>Sistemul imunitar:</b> joacă un rol cheie în menținerea integrității barierelor protectoare (piele, mucoase) și susține funcția celulelor imunitare.</li>
-                        <li><b>Integritatea pielii și a mucoaselor:</b> ajută la menținerea sănătății și funcției pielii și a membranelor mucoase, care acționează ca o barieră protectoare.</li>
-                        <li><b>Funcția reproductivă:</b> este implicată în procesele de reproducere la ambele sexe și în dezvoltarea normală a fătului.</li>
-                        <li><b>Acțiune antioxidantă (carotenoizi):</b> carotenoizii, cum ar fi beta-carotenul, neutralizează radicalii liberi și protejează celulele de stresul oxidativ.</li>
+                        <li><b>Integritatea pielii și a mucoaselor:</b> ajută la menținerea sănătății și funcției pielii și a membranelor mucoase.</li>
+                        <li><b>Funcția reproductivă:</b> este implicată în procesele de reproducere și în dezvoltarea normală a fătului.</li>
+                        <li><b>Acțiune antioxidantă (carotenoizi):</b> carotenoizii, cum ar fi beta-carotenul, neutralizează radicalii liberi.</li>
                     </ul>
                 </div>
                  <div class="subsection" style="flex: 1.5;">
@@ -279,14 +279,14 @@
                          <li><b>Ficat:</b> de vită, pui, cod (cea mai bogată sursă).</li>
                          <li><b>Ulei de ficat de cod.</b></li>
                          <li><b>Ouă:</b> în special gălbenușul.</li>
-                         <li><b>Produse lactate integrale:</b> lapte, brânză, unt.</li>
+                         <li><b>Produse lactate integrale.</b></li>
                      </ul>
                      <p><strong>2. Carotenoizi (Pro-vitamina A):</strong></p>
-                     <p>Găsiți în plante, trebuie convertiți în vitamina A activă în organism.</p>
+                     <p>Găsiți în plante, trebuie convertiți în vitamina A activă.</p>
                      <ul>
                          <li><b>Legume portocalii și galbene:</b> morcovi, cartofi dulci, dovleac.</li>
                          <li><b>Legume cu frunze verzi:</b> spanac, varză kale.</li>
-                         <li><b>Fructe:</b> mango, caise, pepene galben, papaya.</li>
+                         <li><b>Fructe:</b> mango, caise, pepene galben.</li>
                      </ul>
                 </div>
             </div>
@@ -296,7 +296,7 @@
              <h2 class="section-title"><span class="icon">⚠️</span>2. Deficit vs. Exces</h2>
              <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="subsection-icon">📉</span>Simptome cauzate de deficit (Hipovitaminoza A)</h3>
+                    <h3 class="subsection-title"><span class="subsection-icon">📉</span>Simptome cauzate de deficit</h3>
                     <p>Deficiența de vitamina A este o problemă majoră de sănătate publică la nivel global.</p>
                     <ol>
                         <li><b>Probleme de vedere:</b>
@@ -305,23 +305,21 @@
                                 <li><b>Xeroftalmie:</b> uscăciunea severă a ochiului, care poate progresa la leziuni corneene și orbire permanentă.</li>
                             </ul>
                         </li>
-                        <li><b>Imunitate slăbită:</b> creșterea susceptibilității la infecții respiratorii și digestive.</li>
+                        <li><b>Imunitate slăbită:</b> creșterea susceptibilității la infecții.</li>
                         <li><b>Probleme de creștere:</b> retard de creștere la copii.</li>
-                        <li><b>Probleme ale pielii:</b> piele uscată, aspră, descuamată (hiperkeratoză foliculară).</li>
-                        <li><b>Probleme de reproducere:</b> afectarea fertilității.</li>
+                        <li><b>Probleme ale pielii:</b> piele uscată, aspră (hiperkeratoză foliculară).</li>
                     </ol>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="subsection-icon">📈</span>Simptome cauzate de exces (Hipervitaminoză A)</h3>
+                    <h3 class="subsection-title"><span class="subsection-icon">📈</span>Simptome cauzate de exces</h3>
                     <p>Toxicitatea este cauzată aproape exclusiv de suplimentarea excesivă cu retinoizi, nu de carotenoizi.</p>
                     <ol>
-                        <li><b>Acută (doze foarte mari):</b> greață, vărsături, vertij, vedere încețoșată, dureri de cap severe.</li>
+                        <li><b>Acută (doze foarte mari):</b> greață, vărsături, vertij, dureri de cap.</li>
                         <li><b>Cronică (doze mari pe termen lung):</b>
                              <ul>
-                                <li><b>Toxicitate hepatică:</b> leziuni hepatice, fibroză, ciroză.</li>
-                                <li><b>Probleme osoase:</b> dureri, umflături, risc crescut de fracturi.</li>
-                                <li><b>Probleme neurologice:</b> dureri de cap, presiune intracraniană crescută.</li>
-                                <li><b>Probleme dermatologice:</b> piele uscată, căderea părului, buze crăpate.</li>
+                                <li><b>Toxicitate hepatică:</b> leziuni hepatice, fibroză.</li>
+                                <li><b>Probleme osoase:</b> dureri, risc crescut de fracturi.</li>
+                                <li><b>Probleme dermatologice:</b> piele uscată, căderea părului.</li>
                                 <li><b>Teratogenicitate:</b> risc extrem de ridicat de malformații congenitale grave la făt.</li>
                             </ul>
                         </li>
@@ -340,68 +338,52 @@
                         <li><b>Grăsimi:</b> absorbția sa depinde de grăsimile alimentare.</li>
                         <li><b>Zincul:</b> este absolut necesar pentru a mobiliza și transporta vitamina A din ficat.</li>
                         <li><b>Vitamina D și K2:</b> acționează sinergic pentru sănătatea osoasă.</li>
-                        <li><b>Fier:</b> ajută la mobilizarea fierului din depozite, fiind utilă în anemie.</li>
-                    </ul>
-                     <p><b>Antagonisme (competiție sau blocaj):</b></p>
-                     <ul>
-                        <li>Consumul excesiv de alcool epuizează rezervele hepatice de vitamina A.</li>
-                        <li>Anumite medicamente pot interfera cu absorbția sa.</li>
+                        <li><b>Fier:</b> ajută la mobilizarea fierului din depozite.</li>
                     </ul>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">☯️</span>Medicina tradițională chineză (MTC)</h3>
-                    <p>Vitamina A este strâns legată de energia <b>Ficatului</b>. În MTC, "Ficatul se deschide în ochi", iar sănătatea vederii depinde direct de calitatea Sângelui și a energiei Yin a Ficatului. Alimentele bogate în vitamina A sunt considerate a <b>"hrăni Sângele și Yin-ul Ficatului"</b>. O carență se poate manifesta nu doar ca vedere slabă, ci și ca un Ficat slăbit, predispus la stagnare energetică (frustrare, iritabilitate).</p>
+                    <p>Vitamina A este strâns legată de energia <b>Ficatului</b>. În MTC, "Ficatul se deschide în ochi", iar sănătatea vederii depinde direct de calitatea Sângelui și a energiei Yin a Ficatului. Alimentele bogate în vitamina A sunt considerate a <b>"hrăni Sângele și Yin-ul Ficatului"</b>.</p>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">🕉️</span>Medicina ayurvedică</h3>
-                    <p>Alimentele bogate în carotenoide (cartofi dulci, dovleac) sunt de obicei dulci, grele și nutritive, având un efect de echilibrare pentru dosha <b>Vata</b> (care tinde spre uscăciune și instabilitate). Culoarea lor portocalie vibrantă este asociată cu energia chakrei a doua (Swadhisthana) și a treia (Manipura - plexul solar), fiind legată de creativitate și putere personală.</p>
+                    <p>Alimentele bogate în carotenoide (cartofi dulci, dovleac) sunt de obicei dulci și nutritive, având un efect de echilibrare pentru dosha <b>Vata</b> (care tinde spre uscăciune). Culoarea lor portocalie vibrantă este asociată cu energia chakrei a doua (Swadhisthana) și a treia (Manipura).</p>
                 </div>
             </div>
         </section>
 
         <section class="section">
             <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">❤️‍🩹</span>4. Perspective psiho-somatice și calea spre echilibru</h2>
+            <p>Din perspectivă holistică, vitamina A este adesea asociată cu <b>viziunea (fizică și metaforică), claritatea, intuiția și discernământul</b>. Rezonează cu modul în care ne percepem lumea și cu abilitatea de a "vedea" dincolo de aparențe.</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">💔</span>Deficit</h3>
-                    <p>Un deficit de vitamina A poate fi legat de următoarele aspecte emoționale:</p>
+                    <h3 class="subsection-title"><span class="icon-small">💔</span>Deficit și Calea spre Echilibru</h3>
+                    <p>Un deficit de vitamina A poate fi legat de:</p>
                     <ol>
-                        <li><b>Lipsa de viziune și claritate:</b> dificultăți în a-ți vedea propriul drum, scop sau viitor. Senzația de a fi "în ceață".<br><i>Manifestare fizică: vedere slabă pe timp de noapte.</i></li>
-                        <li><b>Dificultăți în a percepe adevărul:</b> incapacitatea de a "vedea" situațiile sau persoanele așa cum sunt ele cu adevărat.</li>
-                        <li><b>Lipsa de discernământ și intuiție:</b> o deconectare de la vocea interioară.</li>
-                        <li><b>Sentiment de vulnerabilitate:</b> o lipsă de granițe emoționale, o vulnerabilitate la energii negative.<br><i>Manifestare fizică: piele uscată, infecții recurente.</i></li>
-                        <li><b>Frica de întuneric sau de necunoscut:</b> o teamă de a înfrunta aspecte neplăcute ale vieții.</li>
+                        <li><b>Lipsa de viziune și claritate:</b> dificultăți în a-ți vedea propriul drum sau scop.<br><i>Manifestare fizică: vedere slabă pe timp de noapte.</i></li>
+                        <li><b>Dificultăți în a percepe adevărul:</b> o tendință de a fi naiv sau de a ignora realitatea.</li>
+                        <li><b>Sentiment de vulnerabilitate:</b> o lipsă de granițe emoționale.<br><i>Manifestare fizică: piele uscată, infecții recurente.</i></li>
                     </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">⚡</span>Exces</h3>
-                    <p>Un exces de vitamina A (retinoizi) ar putea sugera:</p>
-                    <ol>
-                        <li><b>Viziune rigidă și lipsă de flexibilitate:</b> o tendință de a vedea lucrurile doar într-un singur mod, dogmatism.</li>
-                        <li><b>Judecată excesivă și critică:</b> o tendință de a "vedea" doar greșelile sau imperfecțiunile.</li>
-                        <li><b>Iluzii de control:</b> o nevoie de a controla modul în care sunt percepute lucrurile.</li>
-                        <li><b>"Orbirile" emoționale:</b> o capacitate de a "vedea" aspecte negative în mod obsesiv, ignorând partea bună.</li>
-                    </ol>
-                </div>
-            </div>
-            <h3 class="section-title" style="font-size: 1.6em; margin-top: 40px; border-color: var(--accent-green);">Calea spre echilibru</h3>
-            <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>În caz de deficit</h3>
-                    <ul>
-                        <li>Practici de dezvoltare a intuiției și a clarității mentale (meditație, vizualizare, jurnal).</li>
-                        <li>Lucrul cu încrederea în propria viziune și în capacitatea de a discerne adevărul.</li>
+                    <p style="margin-top:20px;"><strong>Calea spre echilibru:</strong></p>
+                     <ul>
+                        <li>Practici de dezvoltare a intuiției (meditație, vizualizare, jurnal).</li>
+                        <li>Lucrul cu încrederea în propria viziune.</li>
                         <li>Terapii pentru eliberarea fricilor legate de necunoscut.</li>
-                        <li>Practici de întărire a granițelor emoționale.</li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span>În caz de exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">⚡</span>Exces și Calea spre Echilibru</h3>
+                    <p>Un exces de vitamina A (retinoizi) ar putea sugera:</p>
+                    <ol>
+                        <li><b>Viziune rigidă și lipsă de flexibilitate:</b> o tendință de a vedea lucrurile doar într-un singur mod, dogmatism.</li>
+                        <li><b>Judecată excesivă și critică:</b> o tendință de a "vedea" doar greșelile.</li>
+                        <li><b>Iluzii de control:</b> o nevoie de a controla modul în care sunt percepute lucrurile.</li>
+                    </ol>
+                    <p style="margin-top:20px;"><strong>Calea spre echilibru:</strong></p>
                     <ul>
                         <li>Practici de flexibilitate mentală și emoțională (yoga, meditații de acceptare).</li>
                         <li>Terapii care ajută la eliberarea rigidității și a nevoii de control.</li>
                         <li>Lucrul cu umilința și acceptarea că există multiple perspective.</li>
-                        <li>Practici care încurajează empatia și compasiunea.</li>
                     </ul>
                 </div>
             </div>
@@ -412,7 +394,7 @@
             <div class="section-content">
                 <div class="subsection">
                      <h3 class="subsection-title"><span class="subsection-icon">📋</span>Doze zilnice recomandate</h3>
-                     <p>Cantitatea necesară este exprimată în <strong>echivalenți de activitate a retinolului (RAE)</strong> pentru a standardiza diferitele forme.</p>
+                     <p>Cantitatea necesară este exprimată în <strong>echivalenți de activitate a retinolului (RAE)</strong>.</p>
                      <table>
                          <thead>
                              <tr>
@@ -422,16 +404,6 @@
                              </tr>
                          </thead>
                          <tbody>
-                             <tr>
-                                 <td>Copii 1–3 ani</td>
-                                 <td>300</td>
-                                 <td>600</td>
-                             </tr>
-                             <tr>
-                                 <td>Copii 4–8 ani</td>
-                                 <td>400</td>
-                                 <td>900</td>
-                             </tr>
                              <tr>
                                  <td>Adulți (19+ ani) - Bărbați</td>
                                  <td>900</td>
@@ -454,15 +426,14 @@
                              </tr>
                          </tbody>
                      </table>
-                      <p style="font-size: 0.8em; margin-top: 15px;"><i>Notă: Limita superioară se aplică doar vitaminei A preformate (retinoizi) din suplimente și surse animale, nu și carotenoidelor din plante.</i></p>
+                      <p style="font-size: 0.8em; margin-top: 15px;"><i>Notă: Limita superioară se aplică doar vitaminei A preformate (retinoizi), nu și carotenoidelor.</i></p>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="subsection-icon">🚨</span>Avertisment de siguranță</h3>
                     <p>Deși deficitul este periculos, <strong>suplimentarea necontrolată cu retinoizi este extrem de toxică</strong>.</p>
                     <div class="note warning-note">
-                        <p><b>Avertisment critic pentru sarcină:</b> Excesul de vitamina A preformată (retinoizi) în timpul sarcinii este <strong>puternic teratogen</strong>, ceea ce înseamnă că poate provoca <strong>malformații congenitale grave</strong> la făt. Femeile însărcinate sau care intenționează să rămână însărcinate trebuie să evite dozele mari de suplimente cu vitamina A și consumul excesiv de ficat. Consultați întotdeauna medicul înainte de a lua orice supliment.</p>
+                        <p><b>Avertisment critic pentru sarcină:</b> Excesul de vitamina A preformată (retinoizi) în timpul sarcinii este <strong>puternic teratogen</strong>, putând provoca <strong>malformații congenitale grave</strong> la făt. Femeile însărcinate sau care intenționează să rămână însărcinate trebuie să evite dozele mari de suplimente cu vitamina A și consumul excesiv de ficat. Consultați întotdeauna medicul.</p>
                     </div>
-                     <p class="note holistic-note" style="margin-top: 30px;">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
                 </div>
             </div>
         </section>
