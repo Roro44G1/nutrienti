@@ -12,6 +12,7 @@
             --color-secondary: #2c3e50;
             --color-coenzyme: #9b59b6;
             --color-mineral: #3498db;
+            --color-accent: #f39c12;
             --color-background: #f4f7f6;
             --color-text: #333;
             --color-card-bg: #ffffff;
@@ -60,12 +61,12 @@
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px; /* Am mărit spațierea pentru claritate */
+            gap: 30px;
         }
         .nutrient-card-link {
             text-decoration: none;
             color: inherit;
-            display: flex; /* Asigură că linkul este un container flex */
+            display: flex; 
         }
         .nutrient-card {
             background: var(--color-card-bg);
@@ -77,7 +78,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            flex: 1; /* Cheia pentru egalizarea înălțimii: cardul umple linkul */
+            flex: 1;
         }
         .nutrient-card.coenzyme {
             border-left-color: var(--color-coenzyme);
@@ -111,8 +112,36 @@
         .nutrient-card p {
             font-size: 0.95em;
             color: #555;
-            flex-grow: 1; /* Permite paragrafului să umple spațiul vertical disponibil */
+            flex-grow: 1;
         }
+        
+        .full-width-card-section {
+            margin: 30px 0;
+        }
+        .full-width-card {
+            flex-direction: row;
+            align-items: center;
+            border-left-color: var(--color-accent) !important;
+        }
+        .full-width-card.mineral {
+            border-left-color: var(--color-mineral) !important;
+        }
+        .full-width-card h3 {
+            margin-bottom: 0;
+            flex-shrink: 0;
+        }
+        .full-width-card p {
+            flex-grow: 1;
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+        .full-width-card h3 .icon {
+            color: var(--color-accent) !important;
+        }
+        .full-width-card.mineral h3 .icon {
+            color: var(--color-mineral) !important;
+        }
+
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -123,20 +152,33 @@
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
+        
+        @media (max-width: 768px) {
+            .full-width-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .full-width-card h3 {
+                margin-bottom: 15px;
+            }
+            .full-width-card p {
+                padding-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header class="header">
-            <h1>Ghid integrativ- Micronutrienți </h1>
+            <h1>Ghid Integrativ - Micronutrienți</h1>
             <p>O perspectivă completă asupra vitaminelor și mineralelor</p>
         </header>
 
         <main>
             <section id="introducere">
                 <div class="nutrient-card" style="border-left-color: #34495e;">
-                    <h3><span class="icon" style="color: #34495e;">🌿</span>Introducere: Fundamentele vitalității</h3>
+                    <h3><span class="icon" style="color: #34495e;">🌿</span>Fundamentele vitalității</h3>
                     <p>Vitaminele și mineralele sunt scânteile biochimice esențiale vieții. Deși necesare în cantități mici, ele reglează metabolismul și funcționează ca piese într-o rețea complexă de sinergii și antagonisme. O abordare holistică recunoaște că sănătatea nu este doar absența bolii, ci un echilibru dinamic susținut de o nutriție completă, unde fiecare element își are rolul său precis.</p>
                 </div>
             </section>
@@ -223,6 +265,15 @@
                     <div class="nutrient-card">
                         <h3><span class="icon">🍊</span>Vitamina C (Acid Ascorbic)</h3>
                         <p>Antioxidant puternic, esențial pentru sinteza colagenului (piele, oase, vase de sânge), imunitate și absorbția fierului din surse vegetale.</p>
+                    </div>
+                </a>
+            </section>
+            
+            <section class="full-width-card-section">
+                <a href="doze_vitamine.html" class="nutrient-card-link">
+                    <div class="nutrient-card full-width-card">
+                        <h3><span class="icon">📊</span>Tabel Doze - Vitamine</h3>
+                        <p>Accesați ghidul complet pentru dozele zilnice recomandate (DZR) și limitele superioare de siguranță (UL) pentru fiecare vitamină.</p>
                     </div>
                 </a>
             </section>
@@ -381,6 +432,15 @@
                     <div class="nutrient-card mineral">
                         <h3><span class="icon">🧬</span>Zinc</h3>
                         <p>Cofactor pentru sute de enzime. Vital pentru imunitate, vindecarea rănilor, sinteza ADN-ului, fertilitate și menținerea simțului gustului și mirosului.</p>
+                    </div>
+                </a>
+            </section>
+            
+            <section class="full-width-card-section">
+                <a href="doze_minerale.html" class="nutrient-card-link">
+                    <div class="nutrient-card mineral full-width-card">
+                        <h3><span class="icon">⚖️</span>Tabel Doze - Minerale</h3>
+                        <p>Consultați tabelul detaliat cu aportul adecvat (AI), dozele zilnice recomandate (DZR) și limitele superioare de siguranță (UL) pentru minerale.</p>
                     </div>
                 </a>
             </section>
