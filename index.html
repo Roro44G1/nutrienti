@@ -20,7 +20,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            line-height: 1.7;
+            line-height: 1.6; /* Am redus spațierea textului */
             margin: 0;
             background-color: var(--color-background);
             color: var(--color-text);
@@ -75,6 +75,7 @@
             padding: 25px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-left: 5px solid var(--color-primary);
+            border-right: 5px solid var(--color-primary); /* Am adăugat bordura dreaptă */
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -82,9 +83,11 @@
         }
         .nutrient-card.coenzyme {
             border-left-color: var(--color-coenzyme);
+            border-right-color: var(--color-coenzyme); /* Am adăugat bordura dreaptă */
         }
         .nutrient-card.mineral {
             border-left-color: var(--color-mineral);
+            border-right-color: var(--color-mineral); /* Am adăugat bordura dreaptă */
         }
         .nutrient-card-link:hover .nutrient-card {
             transform: translateY(-5px);
@@ -122,9 +125,11 @@
             flex-direction: row;
             align-items: center;
             border-left-color: var(--color-accent) !important;
+            border-right-color: var(--color-accent) !important; /* Am adăugat bordura dreaptă */
         }
         .full-width-card.mineral {
             border-left-color: var(--color-mineral) !important;
+            border-right-color: var(--color-mineral) !important; /* Am adăugat bordura dreaptă */
         }
         .full-width-card h3 {
             margin-bottom: 0;
@@ -171,48 +176,20 @@
 
     <div class="container">
         <header class="header">
-            <h1>Ghid Integrativ - Micronutrienți</h1>
+            <h1>Ghid integrativ - Micronutrienți</h1>
             <p>O perspectivă completă asupra vitaminelor și mineralelor</p>
         </header>
 
         <main>
             <section id="introducere">
-                <div class="nutrient-card" style="border-left-color: #34495e;">
+                <div class="nutrient-card" style="border-left-color: #34495e; border-right-color: #34495e;">
                     <h3><span class="icon" style="color: #34495e;">🌿</span>Fundamentele vitalității</h3>
                     <p>Vitaminele și mineralele sunt scânteile biochimice esențiale vieții. Deși necesare în cantități mici, ele reglează metabolismul și funcționează ca piese într-o rețea complexă de sinergii și antagonisme. O abordare holistică recunoaște că sănătatea nu este doar absența bolii, ci un echilibru dinamic susținut de o nutriție completă, unde fiecare element își are rolul său precis.</p>
                 </div>
             </section>
 
-            <h2 class="section-title">Vitamine Liposolubile</h2>
-            <section id="vitamine-liposolubile" class="grid-container">
-                <a href="vitamina_A.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">👁️</span>Vitamina A</h3>
-                        <p>Esențială pentru vedere (în special nocturnă), imunitate și sănătatea pielii. Acționează ca antioxidant și este crucială pentru creșterea și diferențierea celulară. Necesită zinc pentru a fi transportată eficient în organism.</p>
-                    </div>
-                </a>
-                <a href="vitamina_D.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">☀️</span>Vitamina D</h3>
-                        <p>Un pro-hormon vital pentru absorbția calciului, sănătatea oaselor și modularea sistemului imunitar. Acționează în sinergie perfectă cu vitamina K2 pentru a direcționa calciul corect în organism.</p>
-                    </div>
-                </a>
-                <a href="vitamina_E.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">🛡️</span>Vitamina E</h3>
-                        <p>Principalul antioxidant liposolubil, protejează membranele celulare de stresul oxidativ. Susține sănătatea pielii, a sistemului cardiovascular și este regenerată de vitamina C.</p>
-                    </div>
-                </a>
-                <a href="vitamina_K.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">🩸</span>Vitamina K</h3>
-                        <p>Esențială pentru coagularea sângelui (K1) și pentru direcționarea calciului în oase și dinți, prevenind calcificarea arterelor (K2). Sinergia sa cu vitamina D este fundamentală.</p>
-                    </div>
-                </a>
-            </section>
-
-            <h2 class="section-title">Vitamine Hidrosolubile</h2>
-            <section id="vitamine-hidrosolubile" class="grid-container">
+            <h2 class="section-title">Vitamine</h2>
+            <section id="vitamine" class="grid-container">
                 <a href="vitamina_B1.html" class="nutrient-card-link">
                     <div class="nutrient-card">
                         <h3><span class="icon">⚡</span>Vitamina B1 (Tiamina)</h3>
@@ -228,13 +205,7 @@
                 <a href="vitamina_B3.html" class="nutrient-card-link">
                     <div class="nutrient-card">
                         <h3><span class="icon">🔥</span>Vitamina B3 (Niacina)</h3>
-                        <p>Vitală pentru producerea de energie (NAD/NADP) și repararea ADN-ului. Forma de acid nicotinic este folosită pentru a regla colesterolul, provocând un efect de "flush".</p>
-                    </div>
-                </a>
-                <a href="nicotinamida.html" class="nutrient-card-link">
-                    <div class="nutrient-card">
-                        <h3><span class="icon">🔥</span>Vitamina B3 (Nicotinamida)</h3>
-                        <p>Vitală pentru producerea de energie (NAD/NADP) și repararea ADN-ului. Forma de acid nicotinic este folosită pentru a regla colesterolul, provocând un efect de "flush".</p>
+                        <p>Forma de acid nicotinic a vitaminei B3, esențială pentru energie (NAD/NADP) și repararea ADN-ului. Este cunoscută pentru efectul de 'flush' și este utilizată în doze mari pentru a regla nivelul colesterolului.</p>
                     </div>
                 </a>
                 <a href="vitamina_B5.html" class="nutrient-card-link">
@@ -273,19 +244,49 @@
                         <p>Antioxidant puternic, esențial pentru sinteza colagenului (piele, oase, vase de sânge), imunitate și absorbția fierului din surse vegetale.</p>
                     </div>
                 </a>
+                <a href="vitamina_A.html" class="nutrient-card-link">
+                    <div class="nutrient-card">
+                        <h3><span class="icon">👁️</span>Vitamina A</h3>
+                        <p>Esențială pentru vedere (în special nocturnă), imunitate și sănătatea pielii. Acționează ca antioxidant și este crucială pentru creșterea și diferențierea celulară. Necesită zinc pentru a fi transportată eficient în organism.</p>
+                    </div>
+                </a>
+                <a href="vitamina_D.html" class="nutrient-card-link">
+                    <div class="nutrient-card">
+                        <h3><span class="icon">☀️</span>Vitamina D</h3>
+                        <p>Un pro-hormon vital pentru absorbția calciului, sănătatea oaselor și modularea sistemului imunitar. Acționează în sinergie perfectă cu vitamina K2 pentru a direcționa calciul corect în organism.</p>
+                    </div>
+                </a>
+                <a href="vitamina_E.html" class="nutrient-card-link">
+                    <div class="nutrient-card">
+                        <h3><span class="icon">🛡️</span>Vitamina E</h3>
+                        <p>Principalul antioxidant liposolubil, protejează membranele celulare de stresul oxidativ. Susține sănătatea pielii, a sistemului cardiovascular și este regenerată de vitamina C.</p>
+                    </div>
+                </a>
+                <a href="vitamina_K.html" class="nutrient-card-link">
+                    <div class="nutrient-card">
+                        <h3><span class="icon">🩸</span>Vitamina K</h3>
+                        <p>Esențială pentru coagularea sângelui (K1) și pentru direcționarea calciului în oase și dinți, prevenind calcificarea arterelor (K2). Sinergia sa cu vitamina D este fundamentală.</p>
+                    </div>
+                </a>
             </section>
             
             <section class="full-width-card-section">
                 <a href="doze_vitamine.html" class="nutrient-card-link">
                     <div class="nutrient-card full-width-card">
-                        <h3><span class="icon">📊</span>Tabel Doze - Vitamine</h3>
+                        <h3><span class="icon">📊</span>Vitamine - AI&DZR</h3>
                         <p>Accesați ghidul complet pentru dozele zilnice recomandate (DZR) și limitele superioare de siguranță (UL) pentru fiecare vitamină.</p>
                     </div>
                 </a>
             </section>
 
-            <h2 class="section-title">Compuși Esențiali și Pseudo-Vitamine</h2>
+            <h2 class="section-title">Compuși esențiali și pseudo-vitamine</h2>
             <section id="compusi-esentiali" class="grid-container">
+                <a href="nicotinamida.html" class="nutrient-card-link">
+                    <div class="nutrient-card coenzyme">
+                        <h3><span class="icon">🔥</span>Nicotinamida</h3>
+                        <p>Forma 'no-flush' a vitaminei B3 (niacinamidă). Este un precursor direct al NAD+, fiind crucială pentru energia celulară, repararea ADN-ului și sănătatea pielii. Preferată pentru suplimentare generală.</p>
+                    </div>
+                </a>
                 <a href="colina.html" class="nutrient-card-link">
                     <div class="nutrient-card coenzyme">
                         <h3><span class="icon">💡</span>Colina</h3>
@@ -316,7 +317,7 @@
                         <p>"Scânteia" mitocondriilor, esențială pentru producerea de energie (ATP) în organele vitale, în special în inimă, ficat și rinichi.</p>
                     </div>
                 </a>
-                <a href="gsh.html" class="nutrient-card-link">
+                <a href="glutation.html" class="nutrient-card-link">
                     <div class="nutrient-card coenzyme">
                         <h3><span class="icon"> Detox </span>Glutation</h3>
                         <p>"Maestrul antioxidant" al organismului, crucial pentru detoxifierea hepatică, protecția celulară, regenerarea vitaminelor C și E și funcția imunitară.</p>
@@ -445,7 +446,7 @@
             <section class="full-width-card-section">
                 <a href="doze_minerale.html" class="nutrient-card-link">
                     <div class="nutrient-card mineral full-width-card">
-                        <h3><span class="icon">⚖️</span>Tabel Doze - Minerale</h3>
+                        <h3><span class="icon">⚖️</span>Minerale - AI&DZR</h3>
                         <p>Consultați tabelul detaliat cu aportul adecvat (AI), dozele zilnice recomandate (DZR) și limitele superioare de siguranță (UL) pentru minerale.</p>
                     </div>
                 </a>
