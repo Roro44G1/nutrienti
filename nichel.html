@@ -3,291 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nichelul și Granițele Personale</title>
+    <title>Nichel</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #7f8c8d; /* O nuanță de gri-oțel */
+            --primary-color-dark: #626f70;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f6f7;
+            --text-color: #34495e;
+            --card-background: #ffffff;
+            --light-gray-background: #f8f9fa;
+            --border-color: #e0e0e0;
+            --accent-blue: #3498db;
+            --accent-green: #27ae60;
+            --accent-red: #e74c3c;
+            --base-font-family: 'Roboto', sans-serif;
+            --border-radius-large: 15px;
+            --border-radius-small: 10px;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: var(--base-font-family);
+            line-height: 1.7;
             margin: 0;
-            background-color: #e9ecef;
-            color: #343a40;
+            background-color: var(--background-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             padding: 40px 20px;
             box-sizing: border-box;
         }
+
         .infographic-container {
-            max-width: 900px;
+            max-width: 950px;
             width: 100%;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: var(--card-background);
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-medium);
             overflow: hidden;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
         }
+
         .infographic-header {
-            background-color: #79a3b1;
+            background-color: var(--primary-color);
             color: white;
-            padding: 30px 20px;
+            padding: 10px 10px;
             text-align: center;
-            font-size: 2.2em;
+            font-size: 2.5em;
             font-weight: 700;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
             position: relative;
         }
-        .infographic-header:before, .infographic-header:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .infographic-header:before {
-            border-width: 0 0 20px 20px;
-            border-color: transparent transparent #5f8694 transparent;
-            bottom: 0;
-            left: 0;
-        }
-        .infographic-header:after {
-            border-width: 20px 20px 0 0;
-            border-color: #5f8694 transparent transparent transparent;
-            top: 0;
-            right: 0;
-        }
 
         .section {
-            padding: 30px 40px;
+            padding: 25px 45px;
             border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
         }
+
         .section:last-child {
             border-bottom: none;
         }
 
         .section-title {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 20px;
+            font-size: 1.9em;
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
             font-weight: 600;
-            border-bottom: 2px solid #a3d9ff;
-            padding-bottom: 5px;
-            align-self: stretch;
+            border-bottom: 3px solid var(--primary-color-dark);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
+
         .section-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
             width: 100%;
         }
+        
         .subsection {
             flex: 1;
-            min-width: 280px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
+            min-width: 300px;
+            background-color: var(--light-gray-background);
+            border-radius: var(--border-radius-small);
+            padding: 25px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid transparent;
         }
+
         .subsection:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left-color: var(--primary-color);
         }
+
         .subsection-title {
-            font-size: 1.3em;
-            color: #5f8694;
+            font-size: 1.4em;
+            color: var(--primary-color);
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
             display: flex;
             align-items: center;
+            border-bottom: none;
+            padding-bottom: 0;
         }
-        .subsection p, .subsection ul, .subsection ol {
-            font-size: 0.95em;
-            margin-bottom: 10px;
+
+        .subsection p,.subsection ul,.subsection ol {
+            font-size: 0.98em;
+            margin-bottom: 12px;
         }
-        .subsection ul, .subsection ol {
+
+        .subsection ul,.subsection ol {
             padding-left: 20px;
         }
+
         .subsection li {
-            margin-bottom: 5px;
-        }
-        .subsection b {
-            color: #34495e;
-        }
-        .note {
-            font-size: 0.85em;
-            color: #777;
-            margin-top: 20px;
-            text-align: center;
-            width: 100%;
+            margin-bottom: 10px;
         }
 
-        .subsection ol ul {
-            list-style: circle;
-            margin-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
+        .subsection b,.subsection strong {
+            color: var(--secondary-color);
         }
+
+        .note {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 25px;
+            padding: 15px 20px;
+            background-color: #f4f6f7;
+            border-left: 4px solid var(--primary-color);
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        
+        .warning-note {
+            background-color: #f9ebea;
+            border-left-color: var(--accent-red);
+        }
+        
+        .holistic-note {
+            background-color: #e8f8f5;
+            border-left-color: var(--accent-green);
+       }
 
         .icon {
-            font-size: 1.8em;
-            margin-right: 10px;
-            color: #79a3b1;
-            display: inline-block;
+            font-size: 1.5em;
+            margin-right: 12px;
+            color: var(--primary-color-dark);
             vertical-align: middle;
         }
+        
+        .subsection-icon {
+             font-size: 1.5em;
+             margin-right: 10px;
+             color: var(--primary-color);
+        }
+        
         .icon-small {
             font-size: 1.5em;
             margin-right: 8px;
-            color: #79b18b;
+            color: var(--primary-color);
             display: inline-block;
             vertical-align: middle;
-        }
-
-        .index-button-container {
-            text-align: center;
-            padding: 20px 40px;
-            background-color: #f0f0f0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .index-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-        }
-        .index-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
         }
 
         .footer-copyright {
             text-align: center;
             padding: 20px 0;
-            font-size: 0.85em;
+            font-size: 0.9em;
             color: #6c757d;
-            border-top: 1px solid #e0e0e0;
+            background-color: var(--light-gray-background);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--light-gray-background);
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 25px 20px; }
+            .section-content {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.6em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="infographic-container">
-        <div class="infographic-header">
-            Nichelul și Granițele Personale
-        </div>
+    <main class="infographic-container">
+        <header class="infographic-header">
+            Nichel
+        </header>
 
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Nichel - Perspectiva fizică</h2>
+        <section class="section">
+            <h2 class="section-title"><span class="icon">🔬</span>1. Perspectiva fizică și biochimică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Nichelul este un oligoelement care, deși esențial în cantități minuscule pentru anumite organisme vii, rolul său exact și esențial în metabolismul uman este încă un subiect de cercetare și nu este pe deplin înțeles, spre deosebire de alte minerale. Acesta este considerat un oligoelement ultratrație, ceea ce înseamnă că necesarul său zilnic este extrem de mic.</p>
-                    <ul>
-                        <li><b>Activitatea enzimatică:</b> Se consideră că nichelul este un cofactor pentru anumite enzime, ajutând la catalizarea unor reacții biochimice. De exemplu, s-a sugerat un rol în activitatea unor enzime legate de metabolismul glucozei și a lipidelor.</li>
-                        <li><b>Metabolismul fierului:</b> Unele studii pe animale au sugerat că nichelul ar putea fi implicat în absorbția sau utilizarea fierului, dar acest lucru nu este ferm stabilit la oameni.</li>
-                        <li><b>Integritatea celulară:</b> Există speculații că ar putea avea un rol în menținerea structurii membranelor celulare.</li>
-                        <li><b>Producția hormonală:</b> Unii cercetători au explorat o posibilă legătură cu producția sau reglarea unor hormoni, dar dovezile sunt limitate.</li>
-                    </ul>
-                    <p><b>Important de reținut:</b> Necesitatea nichelului în corpul uman este încă neclară și nu există o deficiență de nichel recunoscută clinic la om, care să fie cauzată exclusiv de lipsa aportului alimentar. Majoritatea oamenilor obțin suficient nichel din dieta obișnuită.</p>
+                <div class="subsection" style="flex: 2;">
+                    <h3 class="subsection-title"><span class="subsection-icon">⚙️</span>Rolul principal în organism</h3>
+                     <p><b>Nichelul (Ni)</b> este un oligoelement al cărui rol esențial în metabolismul uman este încă un subiect de cercetare și nu este pe deplin stabilit. Este considerat un oligoelement ultratrație, necesar în cantități extrem de mici.</p>
+                     <p>Rolurile sale potențiale, observate în principal în studii pe animale, includ:</p>
+                     <ul>
+                         <li><b>Activitatea enzimatică:</b> Se consideră că nichelul este un cofactor pentru anumite enzime, ajutând la catalizarea unor reacții biochimice.</li>
+                         <li><b>Metabolismul fierului:</b> Unele studii au sugerat că nichelul ar putea fi implicat în absorbția sau utilizarea fierului.</li>
+                         <li><b>Integritatea celulară:</b> Există speculații că ar putea avea un rol în menținerea structurii membranelor celulare.</li>
+                         <li><b>Producția hormonală:</b> A fost explorată o posibilă legătură cu producția sau reglarea unor hormoni, dar dovezile sunt limitate.</li>
+                     </ul>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Nichelul este destul de răspândit în natură și se găsește în multe alimente. Persoanele cu alergie la nichel pot fi sfătuite să limiteze consumul acestora.</p>
-                    <ul>
+                 <div class="subsection" style="flex: 1.5;">
+                    <h3 class="subsection-title"><span class="subsection-icon">🍫</span>Surse alimentare</h3>
+                    <p>Nichelul este răspândit în natură și se găsește în multe alimente, în special de origine vegetală.</p>
+                     <ul>
                         <li><b>Cereale integrale:</b> Ovăz, grâu integral, hrișcă.</li>
                         <li><b>Leguminoase:</b> Linte, fasole, năut, mazăre.</li>
-                        <li><b>Nuci și semințe:</b> Migdale, nuci, alune de pădure, semințe de floarea-soarelui.</li>
-                        <li><b>Cacao și ciocolată:</b> Ciocolata neagră are un conținut ridicat de nichel.</li>
-                        <li><b>Anumite legume:</b> Spanac, broccoli, varză, roșii.</li>
-                        <li><b>Fructe:</b> Pere, ananas, zmeură, prune.</li>
-                        <li><b>Fructe de mare:</b> Stridii, hering, somon.</li>
-                        <li><b>Ceai negru</b>.</li>
-                    </ul>
-                    <h2>Probleme legate de nichel</h2>
-                    <p>Mai degrabă decât o deficiență, problemele legate de nichel la oameni sunt mai frecvent asociate cu:</p>
-                    <ul>
-                        <li><b>Alergia la nichel:</b> Aceasta este o problemă comună și se manifestă adesea ca dermatită de contact (erupție cutanată, mâncărime, roșeață) atunci când pielea intră în contact direct cu obiecte care conțin nichel (bijuterii, catarame de curea, nasturi). Poate apărea și o alergie alimentară la nichel, manifestată prin simptome digestive sau cutanate.</li>
-                        <li><b>Toxicitatea la nichel (exces):</b> În cantități mari, nichelul poate fi toxic. Expunerea la niveluri ridicate de nichel, de obicei prin inhalare în medii industriale sau prin ingestia unor cantități foarte mari de suplimente (ceea ce nu este recomandat), poate duce la probleme respiratorii, neurologice sau la afectarea organelor.</li>
-                    </ul>
+                        <li><b>Nuci și semințe:</b> Migdale, nuci, alune de pădure.</li>
+                        <li><b>Cacao și ciocolată neagră.</b></li>
+                        <li><b>Anumite legume:</b> Spanac, broccoli, varză.</li>
+                        <li><b>Fructe de mare:</b> Stridii, hering.</li>
+                        <li><b>Ceai negru.</b></li>
+                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2 class="section-title">Nichel: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, nichelul este un oligoelement ultratrație, al cărui rol în corpul uman este încă în studiu, dar este adesea asociat cu <b>sensibilitatea, reacția la mediu (fizic și emoțional), adaptabilitatea și gestionarea granițelor personale</b>. Având în vedere că problemele legate de nichel sunt mai frecvent asociate cu alergii și toxicitate, holistic, el rezonează cu modul în care interacționăm și reacționăm la lumea externă și la stimuli.</p>
-
+        <section class="section">
+             <h2 class="section-title"><span class="icon">⚠️</span>2. Deficit și Siguranță</h2>
+             <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">📉</span>Deficit</h3>
+                    <p><strong>Nu există o deficiență de nichel recunoscută clinic la om</strong>, care să fie cauzată exclusiv de lipsa aportului alimentar. Majoritatea oamenilor obțin suficient nichel din dieta obișnuită pentru a satisface orice necesar teoretic.</p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">📈</span>Exces și Alergie</h3>
+                    <p>Problemele legate de nichel la oameni sunt aproape întotdeauna asociate cu alergia sau toxicitatea prin expunere excesivă, nu cu aportul alimentar normal.</p>
+                     <ul>
+                        <li><b>Alergia la nichel:</b> Aceasta este o problemă foarte comună. Se manifestă ca <strong>dermatită de contact</strong> (erupție cutanată, mâncărime, roșeață) la contactul pielii cu obiecte care conțin nichel (bijuterii, catarame, nasturi).</li>
+                        <li><b>Toxicitate:</b> În cantități mari (de obicei prin inhalare în medii industriale), nichelul poate fi toxic și carcinogen, afectând sistemul respirator și alte organe.</li>
+                    </ul>
+                </div>
+             </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">🌿</span>3. Perspective holistice și funcționale</h2>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Deși o deficiență de nichel recunoscută clinic la om, cauzată exclusiv de lipsa aportului alimentar, nu este pe deplin stabilită, din perspectivă holistică am putea explora:</p>
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">🔗</span>Interacțiuni</h3>
+                    <p>Nichelul poate concura cu alte metale pentru absorbție, în special cu <strong>fierul</strong>. Un aport ridicat de fier poate reduce absorbția nichelului, și invers.</p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">☯️</span>Perspective tradiționale</h3>
+                    <p><b>În MTC</b>, reacțiile alergice la nichel pot fi văzute ca un dezechilibru al <strong>Wei Qi</strong> (energia defensivă) și o reacție de tip "Căldură Toxică" la nivelul pielii.</p>
+                    <p><b>În Ayurveda</b>, alergiile cutanate sunt adesea o manifestare a unui dezechilibru <strong>Pitta dosha</strong>, reflectând o "căldură" și o reactivitate crescută în sânge și piele.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">❤️‍🩹</span>4. Perspective psiho-somatice și calea spre echilibru</h2>
+            <p>Din perspectivă holistică, nichelul este asociat cu <b>sensibilitatea, reacția la mediu și gestionarea granițelor personale</b>. Rezonează cu modul în care interacționăm și reacționăm la lumea externă.</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">💔</span>Dezechilibru (Alergie/Exces)</h3>
+                    <p>Dezechilibrul legat de nichel poate fi asociat cu:</p>
                     <ol>
-                        <li><b>Dificultăți de adaptare la mediu sau la schimbare:</b> O lipsă de fluiditate în a te ajusta la noi situații, oameni sau circumstanțe. Senzația de a te simți "străin" sau inconfortabil în anumite medii.</li>
-                        <li><b>Hipersensibilitate emoțională ascunsă:</b> O tendință de a prelua energiile sau emoțiile negative din jur, fără a avea mecanisme clare de filtrare sau protecție.</li>
-                        <li><b>Lipsa de "ancorare" sau de rezistență:</b> Un sentiment de fragilitate interioară, de a fi ușor influențabil sau de a nu-ți putea menține integritatea în fața presiunilor externe.</li>
-                        <li><b>Probleme cu identitatea personală:</b> Incapacitatea de a-ți stabili granițe clare între tine și ceilalți, ducând la o diluare a propriei identități.</li>
+                        <li><b>Reacții exagerate și intoleranță:</b> O tendință de a reacționa disproporționat la stimuli minori, fie fizic (alergii), fie emoțional (iritabilitate).</li>
+                        <li><b>Rigiditate și "ziduri" emoționale:</b> O protecție excesivă, o dificultate în a te deschide sau a permite vulnerabilitatea.</li>
+                        <li><b>Agresivitate pasivă:</b> O energie internă tensionată care se manifestă prin critici sau o nevoie de a controla mediul.</li>
                     </ol>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Problemele legate de nichel la oameni sunt mai frecvent asociate cu excesul sau cu alergia. Din perspectivă holistică, un exces ar putea sugera:</p>
-                    <ol>
-                        <li><b>Reacții exagerate și intoleranță:</b> O tendință de a reacționa disproporționat la stimuli minori, fie fizic (alergii), fie emoțional (iritabilitate, intoleranță la opiniile altora).</li>
-                        <li><b>Rigiditate extremă și "ziduri" emoționale:</b> O protecție excesivă, o dificultate în a te deschide sau a permite vulnerabilitatea. Aceasta poate duce la izolare.</li>
-                        <li><b>Agresivitate pasivă sau activă:</b> O energie internă tensionată care se manifestă prin critici, judecată sau o nevoie de a controla mediul pentru a evita orice "intruziune".</li>
-                        <li><b>Dificultăți de a "elibera" toxine emoționale:</b> O tendință de a reține resentimente sau furie, ceea ce duce la o "toxicitate" emoțională internă care se poate manifesta fizic.</li>
-                        <li><b>Nevoi excesive de control asupra mediului:</b> O teamă profundă de a fi "contaminat" sau afectat de influențe externe, ceea ce duce la o nevoie compulsivă de a controla totul.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Calea spre echilibru</h2>
-            <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>Calea spre echilibru</h3>
+                    <p>Obiectivele legate de echilibrarea reacției la stimuli pot fi atinse prin:</p>
                     <ul>
-                        <li><b>Practici de stabilire a granițelor personale</b> (emoționale și energetice).</li>
-                        <li><b>Meditații de "împământare"</b> pentru a întări sentimentul de stabilitate internă.</li>
-                        <li><b>Terapii</b> care ajută la dezvoltarea stimei de sine și a identității personale.</li>
-                        <li><b>Exerciții de adaptabilitate și flexibilitate mentală</b> (mindfulness, yoga fluidă).</li>
-                        <li><b>Lucrul cu încrederea</b> și deschiderea controlată față de mediu.</li>
-                    </ul>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
-                    <ul>
-                        <li><b>Practici de eliberare emoțională</b> și de gestionare a furiei (jurnalism, art-terapie, discuții cu terapeutul).</li>
+                        <li><b>Practici de eliberare emoțională</b> și de gestionare a furiei (jurnalism, art-terapie).</li>
                         <li><b>Tehnici de calmare</b> și reducere a reacțiilor exagerate (respirație profundă, meditație).</li>
                         <li><b>Cultivarea empatiei</b> și a toleranței față de ceilalți.</li>
                         <li><b>Recunoașterea și eliberarea nevoii de control.</b></li>
-                        <li><b>"Curățare" energetică</b> regulată pentru a elibera energiile externe preluate.</li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
+        </section>
 
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
-        </div>
-
+        <section class="section">
+            <h2 class="section-title"><span class="icon">📜</span>5. Recomandări și siguranță</h2>
+            <div class="section-content">
+                <div class="subsection">
+                     <h3 class="subsection-title"><span class="subsection-icon">📋</span>Doze recomandate</h3>
+                     <p>Deoarece esențialitatea sa la om nu este pe deplin stabilită, <strong>nu există o Doză Zilnică Recomandată (DZR)</strong> pentru nichel. Aportul dintr-o dietă normală este considerat suficient.</p>
+                     <p>Limita superioară tolerabilă (UL) pentru adulți este stabilită la <strong>1.000 mcg (1 mg) pe zi</strong> din toate sursele (alimente, apă, suplimente).</p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">🚨</span>Avertisment de siguranță</h3>
+                    <p>Principala preocupare legată de nichel pentru publicul larg este alergia.</p>
+                    <div class="note warning-note">
+                        <p><b>Recomandare:</b> <strong>Nu se recomandă suplimentarea cu nichel.</strong> Persoanele cu o alergie cunoscută la nichel ar trebui să evite contactul cu obiecte care conțin acest metal și, în cazuri severe, să discute cu un medic sau dietetician despre o dietă cu conținut redus de nichel. O dietă variată și echilibrată este cea mai sigură abordare.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
+            <p style="font-size: 0.8em; color: #95a5a6;">Acest conținut este pur informativ și nu înlocuiește sfatul medical profesionist. Consultați întotdeauna medicul pentru probleme de sănătate.</p>
         </div>
-    </div>
+    </main>
 </body>
 </html>
