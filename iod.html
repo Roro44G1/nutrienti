@@ -3,314 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iodul și Adevărul Personal</title>
+    <title>Iod</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #5DADE2; /* O nuanță de albastru-indigo */
+            --primary-color-dark: #3498DB;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f6f7;
+            --text-color: #34495e;
+            --card-background: #ffffff;
+            --light-gray-background: #f8f9fa;
+            --border-color: #e0e0e0;
+            --accent-green: #27ae60;
+            --accent-red: #e74c3c;
+            --base-font-family: 'Roboto', sans-serif;
+            --border-radius-large: 15px;
+            --border-radius-small: 10px;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: var(--base-font-family);
+            line-height: 1.7;
             margin: 0;
-            background-color: #e9ecef;
-            color: #343a40;
+            background-color: var(--background-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             padding: 40px 20px;
             box-sizing: border-box;
         }
+
         .infographic-container {
-            max-width: 900px;
+            max-width: 950px;
             width: 100%;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: var(--card-background);
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-medium);
             overflow: hidden;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
         }
+
         .infographic-header {
-            background-color: #79a3b1;
+            background-color: var(--primary-color);
             color: white;
-            padding: 30px 20px;
+            padding: 10px 10px;
             text-align: center;
-            font-size: 2.2em;
+            font-size: 2.5em;
             font-weight: 700;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
             position: relative;
         }
-        .infographic-header:before, .infographic-header:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .infographic-header:before {
-            border-width: 0 0 20px 20px;
-            border-color: transparent transparent #5f8694 transparent;
-            bottom: 0;
-            left: 0;
-        }
-        .infographic-header:after {
-            border-width: 20px 20px 0 0;
-            border-color: #5f8694 transparent transparent transparent;
-            top: 0;
-            right: 0;
-        }
 
         .section {
-            padding: 30px 40px;
+            padding: 25px 45px;
             border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
         }
+
         .section:last-child {
             border-bottom: none;
         }
 
         .section-title {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 20px;
+            font-size: 1.9em;
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
             font-weight: 600;
-            border-bottom: 2px solid #a3d9ff;
-            padding-bottom: 5px;
-            align-self: stretch;
+            border-bottom: 3px solid var(--primary-color-dark);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
+
         .section-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
             width: 100%;
         }
+        
         .subsection {
             flex: 1;
-            min-width: 280px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
+            min-width: 300px;
+            background-color: var(--light-gray-background);
+            border-radius: var(--border-radius-small);
+            padding: 25px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid transparent;
         }
+
         .subsection:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left-color: var(--primary-color);
         }
+
         .subsection-title {
-            font-size: 1.3em;
-            color: #5f8694;
+            font-size: 1.4em;
+            color: var(--primary-color);
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
             display: flex;
             align-items: center;
+            border-bottom: none;
+            padding-bottom: 0;
         }
-        .subsection p, .subsection ul, .subsection ol {
-            font-size: 0.95em;
-            margin-bottom: 10px;
+
+        .subsection p,.subsection ul,.subsection ol {
+            font-size: 0.98em;
+            margin-bottom: 12px;
         }
-        .subsection ul, .subsection ol {
+
+        .subsection ul,.subsection ol {
             padding-left: 20px;
         }
+
         .subsection li {
-            margin-bottom: 5px;
-        }
-        .subsection b {
-            color: #34495e;
-        }
-        .note {
-            font-size: 0.85em;
-            color: #777;
-            margin-top: 20px;
-            text-align: center;
-            width: 100%;
+            margin-bottom: 10px;
         }
 
-        .subsection ol ul {
-            list-style: circle;
-            margin-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
+        .subsection b,.subsection strong {
+            color: var(--secondary-color);
         }
+
+        .note {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 25px;
+            padding: 15px 20px;
+            background-color: #ebf5fb;
+            border-left: 4px solid var(--primary-color);
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        
+        .warning-note {
+            background-color: #f9ebea;
+            border-left-color: var(--accent-red);
+        }
+        
+        .holistic-note {
+            background-color: #e8f8f5;
+            border-left-color: var(--accent-green);
+       }
 
         .icon {
-            font-size: 1.8em;
-            margin-right: 10px;
-            color: #79a3b1;
-            display: inline-block;
+            font-size: 1.5em;
+            margin-right: 12px;
+            color: var(--primary-color-dark);
             vertical-align: middle;
         }
+        
+        .subsection-icon {
+             font-size: 1.5em;
+             margin-right: 10px;
+             color: var(--primary-color);
+        }
+        
         .icon-small {
             font-size: 1.5em;
             margin-right: 8px;
-            color: #79b18b;
+            color: var(--primary-color);
             display: inline-block;
             vertical-align: middle;
-        }
-
-        .index-button-container {
-            text-align: center;
-            padding: 20px 40px;
-            background-color: #f0f0f0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .index-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-        }
-        .index-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
         }
 
         .footer-copyright {
             text-align: center;
             padding: 20px 0;
-            font-size: 0.85em;
+            font-size: 0.9em;
             color: #6c757d;
-            border-top: 1px solid #e0e0e0;
+            background-color: var(--light-gray-background);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--light-gray-background);
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 25px 20px; }
+            .section-content {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.6em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="infographic-container">
-        <div class="infographic-header">
-            Iodul și Adevărul Personal
-        </div>
+    <main class="infographic-container">
+        <header class="infographic-header">
+            Iod
+        </header>
 
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Iod - Perspectiva fizică</h2>
+        <section class="section">
+            <h2 class="section-title"><span class="icon">🔬</span>1. Perspectiva fizică și biochimică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Iodul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități mici pentru a funcționa corect. Rolul său principal și cel mai vital este legat de funcția glandei tiroide.</p>
-                    <ul>
-                        <li><b>Sinteza hormonilor tiroidieni:</b> Acesta este rolul fundamental al iodului. Glanda tiroidă utilizează iodul pentru a produce doi hormoni esențiali: Tiroxina (T4) și Triiodotironina (T3). Acești hormoni tiroidieni sunt vitali pentru o multitudine de procese din corp.</li>
-                        <li><b>Reglarea metabolismului:</b> Hormonii tiroidieni controlează rata metabolică a organismului, influențând modul în care celulele utilizează energia. Aceasta afectează greutatea corporală, nivelul de energie și temperatura corpului.</li>
-                        <li><b>Dezvoltarea și creșterea:</b> Iodul este crucial pentru creșterea și dezvoltarea normală, în special la copii și adolescenți. Este absolut vital în timpul sarcinii și al alăptării pentru dezvoltarea neurologică și cognitivă a fătului și a bebelușului. Implicațiile sunt că deficiența de iod în aceste perioade poate duce la cretinism, o formă severă de retard mintal și fizic.</li>
-                        <li><b>Funcția cognitivă:</b> Hormonii tiroidieni influențează direct funcția cerebrală, memoria, concentrația și capacitatea de învățare la toate vârstele.</li>
-                        <li><b>Sănătatea pielii și a părului:</b> Contribuie la menținerea sănătății pielii, a părului și a unghiilor.</li>
-                        <li><b>Funcția cardiacă:</b> Hormonii tiroidieni influențează ritmul cardiac și funcția generală a inimii.</li>
-                    </ul>
+                <div class="subsection" style="flex: 2;">
+                    <h3 class="subsection-title"><span class="subsection-icon">⚙️</span>Rolul principal în organism</h3>
+                     <p><b>Iodul (I)</b> este un oligoelement esențial, a cărui unică funcție cunoscută este de a fi o componentă indispensabilă a hormonilor tiroidieni.</p>
+                     <ul>
+                         <li><b>Sinteza hormonilor tiroidieni:</b> Glanda tiroidă utilizează iodul pentru a produce <strong>Tiroxina (T4)</strong> și <strong>Triiodotironina (T3)</strong>. Acești hormoni sunt regulatorii principali ai metabolismului.</li>
+                         <li><b>Reglarea metabolismului:</b> Hormonii tiroidieni controlează rata metabolică bazală, influențând modul în care celulele utilizează energia, greutatea corporală și temperatura.</li>
+                         <li><b>Dezvoltarea și creșterea:</b> Este absolut vital în timpul sarcinii și copilăriei pentru dezvoltarea neurologică și cognitivă a fătului. Deficiența severă poate duce la cretinism, o formă de retard mintal și fizic ireversibil.</li>
+                         <li><b>Funcția cognitivă:</b> Hormonii tiroidieni influențează direct funcția cerebrală, memoria, concentrația și starea de spirit la toate vârstele.</li>
+                         <li><b>Sănătatea pielii și a părului:</b> Contribuie la menținerea sănătății pielii, a părului și a unghiilor.</li>
+                     </ul>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Cea mai mare parte a iodului din dietă provine din alimente, deși conținutul poate varia în funcție de cantitatea de iod din sol sau apă.</p>
-                    <ul>
-                        <li><b>Sare iodată:</b> În multe țări, sarea de masă este iodată pentru a preveni deficiența de iod la nivel populațional. Aceasta este o sursă importantă pentru mulți oameni.</li>
-                        <li><b>Alge marine:</b> Nori, kombu, wakame – sunt printre cele mai bogate surse de iod. Cantitatea poate varia enorm, așa că este bine să fie consumate cu moderație pentru a evita un exces.</li>
-                        <li><b>Pește și fructe de mare:</b> Peștele de apă sărată și fructele de mare sunt surse excelente de iod.
-                            <ul>
-                                <li>Cod.</li>
-                                <li>Ton.</li>
-                                <li>Haddock.</li>
-                                <li>Creveți.</li>
-                                <li>Homar.</li>
-                            </ul>
-                        </li>
-                        <li><b>Produse lactate:</b> Cantitatea de iod din lapte și produse lactate depinde de hrana animalelor și de soluțiile de curățare utilizate în procesarea laptelui.
-                            <ul>
-                                <li>Lapte.</li>
-                                <li>Iaurt.</li>
-                                <li>Brânză.</li>
-                            </ul>
-                        </li>
-                        <li><b>Ouă:</b> Conțin o cantitate moderată de iod.</li>
-                        <li><b>Pâine:</b> Unele produse de panificație pot fi făcute cu aluat care conține iodat de potasiu, dar acest lucru variază în funcție de producător și țară.</li>
-                    </ul>
-                    <p><b>Important:</b> Atât deficiența, cât și excesul de iod pot fi dăunătoare pentru glanda tiroidă. De aceea, este important să se mențină un echilibru. Persoanele cu afecțiuni tiroidiene preexistente trebuie să fie deosebit de atente la aportul de iod și să discute cu medicul lor înainte de a lua suplimente.</p>
-                    <h2>Ce se întâmplă în caz de deficit de iod?</h2>
-                    <p>Deficiența de iod este o problemă globală de sănătate publică și poate duce la:</p>
-                    <ul>
-                        <li><b>Gușă (glanda tiroidă mărită):</b> Glanda tiroidă se mărește în încercarea de a capta mai mult iod din sânge și de a produce suficienți hormoni.</li>
-                        <li><b>Hipotiroidism:</b> Producție insuficientă de hormoni tiroidieni, ducând la simptome precum oboseală, creștere în greutate, sensibilitate la frig, piele uscată, constipație și probleme de memorie.</li>
-                        <li><b>Probleme de dezvoltare:</b> Așa cum am menționat, deficiența severă la copii poate duce la retard mintal și fizic.</li>
-                    </ul>
+                 <div class="subsection" style="flex: 1.5;">
+                    <h3 class="subsection-title"><span class="subsection-icon">🌊</span>Surse alimentare</h3>
+                    <p>Conținutul de iod din alimente variază în funcție de sol și de practicile agricole.</p>
+                     <ul>
+                        <li><b>Sare iodată:</b> Principala sursă în multe țări, ca măsură de sănătate publică.</li>
+                        <li><b>Alge marine:</b> Nori, kombu, wakame – sunt printre cele mai bogate surse, dar trebuie consumate cu moderație.</li>
+                        <li><b>Pește și fructe de mare:</b> Peștele de apă sărată (cod, ton) și fructele de mare.</li>
+                        <li><b>Produse lactate:</b> Lapte, iaurt, brânză.</li>
+                        <li><b>Ouă.</b></li>
+                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2 class="section-title">Iod: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, iodul este fundamental conectat cu <b>comunicarea, auto-exprimarea, adevărul personal și puterea de manifestare</b>. Fiind esențial pentru funcția glandei tiroide, care este adesea asociată cu chakra gâtului (centrul energiei comunicării și adevărului) în tradițiile holistice, iodul rezonează cu capacitatea noastră de a ne exprima autentic și de a trăi în acord cu esența noastră.</p>
-
+        <section class="section">
+             <h2 class="section-title"><span class="icon">⚠️</span>2. Deficit și Exces</h2>
+             <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">📉</span>Simptome cauzate de deficit</h3>
+                    <p>Deficiența de iod este o problemă globală de sănătate publică și poate duce la o serie de afecțiuni cunoscute ca "tulburări prin deficit de iod".</p>
+                    <ul>
+                        <li><b>Gușă:</b> Mărirea glandei tiroide, care se umflă în încercarea de a capta mai mult iod din sânge.</li>
+                        <li><b>Hipotiroidism:</b> Producție insuficientă de hormoni tiroidieni, ducând la oboseală, creștere în greutate, sensibilitate la frig, piele uscată, constipație și "ceață mentală".</li>
+                        <li><b>Probleme de dezvoltare:</b> Risc de retard mintal și fizic la făt dacă mama are deficit în timpul sarcinii.</li>
+                        <li><b>Dificultăți de învățare și IQ redus</b> la copii.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">📈</span>Exces și siguranță</h3>
+                    <p>Atât deficitul, cât și excesul de iod pot fi dăunătoare pentru tiroidă. Excesul apare de obicei din suplimentare necontrolată sau consum excesiv de alge marine.</p>
+                     <ul>
+                        <li><b>Hipotiroidism indus de iod (efectul Wolff-Chaikoff):</b> Dozele mari pot bloca temporar producția de hormoni tiroidieni.</li>
+                        <li><b>Hipertiroidism indus de iod (fenomenul Jod-Basedow):</b> La persoanele cu gușă sau noduli tiroidieni, un aport brusc și mare de iod poate declanșa o producție excesivă de hormoni.</li>
+                        <li><b>Poate agrava tiroidita autoimună (Hashimoto).</b></li>
+                        <li><b>Acnee iodică.</b></li>
+                    </ul>
+                </div>
+             </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">🌿</span>3. Perspective holistice și funcționale</h2>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de iod poate fi legat de următoarele aspecte emoționale:</p>
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">🤝</span>Sinergii și antagonisme</h3>
+                    <p><b>Sinergii (lucrează împreună cu):</b></p>
+                    <ul>
+                        <li><b>Seleniu:</b> Este esențial pentru enzimele (deiodinaze) care transformă T4 (forma de stocare) în T3 (forma activă) a hormonului tiroidian.</li>
+                        <li><b>Fier, Zinc, Vitamina A:</b> Sunt, de asemenea, necesare pentru o funcție tiroidiană optimă.</li>
+                    </ul>
+                     <p><b>Antagonisme (blochează utilizarea):</b></p>
+                     <ul>
+                        <li><b>Goitrogeni:</b> Compuși din anumite alimente (în special crucifere crude: varză, broccoli, conopidă) pot interfera cu utilizarea iodului de către tiroidă. Gătirea inactivează în mare parte acești compuși.</li>
+                        <li><b>Halogene:</b> Fluorul, clorul și bromul pot concura cu iodul pentru receptorii tiroidieni.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">☯️</span>Perspective tradiționale</h3>
+                    <p><b>În MTC</b>, funcția tiroidei este strâns legată de <b>Rinichi</b> (sursa energiei metabolice și a dezvoltării) și de <b>Splină</b> (transformarea și transportul). Gușa este adesea văzută ca o stagnare de Qi și Flegmă în zona gâtului.</p>
+                    <p><b>În Ayurveda</b>, tiroida este legată de <b>Agni</b> (focul metabolic) și de <b>Pitta dosha</b>. Hipotiroidismul este adesea o problemă de tip <b>Kapha</b> (lentoare, greutate), în timp ce hipertiroidismul este o problemă de tip <b>Pitta</b> (căldură, intensitate).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">❤️‍🩹</span>4. Perspective psiho-somatice și calea spre echilibru</h2>
+            <p>Din perspectivă holistică, iodul este fundamental conectat cu <b>comunicarea, auto-exprimarea și adevărul personal</b>. Fiind esențial pentru tiroidă, asociată cu chakra gâtului, rezonează cu capacitatea noastră de a ne exprima autentic.</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">💔</span>Deficit</h3>
+                    <p>Un deficit de iod poate fi legat de:</p>
                     <ol>
-                        <li><b>Blocaj în comunicare și auto-exprimare:</b> Dificultatea de a-ți exprima gândurile, sentimentele sau nevoile. Senzația de a avea "un nod în gât", de a fi tăcut sau de a nu-ți găsi cuvintele. Aceasta poate duce la frustrare și izolare.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Gușă (glanda tiroidă mărită), disfonie.</li>
-                            </ul>
-                        </li>
-                        <li><b>Teama de a-ți spune adevărul personal:</b> Frica de judecată, de respingere sau de conflict, care te împiedică să fii autentic și să îți exprimi opiniile sau convingerile. Această reprimare poate afecta energia din zona gâtului.</li>
-                        <li><b>Lipsa de claritate a scopului în viață:</b> Deoarece hormonii tiroidieni reglează metabolismul și energia vitală, un deficit poate reflecta o lipsă de direcție, o confuzie privind drumul personal sau un sentiment de a nu avea un scop clar.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Oboseală, lipsă de energie, metabolism lent.</li>
-                            </ul>
-                        </li>
-                        <li><b>Sentimentul de a fi "invizibil" sau neauzit:</b> O lipsă de recunoaștere sau de validare a vocii interioare, ceea ce poate duce la un sentiment de insignifianță.</li>
-                        <li><b>Dependența de aprobarea externă:</b> O nevoie excesivă de a fi pe placul celorlalți, sacrificându-ți propriile dorințe sau adevăruri pentru a te integra.</li>
+                        <li><b>Blocaj în comunicare și auto-exprimare:</b> Dificultatea de a-ți exprima gândurile și sentimentele, senzația de a avea "un nod în gât".<br><i>Manifestare fizică: Gușă, hipotiroidism.</i></li>
+                        <li><b>Teama de a-ți spune adevărul personal:</b> Frica de judecată sau conflict care te împiedică să fii autentic.</li>
+                        <li><b>Lipsa de claritate a scopului în viață.</b></li>
                     </ol>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de iod (rar din dietă, mai des din suplimentare excesivă sau expuneri specifice) ar putea sugera din perspectivă holistică:</p>
-                    <ol>
-                        <li><b>Agresivitate verbală sau dominare prin cuvinte:</b> O tendință de a vorbi excesiv, de a fi prea asertiv sau de a domina conversațiile, fără a asculta sau a permite și altor voci să se exprime.</li>
-                        <li><b>Rigiditate în convingeri și dogmatism:</b> O nevoie puternică de a-ți impune propriile adevăruri, fără a accepta perspective diferite. Un "adevăr absolut" care nu permite flexibilitate sau nuanțe.</li>
-                        <li><b>Suprasolicitare și energie "arzătoare":</b> Deși excesul de iod poate suprima tiroida, inițial sau la nivel subtil, poate indica o tendință de a "forța" manifestarea, de a fi prea zelos sau de a consuma rapid energia.</li>
-                        <li><b>Control excesiv al mediului prin comunicare:</b> O încercare de a manipula sau de a controla situațiile și persoanele prin intermediul cuvintelor sau al convingerilor.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Calea spre echilibru</h2>
-            <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>Calea spre echilibru</h3>
+                    <p>Obiectivele pe care le susține iodul pot fi atinse prin:</p>
                     <ul>
                         <li><b>Practici de eliberare a vocii:</b> Cântat, rostit tare, vocalize.</li>
                         <li><b>Jurnalism terapeutic</b> pentru a-ți clarifica gândurile și sentimentele.</li>
-                        <li><b>Practici de deschidere a chakrei gâtului:</b> Meditație cu vizualizare albastru deschis în zona gâtului, purtarea de pietre albastre (sodalit, lapis lazuli).</li>
+                        <li><b>Practici de deschidere a chakrei gâtului:</b> Meditație cu vizualizare albastru deschis în zona gâtului.</li>
                         <li><b>Terapii</b> care încurajează asertivitatea și stabilirea limitelor sănătoase.</li>
-                        <li><b>Recunoașterea și celebrarea propriei unicități</b> și a valorii personale.</li>
-                    </ul>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
-                    <ul>
-                        <li><b>Practici de ascultare activă</b> și de cultivare a empatiei.</li>
-                        <li><b>Exerciții de respirație profundă</b> pentru a calma sistemul nervos.</li>
-                        <li><b>Terapii</b> pentru gestionarea furiei și a tendințelor de dominare.</li>
-                        <li><b>Meditații</b> pentru a cultiva flexibilitatea mentală și acceptarea diversității de opinii.</li>
-                        <li><b>Exerciții de "împământare"</b> pentru a centra energia și a reduce suprastimularea.</li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
+        </section>
 
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
-        </div>
-
+        <section class="section">
+            <h2 class="section-title"><span class="icon">📜</span>5. Recomandări și siguranță</h2>
+            <div class="section-content">
+                <div class="subsection">
+                     <h3 class="subsection-title"><span class="subsection-icon">📋</span>Doze recomandate</h3>
+                     <p>Necesarul de iod este mic, dar absolut esențial.</p>
+                     <table>
+                         <thead>
+                             <tr>
+                                 <th>Grup de populație</th>
+                                 <th>DZR (mcg/zi)</th>
+                                 <th>Limită superioară (UL)</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Adulți (19+ ani)</td>
+                                 <td>150</td>
+                                 <td>1.100</td>
+                             </tr>
+                             <tr>
+                                 <td>Femei însărcinate</td>
+                                 <td>220</td>
+                                 <td>1.100</td>
+                             </tr>
+                             <tr>
+                                 <td>Femei care alăptează</td>
+                                 <td>290</td>
+                                 <td>1.100</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">🚨</span>Avertisment de siguranță</h3>
+                    <p>Atât deficitul, cât și excesul de iod pot perturba funcția tiroidiană.</p>
+                    <div class="note warning-note">
+                        <p><b>Avertisment critic:</b> Persoanele cu afecțiuni tiroidiene preexistente, în special <strong>tiroidita autoimună (Hashimoto)</strong>, pot fi extrem de sensibile la aportul de iod. Suplimentarea cu doze mari poate agrava procesul autoimun. <strong>Nu luați niciodată suplimente cu doze mari de iod fără a consulta un medic endocrinolog.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
+            <p style="font-size: 0.8em; color: #95a5a6;">Acest conținut este pur informativ și nu înlocuiește sfatul medical profesionist. Consultați întotdeauna medicul pentru probleme de sănătate.</p>
         </div>
-    </div>
+    </main>
 </body>
 </html>
