@@ -3,339 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicotinamida și Stabilitatea Emoțională</title>
+    <title>Nicotinamida (Vitamina B3)</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #9b59b6; /* O nuanță de violet/purpuriu */
+            --primary-color-dark: #8e44ad;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f7f6;
+            --text-color: #34495e;
+            --card-background: #ffffff;
+            --light-gray-background: #f8f9fa;
+            --border-color: #e0e0e0;
+            --accent-blue: #3498db;
+            --accent-green: #27ae60;
+            --accent-red: #e74c3c;
+            --base-font-family: 'Roboto', sans-serif;
+            --border-radius-large: 15px;
+            --border-radius-small: 10px;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: var(--base-font-family);
+            line-height: 1.7;
             margin: 0;
-            background-color: #e9ecef;
-            color: #343a40;
+            background-color: var(--background-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             padding: 40px 20px;
             box-sizing: border-box;
         }
+
         .infographic-container {
-            max-width: 900px;
+            max-width: 950px;
             width: 100%;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: var(--card-background);
+            border-radius: var(--border-radius-large);
+            box-shadow: var(--shadow-medium);
             overflow: hidden;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
         }
+
         .infographic-header {
-            background-color: #79a3b1;
+            background-color: var(--primary-color);
             color: white;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
-            font-size: 2.2em;
+            font-size: 2.4em;
             font-weight: 700;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
             position: relative;
         }
-        .infographic-header:before, .infographic-header:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .infographic-header:before {
-            border-width: 0 0 20px 20px;
-            border-color: transparent transparent #5f8694 transparent;
-            bottom: 0;
-            left: 0;
-        }
-        .infographic-header:after {
-            border-width: 20px 20px 0 0;
-            border-color: #5f8694 transparent transparent transparent;
-            top: 0;
-            right: 0;
-        }
 
         .section {
-            padding: 30px 40px;
+            padding: 25px 45px;
             border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
         }
+
         .section:last-child {
             border-bottom: none;
         }
 
         .section-title {
-            font-size: 1.8em;
-            color: #2c3e50;
-            margin-bottom: 20px;
+            font-size: 1.9em;
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
             font-weight: 600;
-            border-bottom: 2px solid #a3d9ff;
-            padding-bottom: 5px;
-            align-self: stretch;
+            border-bottom: 3px solid var(--primary-color-dark);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
+
         .section-content {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
             width: 100%;
         }
-        /* New styling for the rows within section-content for physical perspective */
-        .physical-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            width: 100%;
-            margin-bottom: 25px; /* Space between rows */
-        }
-        .physical-row:last-child {
-            margin-bottom: 0;
-        }
+        
         .subsection {
             flex: 1;
-            min-width: 280px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
+            min-width: 300px;
+            background-color: var(--light-gray-background);
+            border-radius: var(--border-radius-small);
+            padding: 25px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid transparent;
         }
+
         .subsection:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left-color: var(--primary-color);
         }
+
         .subsection-title {
-            font-size: 1.3em;
-            color: #5f8694;
+            font-size: 1.4em;
+            color: var(--primary-color);
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
             display: flex;
             align-items: center;
+            border-bottom: none;
+            padding-bottom: 0;
         }
-        .subsection p, .subsection ul, .subsection ol {
-            font-size: 0.95em;
-            margin-bottom: 10px;
+
+        .subsection p,.subsection ul,.subsection ol {
+            font-size: 0.98em;
+            margin-bottom: 12px;
         }
-        .subsection ul, .subsection ol {
+
+        .subsection ul,.subsection ol {
             padding-left: 20px;
         }
+
         .subsection li {
-            margin-bottom: 5px;
-        }
-        .subsection b {
-            color: #34495e;
-        }
-        .note {
-            font-size: 0.85em;
-            color: #777;
-            margin-top: 20px;
-            text-align: center;
-            width: 100%;
+            margin-bottom: 10px;
         }
 
-        .subsection ol ul {
-            list-style: circle;
-            margin-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
+        .subsection b,.subsection strong {
+            color: var(--secondary-color);
         }
+
+        .note {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 25px;
+            padding: 15px 20px;
+            background-color: #f4ecf7;
+            border-left: 4px solid var(--primary-color);
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        
+        .warning-note {
+            background-color: #f9ebea;
+            border-left-color: var(--accent-red);
+        }
+        
+        .holistic-note {
+            background-color: #e8f8f5;
+            border-left-color: var(--accent-green);
+       }
 
         .icon {
-            font-size: 1.8em;
-            margin-right: 10px;
-            color: #79a3b1;
-            display: inline-block;
+            font-size: 1.5em;
+            margin-right: 12px;
+            color: var(--primary-color-dark);
             vertical-align: middle;
         }
+        
+        .subsection-icon {
+             font-size: 1.5em;
+             margin-right: 10px;
+             color: var(--primary-color);
+        }
+        
         .icon-small {
             font-size: 1.5em;
             margin-right: 8px;
-            color: #79b18b;
+            color: var(--primary-color);
             display: inline-block;
             vertical-align: middle;
         }
 
-        .index-button-container {
-            text-align: center;
-            padding: 20px 40px;
-            background-color: #f0f0f0;
-            border-bottom: 1px solid #e0e0e0;
+        .footer-container {
+            padding: 30px 45px;
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
         }
-        .index-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
+        
+        .references h4 {
             color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            border-bottom: 1px solid #7f8c8d;
+            padding-bottom: 5px;
         }
-        .index-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+        
+        .references ul {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 0.8em;
+        }
+        
+        .references li {
+            margin-bottom: 5px;
         }
 
         .footer-copyright {
             text-align: center;
             padding: 20px 0;
-            font-size: 0.85em;
+            font-size: 0.9em;
             color: #6c757d;
-            border-top: 1px solid #e0e0e0;
+            background-color: var(--light-gray-background);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--light-gray-background);
         }
 
         @media (max-width: 768px) {
-            .section-content, .physical-row {
+            .section { padding: 25px 20px; }
+            .section-content {
                 flex-direction: column;
             }
             .subsection {
                 min-width: unset;
             }
             .infographic-header {
-                font-size: 1.8em;
+                font-size: 2em;
             }
             .section-title {
-                font-size: 1.5em;
+                font-size: 1.6em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="infographic-container">
-        <div class="infographic-header">
-            Nicotinamida și Stabilitatea Emoțională
-        </div>
+    <main class="infographic-container">
+        <header class="infographic-header">
+            Nicotinamida (Vitamina B3)
+        </header>
 
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Nicotinamida - Perspectiva fizică</h2>
+        <section class="section">
+            <h2 class="section-title"><span class="icon">🔬</span>1. Perspectiva fizică și biochimică</h2>
             <div class="section-content">
-                <div class="physical-row">
-                    <div class="subsection">
-                        <h3 class="subsection-title">Rolul principal</h3>
-                        <p>Nicotinamida, cunoscută și ca niacinamidă, este o formă a vitaminei B3 (niacină), o vitamină hidrosolubilă esențială. Joacă un rol fundamental în metabolismul energetic și în sănătatea celulară, fiind preferată în suplimente față de acidul nicotinic (o altă formă de B3) datorită absenței efectului de "flush" (roșeață, senzație de căldură).</p>
-                        <ul>
-                            <li><b>Metabolismul energetic:</b> Nicotinamida este o componentă esențială a coenzimelor NAD (nicotinamid adenin dinucleotid) și NADP (nicotinamid adenin dinucleotid fosfat). Aceste coenzime sunt cruciale pentru peste 400 de reacții enzimatice implicate în transformarea carbohidraților, grăsimilor și proteinelor în energie.</li>
-                            <li><b>Sănătatea sistemului nervos:</b> Este vitală pentru funcționarea normală a creierului și a sistemului nervos, contribuind la sinteza neurotransmițătorilor.</li>
-                            <li><b>Sănătatea pielii:</b> Contribuie la menținerea integrității și sănătății pielii. Este adesea utilizată topic în dermatologie pentru a îmbunătăți funcția de barieră a pielii, a reduce inflamația și roșeața și a ameliora acneea.</li>
-                            <li><b>Sănătatea digestivă:</b> Ajută la menținerea unui tract digestiv sănătos.</li>
-                            <li><b>Acțiune antiinflamatorie:</b> Poate avea proprietăți antiinflamatorii.</li>
-                        </ul>
-                    </div>
-                    <div class="subsection">
-                        <h3 class="subsection-title">Surse alimentare</h3>
-                        <p>Nicotinamida se găsește în aceleași alimente ca și celelalte forme de niacină, în special cele bogate în proteine.</p>
-                        <ul>
-                            <li><b>Carne și organe:</b> Ficat (vită, pui), carne de vită, pui, curcan.</li>
-                            <li><b>Pește:</b> Ton (în special ton conservat în apă), somon, anșoa.</li>
-                            <li><b>Cereale integrale și fortificate:</b> Pâine integrală, orez brun, cereale pentru micul dejun fortificate.</li>
-                            <li><b>Leguminoase:</b> Arahide, fasole, linte.</li>
-                            <li><b>Drojdie de bere.</b></li>
-                            <li><b>Ciuperci.</b></li>
-                            <li><b>Unele legume:</b> Cartofi, sparanghel.</li>
-                            <li><b>Cafea:</b> Conține niacină și poate contribui la aportul zilnic.</li>
-                        </ul>
-                    </div>
+                <div class="subsection" style="flex: 2;">
+                    <h3 class="subsection-title"><span class="subsection-icon">⚙️</span>Rolul principal în organism</h3>
+                     <p><b>Nicotinamida</b>, cunoscută și ca <b>niacinamidă</b>, este o formă a vitaminei B3 (niacină). Este preferată în suplimente datorită siguranței sale și absenței efectului de "flush" (înroșire) specific altei forme, acidul nicotinic.</p>
+                     <ul>
+                         <li><b>Metabolismul energetic:</b> Este o componentă esențială a coenzimelor <strong>NAD+</strong> și <strong>NADP+</strong>, care sunt cruciale pentru peste 400 de reacții enzimatice implicate în transformarea carbohidraților, grăsimilor și proteinelor în energie (ATP).</li>
+                         <li><b>Repararea ADN-ului și longevitate:</b> NAD+ este vital pentru funcția enzimelor PARP, care repară materialul genetic, și a sirtuinelor, proteine asociate cu longevitatea celulară.</li>
+                         <li><b>Sănătatea pielii:</b> Contribuie la menținerea integrității pielii. Este utilizată topic în dermatologie pentru a îmbunătăți funcția de barieră a pielii, a reduce inflamația (în acnee și rozacee) și a uniformiza pigmentarea.</li>
+                         <li><b>Sănătatea sistemului nervos:</b> Este vitală pentru funcționarea normală a creierului și a sistemului nervos.</li>
+                         <li><b>Acțiune antiinflamatorie:</b> Poate avea proprietăți antiinflamatorii, fiind studiată în afecțiuni precum osteoartrita.</li>
+                     </ul>
                 </div>
-
-                <div class="physical-row">
-                    <div class="subsection">
-                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (pelagra)</h3>
-                        <p>Deoarece nicotinamida este o formă de vitamina B3, deficiența sa severă duce la pelagra, o boală caracterizată prin "cele 4 D-uri": dermatită, diaree, demență și, în cele din urmă, deces (dacă nu este tratată). Deficiența este rară în țările dezvoltate.</p>
-                        <ol>
-                            <li><b>Dermatită:</b> Erupții cutanate simetrice, de obicei pe zone expuse la soare (gât, mâini, picioare), cu aspect de arsură solară, care devin apoi aspre și hiperpigmentate.</li>
-                            <li><b>Diaree:</b> Probleme gastrointestinale, inclusiv inflamația limbii (glosită), greață, vărsături și diaree severă.</li>
-                            <li><b>Demență:</b> Simptome neurologice și psihiatrice, inclusiv confuzie, iritabilitate, insomnie, anxietate, depresie și, în cazuri severe, demență.</li>
-                            <li><b>Slăbiciune, oboseală, lipsa poftei de mâncare.</b></li>
-                        </ol>
-                    </div>
-                    <div class="subsection">
-                        <h3 class="subsection-title">Simptome și boli cauzate de exces (toxicitate nicotinamidă)</h3>
-                        <p>Nicotinamida este, în general, foarte bine tolerată la doze mari, spre deosebire de acidul nicotinic care provoacă "flush". Toxicitatea este extrem de rară.</p>
-                        <ol>
-                            <li><b>Probleme gastrointestinale (rare):</b> Greață, diaree, crampe (la doze foarte mari).</li>
-                            <li>Nu sunt raportate efecte adverse grave sau toxicitate severă la doze mari din suplimente orale.</li>
-                            <li>La doze extrem de mari, teoretic pot exista efecte hepatice, dar sunt mult mai puțin probabile decât la acidul nicotinic.</li>
-                        </ol>
-                    </div>
+                 <div class="subsection" style="flex: 1.5;">
+                    <h3 class="subsection-title"><span class="subsection-icon">🥩</span>Surse alimentare</h3>
+                    <p>Nicotinamida se găsește în aceleași alimente ca și celelalte forme de niacină, în special în cele bogate în proteine.</p>
+                     <ul>
+                        <li><b>Carne și organe:</b> Ficat, carne de pui, curcan, vită.</li>
+                        <li><b>Pește:</b> Ton, somon.</li>
+                        <li><b>Cereale integrale și fortificate.</b></li>
+                        <li><b>Leguminoase:</b> Arahide, linte.</li>
+                        <li><b>Drojdie de bere.</b></li>
+                        <li><b>Ciuperci.</b></li>
+                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2 class="section-title">Nicotinamida: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, nicotinamida (Vitamina B3) este adesea asociată cu <b>stabilitatea energetică, gestionarea eficientă a stresului, adaptabilitatea, fluiditatea relațiilor și capacitatea de a menține integritatea "pielii" noastre emoționale</b>. Prin rolul său central în metabolismul energetic și în sănătatea pielii, nicotinamida rezonează cu modul în care ne procesăm emoțiile, cum ne menținem calmul sub presiune și cum interacționăm cu lumea.</p>
-
-            <div class="section-content">
+        <section class="section">
+             <h2 class="section-title"><span class="icon">⚠️</span>2. Deficit (Pelagra) și Siguranță</h2>
+             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de nicotinamidă poate fi legat de următoarele aspecte emoționale:</p>
+                    <h3 class="subsection-title"><span class="subsection-icon">📉</span>Simptome cauzate de deficit</h3>
+                    <p>Deficiența severă de vitamina B3 duce la <strong>pelagra</strong>, o boală caracterizată istoric prin "cei 3 D" (în engleză):</p>
                     <ol>
-                        <li><b>Instabilitate emoțională și iritabilitate:</b> Schimbări bruște de dispoziție, o tendință la nervozitate crescută, anxietate sau depresie. Sentimentul de a fi "pe marginea prăpastiei" emoțional.</li>
-                        <li><b>Dificultăți de auto-exprimare și "sensibilitate la expunere":</b> Afectarea pielii (simbol al "fațadei" noastre) poate rezonă cu o incapacitate de a-ți exprima adevărul personal sau de a te simți vulnerabil la judecata celorlalți.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Dermatită pe zone expuse la soare.</li>
-                            </ul>
-                        </li>
-                        <li><b>Confuzie mentală și lipsă de claritate în relații:</b> O senzație de "ceață mentală", dificultăți în a înțelege dinamica relațiilor sau în a comunica eficient.</li>
-                        <li><b>Lipsa de energie vitală și de entuziasm:</b> Deoarece este esențială pentru metabolismul energetic, un deficit poate reflecta o epuizare profundă, o lipsă de motivație și de bucurie de viață.</li>
-                        <li><b>Retragere socială sau izolare:</b> Dificultăți în a te conecta cu ceilalți, teama de a fi rănit, ceea ce poate duce la un sentiment de singurătate.</li>
+                        <li><b>Dermatită:</b> Erupții cutanate simetrice pe zonele expuse la soare.</li>
+                        <li><b>Diaree:</b> Probleme gastrointestinale severe.</li>
+                        <li><b>Demență:</b> Simptome neurologice și psihiatrice (confuzie, depresie).</li>
                     </ol>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de nicotinamidă este rar asociat cu toxicitate. Din perspectivă holistică, un exces foarte rar ar putea sugera:</p>
-                    <ol>
-                        <li><b>Control excesiv și rigiditate în relații:</b> O tendință de a încerca să controlezi dinamica socială sau emoțiile celorlalți, o nevoie de a fi "cel care știe".</li>
-                        <li><b>"Supra-adaptare" sau lipsă de autenticitate:</b> O tendință de a fi "prea neted" sau de a evita conflictele prin adaptare excesivă, ceea ce poate duce la reprimarea propriilor nevoi.</li>
-                        <li><b>Agitație internă și tensiune:</b> Deși nu produce "flush" fizic, o energie internă "activă" care caută constant stimularea sau rezolvarea, fără a permite calmul.</li>
-                        <li><b>Preocupare excesivă pentru imaginea externă:</b> O obsesie pentru modul în care ești perceput de ceilalți, ceea ce poate duce la lipsă de spontaneitate și la un sentiment de superficialitate.</li>
-                    </ol>
+                    <h3 class="subsection-title"><span class="subsection-icon">📈</span>Exces și siguranță</h3>
+                    <p>Nicotinamida este, în general, foarte bine tolerată, chiar și la doze mari. Nu provoacă "flush"-ul asociat cu acidul nicotinic.</p>
+                    <div class="note">
+                        <p>Toxicitatea este extrem de rară. Doze foarte mari (peste 3 grame/zi) pot cauza, în cazuri izolate, greață sau pot afecta funcția hepatică. Limita superioară de siguranță pentru vitamina B3 totală este de <strong>35 mg/zi</strong> pentru a evita riscul de flush de la acidul nicotinic, dar nicotinamida este sigură la doze mult mai mari.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Calea spre echilibru</h2>
+             </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">🌿</span>3. Perspective holistice și funcționale</h2>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">🧠</span>Psihiatria ortomoleculară</h3>
+                    <p>În anii 1950, psihiatrul Abram Hoffer a fost un pionier în utilizarea dozelor mari de niacină (în special nicotinamidă) ca tratament pentru schizofrenie. Deși această abordare rămâne controversată, ea a pus bazele psihiatriei ortomoleculare, care se concentrează pe corectarea dezechilibrelor biochimice cu ajutorul nutrienților.</p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title" style="color: var(--accent-green);"><span class="subsection-icon" style="color: var(--accent-green);">☯️</span>Perspective tradiționale</h3>
+                    <p><b>În MTC</b>, nicotinamida susține <b>Inima</b> și <b>Splina</b>. Prin rolul său în funcția cerebrală, hrănește <b>Sângele Inimii</b>, care adăpostește <b>Shen-ul</b> (mintea, conștiința). Prin susținerea digestiei, tonifică <b>Qi-ul Splinei</b>, prevenind "umiditatea" care poate duce la ceață mentală.</p>
+                    <p><b>În Ayurveda</b>, nicotinamida este un nutrient puternic <b>Pitta</b>, care susține <b>Agni</b> (focul metabolic). Deficitul său poate agrava <b>Vata</b> (prin simptome neurologice) și <b>Kapha</b> (prin stagnare metabolică).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title" style="border-bottom-color: var(--accent-green);"><span class="icon" style="color: var(--accent-green);">❤️‍🩹</span>4. Perspective psiho-somatice și calea spre echilibru</h2>
+            <p>Din perspectivă holistică, Nicotinamida este asociată cu <b>stabilitatea energetică, gestionarea eficientă a stresului și capacitatea de a menține integritatea "pielii" noastre emoționale</b>. Rezonează cu modul în care ne procesăm emoțiile și cum ne menținem calmul sub presiune.</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">💔</span>Deficit</h3>
+                    <p>Un deficit de nicotinamidă poate fi legat de:</p>
+                    <ol>
+                        <li><b>Instabilitate emoțională și iritabilitate:</b> Schimbări bruște de dispoziție, anxietate sau depresie.<br><i>Manifestare fizică: Simptome neurologice de pelagră.</i></li>
+                        <li><b>Dificultăți de auto-exprimare:</b> O incapacitate de a-ți exprima adevărul personal, o vulnerabilitate la judecata celorlalți.<br><i>Manifestare fizică: Dermatită.</i></li>
+                        <li><b>Lipsa de energie vitală și entuziasm.</b></li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span>Calea spre echilibru</h3>
+                    <p>Obiectivele pe care le susține nicotinamida pot fi atinse prin:</p>
                     <ul>
                         <li><b>Practici de stabilizare emoțională:</b> Meditație, mindfulness, respirație profundă.</li>
-                        <li><b>Terapii</b> pentru explorarea și eliberarea fricilor legate de auto-exprimare și judecată.</li>
+                        <li><b>Terapii</b> pentru explorarea fricilor legate de auto-exprimare.</li>
                         <li><b>Lucrul cu încrederea</b> în sine și în capacitatea de a te conecta autentic.</li>
-                        <li><b>Conectarea cu natura</b> și cu ceilalți pentru a reduce sentimentul de izolare.</li>
                         <li><b>Practici de reîncărcare energetică</b> și de cultivare a bucuriei de a trăi.</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon">📜</span>5. Recomandări și siguranță</h2>
+            <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
-                    <ul>
-                        <li><b>Practici de eliberare a controlului</b> și de cultivare a vulnerabilității.</li>
-                        <li><b>Terapii</b> care ajută la explorarea nevoii de a "manipula" situațiile sau pe ceilalți.</li>
-                        <li><b>Lucrul cu autenticitatea</b> și acceptarea imperfecțiunii.</li>
-                        <li><b>Meditații</b> pentru a calma agitația internă și a cultiva o stare de "a fi" mai degrabă decât de "a face".</li>
-                        <li><b>Stabilirea unor granițe sănătoase</b> pentru a te proteja de supra-solicitare, dar fără a te izola.</li>
-                    </ul>
+                     <h3 class="subsection-title"><span class="subsection-icon">📋</span>Doze recomandate</h3>
+                     <p>Dozele sunt exprimate în echivalenți de niacină (NE) și sunt aceleași ca pentru Vitamina B3 totală.</p>
+                     <table>
+                         <thead>
+                             <tr>
+                                 <th>Grup de populație</th>
+                                 <th>DZR (mg NE/zi)</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Bărbați (19+ ani)</td>
+                                 <td>16</td>
+                             </tr>
+                             <tr>
+                                 <td>Femei (19+ ani)</td>
+                                 <td>14</td>
+                             </tr>
+                             <tr>
+                                 <td>Femei însărcinate</td>
+                                 <td>18</td>
+                             </tr>
+                             <tr>
+                                 <td>Femei care alăptează</td>
+                                 <td>17</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="subsection-icon">🚨</span>Avertisment de siguranță</h3>
+                    <p>Nicotinamida este considerată foarte sigură.</p>
+                    <div class="note holistic-note">
+                        <p><b>Recomandare:</b> Spre deosebire de acidul nicotinic, nicotinamida nu are efecte secundare semnificative la doze uzuale. Este forma preferată pentru corectarea deficienței de B3 și pentru susținerea sănătății pielii. Dozele terapeutice mari trebuie discutate cu un medic, dar riscul de toxicitate este foarte scăzut.</p>
+                    </div>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
-        </div>
-
+        </section>
+        
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright &copy; 2025 dr.ing. Radu Pascu</p>
+            <p style="font-size: 0.8em; color: #95a5a6;">Acest conținut este pur informativ și nu înlocuiește sfatul medical profesionist. Consultați întotdeauna medicul pentru probleme de sănătate.</p>
         </div>
-    </div>
+    </main>
 </body>
 </html>
